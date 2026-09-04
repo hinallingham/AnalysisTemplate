@@ -1,0 +1,544 @@
+|17:32:43.956|    (INFO) Setting provided option run_number=1 for EventLoaderMALTA
+|17:32:43.956|    (INFO) Setting provided option base_path=/home/hinata/MALTA2/AnalysisTemplate/Telescope/data for EventLoaderMALTA
+|17:32:43.956|    (INFO) Setting provided option real_data=false for EventLoaderMALTA
+|17:32:43.956|  (STATUS) Welcome to Corryvreckan v2.0-2137-gf4d886e4-dirty
+|17:32:43.956|  (STATUS) Loading detector MALTA_0
+|17:32:43.956|    (INFO) Fixed alignment, position: (0.831um,-5.37um,-76.2mm)
+|17:32:43.956|  (STATUS) Loading detector MALTA_1
+|17:32:43.956|    (INFO) Fixed alignment, position: (-339.06um,32.417um,-50.8mm)
+|17:32:43.956|  (STATUS) Loading detector MALTA_2
+|17:32:43.956|    (INFO) Fixed alignment, position: (-138.635um,299.37um,-25.4mm)
+|17:32:43.956|  (STATUS) Loading detector MALTA_3
+|17:32:43.956|    (INFO) Fixed alignment, position: (-17.161um,64.572um,0um)
+|17:32:43.956|  (STATUS) Loading detector MALTA_4
+|17:32:43.956|    (INFO) Fixed alignment, position: (20.491um,113.561um,25.4mm)
+|17:32:43.956|  (STATUS) Loading detector MALTA_5
+|17:32:43.956|    (INFO) Fixed alignment, position: (10.237um,320.447um,50.8mm)
+|17:32:43.956|  (STATUS) Loading detector MALTA_6
+|17:32:43.956|    (INFO) Fixed alignment, position: (59.228um,48.307um,76.2mm)
+|17:32:43.956|  (STATUS) Loaded 7 detectors
+|17:32:43.956| (WARNING) Main ROOT file /home/hinata/MALTA2/AnalysisTemplate/Telescope/output/align_dut/align_dut.root exists and will be overwritten.
+|17:32:44.082|  (STATUS) Loading module EventLoaderMALTA
+|17:32:44.084|    (INFO) Setting provided option run_number=1 for EventLoaderMALTA
+|17:32:44.084|    (INFO) Setting provided option base_path=/home/hinata/MALTA2/AnalysisTemplate/Telescope/data for EventLoaderMALTA
+|17:32:44.084|    (INFO) Setting provided option real_data=false for EventLoaderMALTA
+|17:32:44.084|  (STATUS) Loading module ClusteringSpatial
+|17:32:44.084|  (STATUS) Loading module Tracking4D       
+|17:32:44.086|  (STATUS) Loading module DUTAssociation
+|17:32:44.086|  (STATUS) Loading module AlignmentDUTResidual
+|17:32:44.086|    (INFO) [C:AlignmentDUTResidual:MALTA_3] Aligning positions
+|17:32:44.086|    (INFO) [C:AlignmentDUTResidual:MALTA_3] Aligning orientations
+|17:32:44.086|    (INFO) [C:AlignmentDUTResidual:MALTA_3] Aligning detector "MALTA_3"
+|17:32:44.086|  (STATUS) Loaded 11 module instances
+|17:32:44.086|  (STATUS) =================| Initializing modules |==================
+|17:32:44.087|  (STATUS) [I:EventLoaderMALTA] Initializing "EventLoaderMALTA"
+|17:32:44.087|  (STATUS) [I:EventLoaderMALTA] Column filter disabled: All columns will be processed.
+|17:32:44.087|  (STATUS) [I:EventLoaderMALTA] Near-Online Setup: Skip=0, MaxEvents=Unlimited
+|17:32:44.087|  (STATUS) [I:EventLoaderMALTA] Multi-Run Merger active. Merging 1 run dataset(s).
+|17:32:44.091|  (STATUS) [I:EventLoaderMALTA] Plane 0 [MALTA_0] Appended Stream: /home/hinata/MALTA2/AnalysisTemplate/Telescope/data/run_000001_0.root
+|17:32:44.154|    (INFO) [I:EventLoaderMALTA] Plane 0 [MALTA_0] Total Chained Entries = 12534
+|17:32:44.154|  (STATUS) [I:EventLoaderMALTA] Plane 1 [MALTA_1] Appended Stream: /home/hinata/MALTA2/AnalysisTemplate/Telescope/data/run_000001_1.root
+|17:32:44.154|    (INFO) [I:EventLoaderMALTA] Plane 1 [MALTA_1] Total Chained Entries = 12660
+|17:32:44.154|  (STATUS) [I:EventLoaderMALTA] Plane 2 [MALTA_2] Appended Stream: /home/hinata/MALTA2/AnalysisTemplate/Telescope/data/run_000001_2.root
+|17:32:44.154|    (INFO) [I:EventLoaderMALTA] Plane 2 [MALTA_2] Total Chained Entries = 12614
+|17:32:44.154|  (STATUS) [I:EventLoaderMALTA] Plane 3 [MALTA_3] Appended Stream: /home/hinata/MALTA2/AnalysisTemplate/Telescope/data/run_000001_3.root
+|17:32:44.155|    (INFO) [I:EventLoaderMALTA] Plane 3 [MALTA_3] Total Chained Entries = 12652
+|17:32:44.155|  (STATUS) [I:EventLoaderMALTA] Plane 4 [MALTA_4] Appended Stream: /home/hinata/MALTA2/AnalysisTemplate/Telescope/data/run_000001_4.root
+|17:32:44.155|    (INFO) [I:EventLoaderMALTA] Plane 4 [MALTA_4] Total Chained Entries = 12586
+|17:32:44.155|  (STATUS) [I:EventLoaderMALTA] Plane 5 [MALTA_5] Appended Stream: /home/hinata/MALTA2/AnalysisTemplate/Telescope/data/run_000001_5.root
+|17:32:44.155|    (INFO) [I:EventLoaderMALTA] Plane 5 [MALTA_5] Total Chained Entries = 12807
+|17:32:44.155|  (STATUS) [I:EventLoaderMALTA] Plane 6 [MALTA_6] Appended Stream: /home/hinata/MALTA2/AnalysisTemplate/Telescope/data/run_000001_6.root
+|17:32:44.155|    (INFO) [I:EventLoaderMALTA] Plane 6 [MALTA_6] Total Chained Entries = 12660
+|17:32:44.155|  (STATUS) [I:EventLoaderMALTA] Coincidence requirement: 6 reference plane(s) must agree on l1idC for an event to be accepted; DUT planes are exempt.
+|17:32:44.159|  (STATUS) [I:ClusteringSpatial:MALTA_0] Initializing "ClusteringSpatial:MALTA_0"
+|17:32:44.162|  (STATUS) [I:ClusteringSpatial:MALTA_1] Initializing "ClusteringSpatial:MALTA_1"
+|17:32:44.166|  (STATUS) [I:ClusteringSpatial:MALTA_2] Initializing "ClusteringSpatial:MALTA_2" 
+|17:32:44.169|  (STATUS) [I:ClusteringSpatial:MALTA_3] Initializing "ClusteringSpatial:MALTA_3" 
+|17:32:44.173|  (STATUS) [I:ClusteringSpatial:MALTA_4] Initializing "ClusteringSpatial:MALTA_4" 
+|17:32:44.176|  (STATUS) [I:ClusteringSpatial:MALTA_5] Initializing "ClusteringSpatial:MALTA_5" 
+|17:32:44.180|  (STATUS) [I:ClusteringSpatial:MALTA_6] Initializing "ClusteringSpatial:MALTA_6" 
+|17:32:44.183|  (STATUS) [I:Tracking4D] Initializing "Tracking4D"                               
+|17:32:44.204|  (STATUS) [I:DUTAssociation:MALTA_3] Initializing "DUTAssociation:MALTA_3"
+|17:32:44.214|  (STATUS) [I:AlignmentDUTResidual:MALTA_3] Initializing "AlignmentDUTResidual:MALTA_3"
+|17:32:44.218| (WARNING) Detectors file /home/hinata/MALTA2/AnalysisTemplate/Telescope/config/../geometry/aligned_dut.conf exists and will be overwritten at end of run.
+|17:32:44.218|  (STATUS) ========================| Event loop |========================
+|17:32:44.238|  (STATUS) Ev: 0.1k Px: 0.9k Tr: 0.1k (1/ev) t = -10ns
+|17:32:44.245|  (STATUS) Ev: 0.2k Px: 1.7k Tr: 0.2k (1/ev) t = -10ns
+|17:32:44.250|  (STATUS) Ev: 0.3k Px: 2.6k Tr: 0.3k (1/ev) t = -10ns 
+|17:32:44.256|  (STATUS) Ev: 0.4k Px: 3.5k Tr: 0.4k (1/ev) t = -10ns 
+|17:32:44.261|  (STATUS) Ev: 0.5k Px: 4.4k Tr: 0.5k (0.996/ev) t = -10ns
+|17:32:44.266|  (STATUS) Ev: 0.6k Px: 5.3k Tr: 0.6k (0.998/ev) t = -10ns 
+|17:32:44.271|  (STATUS) Ev: 0.7k Px: 6.1k Tr: 0.7k (0.996/ev) t = -10ns 
+|17:32:44.276|  (STATUS) Ev: 0.8k Px: 7.0k Tr: 0.8k (0.996/ev) t = -10ns 
+|17:32:44.281|  (STATUS) Ev: 0.9k Px: 7.9k Tr: 0.9k (0.997/ev) t = -10ns 
+|17:32:44.286|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 1000 events, DUT participation rate = 99.90%
+|17:32:44.286|  (STATUS) Ev: 1.0k Px: 8.8k Tr: 1.0k (0.998/ev) t = -10ns
+|17:32:44.292|  (STATUS) Ev: 1.1k Px: 9.7k Tr: 1.1k (0.998/ev) t = -10ns
+|17:32:44.297|  (STATUS) Ev: 1.2k Px: 10.6k Tr: 1.2k (0.998/ev) t = -10ns
+|17:32:44.302|  (STATUS) Ev: 1.3k Px: 11.4k Tr: 1.3k (0.998/ev) t = -10ns 
+|17:32:44.307|  (STATUS) Ev: 1.4k Px: 12.3k Tr: 1.4k (0.998/ev) t = -10ns 
+|17:32:44.312|  (STATUS) Ev: 1.5k Px: 13.2k Tr: 1.5k (0.998/ev) t = -10ns 
+|17:32:44.317|  (STATUS) Ev: 1.6k Px: 14.1k Tr: 1.6k (0.998/ev) t = -10ns 
+|17:32:44.322|  (STATUS) Ev: 1.7k Px: 15.0k Tr: 1.7k (0.998/ev) t = -10ns 
+|17:32:44.327|  (STATUS) Ev: 1.8k Px: 15.9k Tr: 1.8k (0.999/ev) t = -10ns 
+|17:32:44.332|  (STATUS) Ev: 1.9k Px: 16.8k Tr: 1.9k (0.999/ev) t = -10ns 
+|17:32:44.337|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 2000 events, DUT participation rate = 99.95%
+|17:32:44.337|  (STATUS) Ev: 2.0k Px: 17.8k Tr: 2.0k (1/ev) t = -10ns
+|17:32:44.342|  (STATUS) Ev: 2.1k Px: 18.6k Tr: 2.1k (1/ev) t = -10ns
+|17:32:44.347|  (STATUS) Ev: 2.2k Px: 19.5k Tr: 2.2k (1/ev) t = -10ns 
+|17:32:44.353|  (STATUS) Ev: 2.3k Px: 20.4k Tr: 2.3k (1/ev) t = -10ns 
+|17:32:44.357|  (STATUS) Ev: 2.4k Px: 21.3k Tr: 2.4k (1/ev) t = -10ns 
+|17:32:44.363|  (STATUS) Ev: 2.5k Px: 22.2k Tr: 2.5k (1/ev) t = -10ns 
+|17:32:44.368|  (STATUS) Ev: 2.6k Px: 23.0k Tr: 2.6k (0.999/ev) t = -10ns
+|17:32:44.373|  (STATUS) Ev: 2.7k Px: 23.9k Tr: 2.7k (0.999/ev) t = -10ns 
+|17:32:44.378|  (STATUS) Ev: 2.8k Px: 24.8k Tr: 2.8k (0.999/ev) t = -10ns 
+|17:32:44.383|  (STATUS) Ev: 2.9k Px: 25.7k Tr: 2.9k (1/ev) t = -10ns     
+|17:32:44.389|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 3000 events, DUT participation rate = 99.97%
+|17:32:44.389|  (STATUS) Ev: 3.0k Px: 26.6k Tr: 3.0k (1/ev) t = -10ns
+|17:32:44.394|  (STATUS) Ev: 3.1k Px: 27.5k Tr: 3.1k (1/ev) t = -10ns
+|17:32:44.399|  (STATUS) Ev: 3.2k Px: 28.4k Tr: 3.2k (1/ev) t = -10ns 
+|17:32:44.404|  (STATUS) Ev: 3.3k Px: 29.3k Tr: 3.3k (1/ev) t = -10ns 
+|17:32:44.409|  (STATUS) Ev: 3.4k Px: 30.2k Tr: 3.4k (1/ev) t = -10ns 
+|17:32:44.415|  (STATUS) Ev: 3.5k Px: 31.1k Tr: 3.5k (1/ev) t = -10ns 
+|17:32:44.420|  (STATUS) Ev: 3.6k Px: 32.0k Tr: 3.6k (1/ev) t = -10ns 
+|17:32:44.425|  (STATUS) Ev: 3.7k Px: 32.9k Tr: 3.7k (1/ev) t = -10ns 
+|17:32:44.430|  (STATUS) Ev: 3.8k Px: 33.8k Tr: 3.8k (1/ev) t = -10ns 
+|17:32:44.436|  (STATUS) Ev: 3.9k Px: 34.7k Tr: 3.9k (1/ev) t = -10ns 
+|17:32:44.441|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 4000 events, DUT participation rate = 99.98%
+|17:32:44.441|  (STATUS) Ev: 4.0k Px: 35.6k Tr: 4.0k (1/ev) t = -10ns
+|17:32:44.447|  (STATUS) Ev: 4.1k Px: 36.4k Tr: 4.1k (1/ev) t = -10ns
+|17:32:44.452|  (STATUS) Ev: 4.2k Px: 37.3k Tr: 4.2k (1/ev) t = -10ns 
+|17:32:44.457|  (STATUS) Ev: 4.3k Px: 38.2k Tr: 4.3k (1/ev) t = -10ns 
+|17:32:44.463|  (STATUS) Ev: 4.4k Px: 39.1k Tr: 4.4k (1/ev) t = -10ns 
+|17:32:44.468|  (STATUS) Ev: 4.5k Px: 40.0k Tr: 4.5k (1/ev) t = -10ns 
+|17:32:44.473|  (STATUS) Ev: 4.6k Px: 40.9k Tr: 4.6k (1/ev) t = -10ns 
+|17:32:44.478|  (STATUS) Ev: 4.7k Px: 41.8k Tr: 4.7k (1/ev) t = -10ns 
+|17:32:44.483|  (STATUS) Ev: 4.8k Px: 42.7k Tr: 4.8k (1/ev) t = -10ns 
+|17:32:44.488|  (STATUS) Ev: 4.9k Px: 43.6k Tr: 4.9k (1/ev) t = -10ns 
+|17:32:44.493|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 5000 events, DUT participation rate = 99.98%
+|17:32:44.493|  (STATUS) Ev: 5.0k Px: 44.4k Tr: 5.0k (1/ev) t = -10ns
+|17:32:44.498|  (STATUS) Ev: 5.1k Px: 45.3k Tr: 5.1k (1/ev) t = -10ns
+|17:32:44.503|  (STATUS) Ev: 5.2k Px: 46.2k Tr: 5.2k (1/ev) t = -10ns 
+|17:32:44.508|  (STATUS) Ev: 5.3k Px: 47.1k Tr: 5.3k (1/ev) t = -10ns 
+|17:32:44.517|  (STATUS) Ev: 5.4k Px: 48.0k Tr: 5.4k (1/ev) t = -10ns 
+|17:32:44.525|  (STATUS) Ev: 5.5k Px: 48.8k Tr: 5.5k (1/ev) t = -10ns 
+|17:32:44.534|  (STATUS) Ev: 5.6k Px: 49.7k Tr: 5.6k (1/ev) t = -10ns 
+|17:32:44.543|  (STATUS) Ev: 5.7k Px: 50.6k Tr: 5.7k (1/ev) t = -10ns 
+|17:32:44.552|  (STATUS) Ev: 5.8k Px: 51.5k Tr: 5.8k (1/ev) t = -10ns 
+|17:32:44.559|  (STATUS) Ev: 5.9k Px: 52.4k Tr: 5.9k (1/ev) t = -10ns 
+|17:32:44.566|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 6000 events, DUT participation rate = 99.98%
+|17:32:44.566|  (STATUS) Ev: 6.0k Px: 53.2k Tr: 6.0k (1/ev) t = -10ns
+|17:32:44.572|  (STATUS) Ev: 6.1k Px: 54.1k Tr: 6.1k (1/ev) t = -10ns
+|17:32:44.577|  (STATUS) Ev: 6.2k Px: 55.0k Tr: 6.2k (1/ev) t = -10ns 
+|17:32:44.585|  (STATUS) Ev: 6.3k Px: 55.9k Tr: 6.3k (1/ev) t = -10ns 
+|17:32:44.590|  (STATUS) Ev: 6.4k Px: 56.8k Tr: 6.4k (1/ev) t = -10ns 
+|17:32:44.596|  (STATUS) Ev: 6.5k Px: 57.7k Tr: 6.5k (1/ev) t = -10ns 
+|17:32:44.601|  (STATUS) Ev: 6.6k Px: 58.6k Tr: 6.6k (1/ev) t = -10ns 
+|17:32:44.607|  (STATUS) Ev: 6.7k Px: 59.5k Tr: 6.7k (1/ev) t = -10ns 
+|17:32:44.612|  (STATUS) Ev: 6.8k Px: 60.3k Tr: 6.8k (1/ev) t = -10ns 
+|17:32:44.618|  (STATUS) Ev: 6.9k Px: 61.2k Tr: 6.9k (1/ev) t = -10ns 
+|17:32:44.623|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 7000 events, DUT participation rate = 99.99%
+|17:32:44.623|  (STATUS) Ev: 7.0k Px: 62.1k Tr: 7.0k (1/ev) t = -10ns
+|17:32:44.629|  (STATUS) Ev: 7.1k Px: 63.0k Tr: 7.1k (1/ev) t = -10ns
+|17:32:44.635|  (STATUS) Ev: 7.2k Px: 63.8k Tr: 7.2k (1/ev) t = -10ns 
+|17:32:44.640|  (STATUS) Ev: 7.3k Px: 64.7k Tr: 7.3k (1/ev) t = -10ns 
+|17:32:44.646|  (STATUS) Ev: 7.4k Px: 65.6k Tr: 7.4k (1/ev) t = -10ns 
+|17:32:44.651|  (STATUS) Ev: 7.5k Px: 66.5k Tr: 7.5k (1/ev) t = -10ns 
+|17:32:44.657|  (STATUS) Ev: 7.6k Px: 67.3k Tr: 7.6k (1/ev) t = -10ns 
+|17:32:44.662|  (STATUS) Ev: 7.7k Px: 68.2k Tr: 7.7k (1/ev) t = -10ns 
+|17:32:44.668|  (STATUS) Ev: 7.8k Px: 69.2k Tr: 7.8k (1/ev) t = -10ns 
+|17:32:44.673|  (STATUS) Ev: 7.9k Px: 70.0k Tr: 7.9k (1/ev) t = -10ns 
+|17:32:44.679|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 8000 events, DUT participation rate = 99.98%
+|17:32:44.679|  (STATUS) Ev: 8.0k Px: 70.9k Tr: 8.0k (1/ev) t = -10ns
+|17:32:44.685|  (STATUS) Ev: 8.1k Px: 71.8k Tr: 8.1k (1/ev) t = -10ns
+|17:32:44.691|  (STATUS) Ev: 8.2k Px: 72.7k Tr: 8.2k (1/ev) t = -10ns 
+|17:32:44.696|  (STATUS) Ev: 8.3k Px: 73.6k Tr: 8.3k (1/ev) t = -10ns 
+|17:32:44.702|  (STATUS) Ev: 8.4k Px: 74.5k Tr: 8.4k (1/ev) t = -10ns 
+|17:32:44.707|  (STATUS) Ev: 8.5k Px: 75.4k Tr: 8.5k (1/ev) t = -10ns 
+|17:32:44.713|  (STATUS) Ev: 8.6k Px: 76.3k Tr: 8.6k (1/ev) t = -10ns 
+|17:32:44.719|  (STATUS) Ev: 8.7k Px: 77.2k Tr: 8.7k (1/ev) t = -10ns 
+|17:32:44.724|  (STATUS) Ev: 8.8k Px: 78.1k Tr: 8.8k (1/ev) t = -10ns 
+|17:32:44.730|  (STATUS) Ev: 8.9k Px: 79.0k Tr: 8.9k (1/ev) t = -10ns 
+|17:32:44.736|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 9000 events, DUT participation rate = 99.98%
+|17:32:44.736|  (STATUS) Ev: 9.0k Px: 79.8k Tr: 9.0k (1/ev) t = -10ns
+|17:32:44.741|  (STATUS) Ev: 9.1k Px: 80.7k Tr: 9.1k (1/ev) t = -10ns
+|17:32:44.747|  (STATUS) Ev: 9.2k Px: 81.6k Tr: 9.2k (1/ev) t = -10ns 
+|17:32:44.752|  (STATUS) Ev: 9.3k Px: 82.5k Tr: 9.3k (1/ev) t = -10ns 
+|17:32:44.758|  (STATUS) Ev: 9.4k Px: 83.3k Tr: 9.4k (1/ev) t = -10ns 
+|17:32:44.764|  (STATUS) Ev: 9.5k Px: 84.2k Tr: 9.5k (1/ev) t = -10ns 
+|17:32:44.769|  (STATUS) Ev: 9.6k Px: 85.1k Tr: 9.6k (1/ev) t = -10ns 
+|17:32:44.775|  (STATUS) Ev: 9.7k Px: 86.0k Tr: 9.7k (1/ev) t = -10ns 
+|17:32:44.780|  (STATUS) Ev: 9.8k Px: 86.9k Tr: 9.8k (1/ev) t = -10ns 
+|17:32:44.786|  (STATUS) Ev: 9.9k Px: 87.8k Tr: 9.9k (1/ev) t = -10ns 
+|17:32:44.788|  (STATUS) [R:EventLoaderMALTA] All data consumed. Ending run.
+|17:32:44.788|  (STATUS) ===================| Finalising modules |===================
+|17:32:45.062|  (STATUS) [F:DUTAssociation:MALTA_3] In total, 9943 clusters are associated to 9932 tracks.
+|17:32:45.062|    (INFO) [F:DUTAssociation:MALTA_3] Number of tracks with at least one associated cluster: 9932 vs total number of tracks: 9936
+|17:32:45.062|  (STATUS) [F:DUTAssociation:MALTA_3] DEBUG: hDebugHitMap_byRegion_otherDet has 6 distinct other-detector keys:
+|17:32:45.062|  (STATUS) [F:DUTAssociation:MALTA_3] DEBUG:   "MALTA_0"
+|17:32:45.062|  (STATUS) [F:DUTAssociation:MALTA_3] DEBUG:   "MALTA_1"
+|17:32:45.062|  (STATUS) [F:DUTAssociation:MALTA_3] DEBUG:   "MALTA_2"
+|17:32:45.062|  (STATUS) [F:DUTAssociation:MALTA_3] DEBUG:   "MALTA_4"
+|17:32:45.062|  (STATUS) [F:DUTAssociation:MALTA_3] DEBUG:   "MALTA_5"
+|17:32:45.062|  (STATUS) [F:DUTAssociation:MALTA_3] DEBUG:   "MALTA_6"
+|17:32:45.187|    (INFO) [F:AlignmentDUTResidual:MALTA_3] 100% of all tracks have associated clusters on detector MALTA_3
+|17:32:45.187|  (STATUS) [F:AlignmentDUTResidual:MALTA_3] MALTA_3 initial alignment: 
+                                                          T(-17.161um,64.572um,0mm) R(0deg,0deg,0deg)
+|17:32:45.204|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 0
+|17:32:45.220|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 1
+|17:32:45.236|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 2 
+|17:32:45.252|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 3 
+|17:32:45.268|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 4 
+|17:32:45.285|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 5 
+|17:32:45.301|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 6 
+|17:32:45.317|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 7 
+|17:32:45.334|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 8 
+|17:32:45.351|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 9 
+|17:32:45.367|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 10
+|17:32:45.383|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 11 
+|17:32:45.400|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 12 
+|17:32:45.419|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 13 
+|17:32:45.436|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 14 
+|17:32:45.452|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 15 
+|17:32:45.468|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 16 
+|17:32:45.485|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 17 
+|17:32:45.502|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 18 
+|17:32:45.517|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 19 
+|17:32:45.535|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 20 
+|17:32:45.551|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 21 
+|17:32:45.568|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 22 
+|17:32:45.584|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 23 
+|17:32:45.604|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 24 
+|17:32:45.624|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 25 
+|17:32:45.640|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 26 
+|17:32:45.656|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 27 
+|17:32:45.673|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 28 
+|17:32:45.690|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 29 
+|17:32:45.706|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 30 
+|17:32:45.722|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 31 
+|17:32:45.738|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 32 
+|17:32:45.754|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 33 
+|17:32:45.771|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 34 
+|17:32:45.787|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 35 
+|17:32:45.806|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 36 
+|17:32:45.822|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 37 
+|17:32:45.838|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 38 
+|17:32:45.854|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 39 
+|17:32:45.870|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 40 
+|17:32:45.887|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 41 
+|17:32:45.903|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 42 
+|17:32:45.919|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 43 
+|17:32:45.935|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 44 
+|17:32:45.951|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 45 
+|17:32:45.967|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 46 
+|17:32:45.983|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 47 
+|17:32:46.000|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 48 
+|17:32:46.016|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 49 
+|17:32:46.032|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 50 
+|17:32:46.048|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 51 
+|17:32:46.064|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 52 
+|17:32:46.080|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 53 
+|17:32:46.096|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 54 
+|17:32:46.112|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 55 
+|17:32:46.128|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 56 
+|17:32:46.144|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 57 
+|17:32:46.160|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 58 
+|17:32:46.177|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 59 
+|17:32:46.192|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 60 
+|17:32:46.208|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 61 
+|17:32:46.224|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 62 
+|17:32:46.240|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 63 
+|17:32:46.256|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 64 
+|17:32:46.272|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 65 
+|17:32:46.288|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 66 
+|17:32:46.304|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 67 
+|17:32:46.320|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 68 
+|17:32:46.336|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 69 
+|17:32:46.352|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 70 
+|17:32:46.370|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 71 
+|17:32:46.388|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 72 
+|17:32:46.405|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 73 
+|17:32:46.421|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 74 
+|17:32:46.437|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 75 
+|17:32:46.453|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 76 
+|17:32:46.469|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 77 
+|17:32:46.485|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 78 
+|17:32:46.502|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 79 
+|17:32:46.518|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 80 
+|17:32:46.534|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 81 
+|17:32:46.550|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 82 
+|17:32:46.566|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 83 
+|17:32:46.582|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 84 
+|17:32:46.599|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 85 
+|17:32:46.615|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 86 
+|17:32:46.631|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 87 
+|17:32:46.647|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 88 
+|17:32:46.663|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 89 
+|17:32:46.679|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 90 
+|17:32:46.695|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 91 
+|17:32:46.711|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 92 
+|17:32:46.727|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 93 
+|17:32:46.743|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 94 
+|17:32:46.759|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 95 
+|17:32:46.775|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 96 
+|17:32:46.795|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 97 
+|17:32:46.812|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 98 
+|17:32:46.829|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 99 
+|17:32:46.845|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 100
+|17:32:46.862|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 101 
+|17:32:46.878|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 102 
+|17:32:46.895|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 103 
+|17:32:46.911|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 104 
+|17:32:46.927|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 105 
+|17:32:46.944|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 106 
+|17:32:46.960|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 107 
+|17:32:46.976|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 108 
+|17:32:46.991|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 109 
+|17:32:47.007|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 110 
+|17:32:47.023|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 111 
+|17:32:47.039|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 112 
+|17:32:47.055|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 113 
+|17:32:47.071|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 114 
+|17:32:47.087|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 115 
+|17:32:47.103|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 116 
+|17:32:47.119|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 117 
+|17:32:47.135|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 118 
+|17:32:47.151|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 119 
+|17:32:47.167|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 120 
+|17:32:47.183|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 121 
+|17:32:47.199|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 122 
+|17:32:47.217|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 123 
+|17:32:47.236|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 124 
+|17:32:47.256|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 125 
+|17:32:47.276|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 126 
+|17:32:47.296|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 127 
+|17:32:47.317|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 128 
+|17:32:47.336|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 129 
+|17:32:47.356|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 130 
+|17:32:47.376|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 131 
+|17:32:47.392|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 132 
+|17:32:47.408|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 133 
+|17:32:47.424|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 134 
+|17:32:47.440|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 135 
+|17:32:47.456|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 136 
+|17:32:47.472|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 137 
+|17:32:47.488|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 138 
+|17:32:47.504|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 139 
+|17:32:47.520|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 140 
+|17:32:47.536|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 141 
+|17:32:47.552|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 142 
+|17:32:47.568|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 143 
+|17:32:47.585|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 144 
+|17:32:47.601|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 145 
+|17:32:47.617|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 146 
+|17:32:47.632|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 147 
+|17:32:47.648|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 148 
+|17:32:47.664|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 149 
+|17:32:47.680|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 150 
+|17:32:47.696|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 151 
+|17:32:47.712|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 152 
+|17:32:47.728|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 153 
+|17:32:47.744|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 154 
+|17:32:47.760|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 155 
+|17:32:47.776|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 156 
+|17:32:47.791|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 157 
+|17:32:47.807|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 158 
+|17:32:47.824|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 159 
+|17:32:47.839|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 160 
+|17:32:47.855|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 161 
+|17:32:47.871|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 162 
+|17:32:47.887|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 163 
+|17:32:47.903|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 164 
+|17:32:47.920|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 165 
+|17:32:47.936|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 166 
+|17:32:47.951|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 167 
+|17:32:47.967|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 168 
+|17:32:47.984|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 169 
+|17:32:48.001|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 170 
+|17:32:48.017|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 171 
+|17:32:48.033|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 172 
+|17:32:48.049|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 173 
+|17:32:48.064|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 174 
+|17:32:48.080|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 175 
+|17:32:48.096|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 176 
+|17:32:48.112|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 177 
+|17:32:48.128|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 178 
+|17:32:48.144|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 179 
+|17:32:48.160|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 180 
+|17:32:48.176|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 181 
+|17:32:48.192|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 182 
+|17:32:48.211|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 183 
+|17:32:48.228|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 184 
+|17:32:48.244|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 185 
+|17:32:48.261|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 186 
+|17:32:48.279|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 187 
+|17:32:48.297|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 188 
+|17:32:48.314|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 189 
+|17:32:48.332|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 190 
+|17:32:48.351|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 191 
+|17:32:48.370|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 192 
+|17:32:48.391|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 193 
+|17:32:48.410|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 194 
+|17:32:48.429|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 195 
+|17:32:48.445|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 196 
+|17:32:48.461|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 197 
+|17:32:48.478|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 198 
+|17:32:48.497|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 199 
+|17:32:48.514|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 200 
+|17:32:48.531|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 201 
+|17:32:48.547|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 202 
+|17:32:48.563|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 203 
+|17:32:48.580|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 204 
+|17:32:48.597|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 205 
+|17:32:48.613|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 206 
+|17:32:48.630|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 207 
+|17:32:48.646|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 208 
+|17:32:48.662|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 209 
+|17:32:48.678|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 210 
+|17:32:48.695|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 211 
+|17:32:48.711|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 212 
+|17:32:48.727|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 213 
+|17:32:48.743|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 214 
+|17:32:48.759|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 215 
+|17:32:48.775|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 216 
+|17:32:48.791|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 217 
+|17:32:48.807|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 218 
+|17:32:48.823|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 219 
+|17:32:48.839|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 220 
+|17:32:48.855|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 221 
+|17:32:48.871|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 222 
+|17:32:48.887|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 223 
+|17:32:48.903|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 224 
+|17:32:48.919|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 225 
+|17:32:48.935|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 226 
+|17:32:48.951|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 227 
+|17:32:48.967|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 228 
+|17:32:48.983|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 229 
+|17:32:48.999|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 230 
+|17:32:49.019|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 231 
+|17:32:49.037|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 232 
+|17:32:49.053|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 233 
+|17:32:49.070|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 234 
+|17:32:49.086|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 235 
+|17:32:49.103|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 236 
+|17:32:49.119|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 237 
+|17:32:49.135|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 238 
+|17:32:49.151|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 239 
+|17:32:49.167|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 240 
+|17:32:49.183|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 241 
+|17:32:49.199|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 242 
+|17:32:49.215|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 243 
+|17:32:49.231|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 244 
+|17:32:49.248|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 245 
+|17:32:49.264|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 246 
+|17:32:49.281|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 247 
+|17:32:49.297|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 248 
+|17:32:49.313|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 249 
+|17:32:49.330|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 250 
+|17:32:49.348|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 251 
+|17:32:49.364|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 252 
+|17:32:49.381|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 253 
+|17:32:49.396|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 254 
+|17:32:49.413|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 255 
+|17:32:49.429|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 256 
+|17:32:49.449|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 257 
+|17:32:49.466|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 258 
+|17:32:49.483|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 259 
+|17:32:49.499|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 260 
+|17:32:49.516|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 261 
+|17:32:49.532|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 262 
+|17:32:49.533|    (INFO) [F:AlignmentDUTResidual:MALTA_3] MALTA_3/0 dT(-2.428um,11.767um,0mm) dR(0.0683539deg,-0.969502deg,-0.471888deg)
+|17:32:49.548|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 263
+|17:32:49.564|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 264
+|17:32:49.580|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 265 
+|17:32:49.597|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 266 
+|17:32:49.613|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 267 
+|17:32:49.629|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 268 
+|17:32:49.645|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 269 
+|17:32:49.661|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 270 
+|17:32:49.677|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 271 
+|17:32:49.693|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 272 
+|17:32:49.709|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 273 
+|17:32:49.725|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 274 
+|17:32:49.741|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 275 
+|17:32:49.757|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 276 
+|17:32:49.773|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 277 
+|17:32:49.789|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 278 
+|17:32:49.805|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 279 
+|17:32:49.821|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 280 
+|17:32:49.837|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 281 
+|17:32:49.853|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 282 
+|17:32:49.869|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 283 
+|17:32:49.885|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 284 
+|17:32:49.901|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 285 
+|17:32:49.902|    (INFO) [F:AlignmentDUTResidual:MALTA_3] MALTA_3/1 dT(0mm,0mm,0mm) dR(-0deg,-5.72958e-05deg,-0deg)
+|17:32:49.917|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 286
+|17:32:49.933|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 287
+|17:32:49.949|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 288 
+|17:32:49.965|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 289 
+|17:32:49.981|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 290 
+|17:32:49.997|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 291 
+|17:32:50.013|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 292 
+|17:32:50.029|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 293 
+|17:32:50.044|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 294 
+|17:32:50.060|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 295 
+|17:32:50.076|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 296 
+|17:32:50.092|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 297 
+|17:32:50.107|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 298 
+|17:32:50.123|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 299 
+|17:32:50.139|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 300 
+|17:32:50.155|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 301 
+|17:32:50.171|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 302 
+|17:32:50.172|    (INFO) [F:AlignmentDUTResidual:MALTA_3] MALTA_3/2 dT(0mm,0mm,0mm) dR(0deg,0deg,0deg)
+|17:32:50.187|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 303
+|17:32:50.203|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 304
+|17:32:50.218|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 305 
+|17:32:50.234|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 306 
+|17:32:50.250|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 307 
+|17:32:50.266|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 308 
+|17:32:50.282|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 309 
+|17:32:50.297|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 310 
+|17:32:50.313|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 311 
+|17:32:50.329|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 312 
+|17:32:50.345|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 313 
+|17:32:50.361|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 314 
+|17:32:50.377|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 315 
+|17:32:50.393|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 316 
+|17:32:50.409|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 317 
+|17:32:50.424|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 318 
+|17:32:50.440|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 319 
+|17:32:50.456|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 320 
+|17:32:50.472|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 321 
+|17:32:50.488|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 322 
+|17:32:50.503|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 323 
+|17:32:50.519|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 324 
+|17:32:50.535|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 325 
+|17:32:50.551|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 326 
+|17:32:50.567|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 327 
+|17:32:50.583|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 328 
+|17:32:50.599|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 329 
+|17:32:50.615|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 330 
+|17:32:50.631|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 331 
+|17:32:50.647|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 332 
+|17:32:50.663|    (INFO) [F:AlignmentDUTResidual:MALTA_3] Refit of 9932 track, MINUIT iteration 333 
+|17:32:50.664|    (INFO) [F:AlignmentDUTResidual:MALTA_3] MALTA_3/3 dT(-0mm,-0mm,0mm) dR(-0deg,0deg,0deg)
+|17:32:50.664|  (STATUS) [F:AlignmentDUTResidual:MALTA_3] MALTA_3 new alignment: 
+                                                          T(-19.589um,76.339um,0mm) R(0.0683539deg,-0.969502deg,-0.471888deg)
+|17:32:50.672|  (STATUS) Wrote histogram output file to "/home/hinata/MALTA2/AnalysisTemplate/Telescope/output/align_dut/align_dut.root"
+|17:32:50.672| (WARNING) Detectors file /home/hinata/MALTA2/AnalysisTemplate/Telescope/config/../geometry/aligned_dut.conf exists and will be overwritten.
+|17:32:50.672|  (STATUS) Wrote updated detector configuration to /home/hinata/MALTA2/AnalysisTemplate/Telescope/config/../geometry/aligned_dut.conf
+|17:32:50.672| (WARNING) Unused configuration keys in global section:
+                         workers
+|17:32:50.672|  (STATUS) ===============| Wall-clock timing (seconds) |================
+|17:32:50.672|  (STATUS)     EventLoaderMALTA               --  0.09074s = 0.009142ms/evt
+|17:32:50.672|  (STATUS)    ClusteringSpatial :    MALTA_0  --  0.01625s = 0.001638ms/evt
+|17:32:50.672|  (STATUS)    ClusteringSpatial :    MALTA_1  --  0.01475s = 0.001486ms/evt
+|17:32:50.672|  (STATUS)    ClusteringSpatial :    MALTA_2  --  0.01535s = 0.001547ms/evt
+|17:32:50.672|  (STATUS)    ClusteringSpatial :    MALTA_3  --  0.01639s = 0.001651ms/evt
+|17:32:50.672|  (STATUS)    ClusteringSpatial :    MALTA_4  --  0.01664s = 0.001677ms/evt
+|17:32:50.672|  (STATUS)    ClusteringSpatial :    MALTA_5  --  0.01679s = 0.001691ms/evt
+|17:32:50.672|  (STATUS)    ClusteringSpatial :    MALTA_6  --  0.01639s = 0.001651ms/evt
+|17:32:50.672|  (STATUS)           Tracking4D               --  0.30074s = 0.030302ms/evt
+|17:32:50.672|  (STATUS)       DUTAssociation :    MALTA_3  --  0.02459s = 0.002478ms/evt
+|17:32:50.672|  (STATUS) AlignmentDUTResidual :    MALTA_3  --  0.02946s = 0.002968ms/evt
+|17:32:50.672|  (STATUS) ==============================================================

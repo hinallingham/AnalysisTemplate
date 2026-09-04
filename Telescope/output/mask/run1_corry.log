@@ -1,0 +1,261 @@
+|17:29:41.497|    (INFO) Setting provided option run_number=1 for EventLoaderMALTA
+|17:29:41.497|    (INFO) Setting provided option base_path=/home/hinata/MALTA2/AnalysisTemplate/Telescope/data for EventLoaderMALTA
+|17:29:41.497|    (INFO) Setting provided option real_data=false for EventLoaderMALTA
+|17:29:41.497|  (STATUS) Welcome to Corryvreckan v2.0-2137-gf4d886e4-dirty
+|17:29:41.497|  (STATUS) Loading detector MALTA_0
+|17:29:41.497|    (INFO) Fixed alignment, position: (0um,0um,-76.2mm)
+|17:29:41.497|  (STATUS) Loading detector MALTA_1
+|17:29:41.497|    (INFO) Fixed alignment, position: (0um,0um,-50.8mm)
+|17:29:41.497|  (STATUS) Loading detector MALTA_2
+|17:29:41.497|    (INFO) Fixed alignment, position: (0um,0um,-25.4mm)
+|17:29:41.497|  (STATUS) Loading detector MALTA_3
+|17:29:41.497|    (INFO) Fixed alignment, position: (0um,0um,0um)
+|17:29:41.497|  (STATUS) Loading detector MALTA_4
+|17:29:41.497|    (INFO) Fixed alignment, position: (0um,0um,25.4mm)
+|17:29:41.497|  (STATUS) Loading detector MALTA_5
+|17:29:41.497|    (INFO) Fixed alignment, position: (0um,0um,50.8mm)
+|17:29:41.497|  (STATUS) Loading detector MALTA_6
+|17:29:41.497|    (INFO) Fixed alignment, position: (0um,0um,76.2mm)
+|17:29:41.497|  (STATUS) Loaded 7 detectors
+|17:29:41.497| (WARNING) Main ROOT file /home/hinata/MALTA2/AnalysisTemplate/Telescope/output/mask/mask.root exists and will be overwritten.
+|17:29:41.635|  (STATUS) Loading module EventLoaderMALTA
+|17:29:41.637|    (INFO) Setting provided option run_number=1 for EventLoaderMALTA
+|17:29:41.637|    (INFO) Setting provided option base_path=/home/hinata/MALTA2/AnalysisTemplate/Telescope/data for EventLoaderMALTA
+|17:29:41.637|    (INFO) Setting provided option real_data=false for EventLoaderMALTA
+|17:29:41.637|  (STATUS) Loading module MaskCreator
+|17:29:41.637|  (STATUS) Loaded 8 module instances 
+|17:29:41.637|  (STATUS) =================| Initializing modules |==================
+|17:29:41.638|  (STATUS) [I:EventLoaderMALTA] Initializing "EventLoaderMALTA"
+|17:29:41.638|  (STATUS) [I:EventLoaderMALTA] Column filter disabled: All columns will be processed.
+|17:29:41.638|  (STATUS) [I:EventLoaderMALTA] Near-Online Setup: Skip=0, MaxEvents=Unlimited
+|17:29:41.638|  (STATUS) [I:EventLoaderMALTA] Multi-Run Merger active. Merging 1 run dataset(s).
+|17:29:41.642|  (STATUS) [I:EventLoaderMALTA] Plane 0 [MALTA_0] Appended Stream: /home/hinata/MALTA2/AnalysisTemplate/Telescope/data/run_000001_0.root
+|17:29:41.705|    (INFO) [I:EventLoaderMALTA] Plane 0 [MALTA_0] Total Chained Entries = 12534
+|17:29:41.705|  (STATUS) [I:EventLoaderMALTA] Plane 1 [MALTA_1] Appended Stream: /home/hinata/MALTA2/AnalysisTemplate/Telescope/data/run_000001_1.root
+|17:29:41.705|    (INFO) [I:EventLoaderMALTA] Plane 1 [MALTA_1] Total Chained Entries = 12660
+|17:29:41.705|  (STATUS) [I:EventLoaderMALTA] Plane 2 [MALTA_2] Appended Stream: /home/hinata/MALTA2/AnalysisTemplate/Telescope/data/run_000001_2.root
+|17:29:41.705|    (INFO) [I:EventLoaderMALTA] Plane 2 [MALTA_2] Total Chained Entries = 12614
+|17:29:41.705|  (STATUS) [I:EventLoaderMALTA] Plane 3 [MALTA_3] Appended Stream: /home/hinata/MALTA2/AnalysisTemplate/Telescope/data/run_000001_3.root
+|17:29:41.705|    (INFO) [I:EventLoaderMALTA] Plane 3 [MALTA_3] Total Chained Entries = 12652
+|17:29:41.705|  (STATUS) [I:EventLoaderMALTA] Plane 4 [MALTA_4] Appended Stream: /home/hinata/MALTA2/AnalysisTemplate/Telescope/data/run_000001_4.root
+|17:29:41.706|    (INFO) [I:EventLoaderMALTA] Plane 4 [MALTA_4] Total Chained Entries = 12586
+|17:29:41.706|  (STATUS) [I:EventLoaderMALTA] Plane 5 [MALTA_5] Appended Stream: /home/hinata/MALTA2/AnalysisTemplate/Telescope/data/run_000001_5.root
+|17:29:41.706|    (INFO) [I:EventLoaderMALTA] Plane 5 [MALTA_5] Total Chained Entries = 12807
+|17:29:41.706|  (STATUS) [I:EventLoaderMALTA] Plane 6 [MALTA_6] Appended Stream: /home/hinata/MALTA2/AnalysisTemplate/Telescope/data/run_000001_6.root
+|17:29:41.706|    (INFO) [I:EventLoaderMALTA] Plane 6 [MALTA_6] Total Chained Entries = 12660
+|17:29:41.706|  (STATUS) [I:EventLoaderMALTA] Coincidence requirement: 6 reference plane(s) must agree on l1idC for an event to be accepted; DUT planes are exempt.
+|17:29:41.711|  (STATUS) [I:MaskCreator:MALTA_0] Initializing "MaskCreator:MALTA_0"
+|17:29:41.712|  (STATUS) [I:MaskCreator:MALTA_1] Initializing "MaskCreator:MALTA_1"
+|17:29:41.713|  (STATUS) [I:MaskCreator:MALTA_2] Initializing "MaskCreator:MALTA_2" 
+|17:29:41.714|  (STATUS) [I:MaskCreator:MALTA_3] Initializing "MaskCreator:MALTA_3" 
+|17:29:41.715|  (STATUS) [I:MaskCreator:MALTA_4] Initializing "MaskCreator:MALTA_4" 
+|17:29:41.716|  (STATUS) [I:MaskCreator:MALTA_5] Initializing "MaskCreator:MALTA_5" 
+|17:29:41.716|  (STATUS) [I:MaskCreator:MALTA_6] Initializing "MaskCreator:MALTA_6" 
+|17:29:41.717| (WARNING) Detectors file /home/hinata/MALTA2/AnalysisTemplate/Telescope/config/../geometry/masked.conf exists and will be overwritten at end of run.
+|17:29:41.717|  (STATUS) ========================| Event loop |========================
+|17:29:41.723|  (STATUS) Ev: 0.1k Px: 0.9k Tr: 0.0k (0/ev) t = -10ns
+|17:29:41.726|  (STATUS) Ev: 0.2k Px: 1.7k Tr: 0.0k (0/ev) t = -10ns
+|17:29:41.727|  (STATUS) Ev: 0.3k Px: 2.6k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.728|  (STATUS) Ev: 0.4k Px: 3.5k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.729|  (STATUS) Ev: 0.5k Px: 4.4k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.730|  (STATUS) Ev: 0.6k Px: 5.3k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.731|  (STATUS) Ev: 0.7k Px: 6.1k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.732|  (STATUS) Ev: 0.8k Px: 7.0k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.733|  (STATUS) Ev: 0.9k Px: 7.9k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.734|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 1000 events, DUT participation rate = 99.90%
+|17:29:41.734|  (STATUS) Ev: 1.0k Px: 8.8k Tr: 0.0k (0/ev) t = -10ns
+|17:29:41.735|  (STATUS) Ev: 1.1k Px: 9.7k Tr: 0.0k (0/ev) t = -10ns
+|17:29:41.736|  (STATUS) Ev: 1.2k Px: 10.6k Tr: 0.0k (0/ev) t = -10ns
+|17:29:41.737|  (STATUS) Ev: 1.3k Px: 11.4k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.738|  (STATUS) Ev: 1.4k Px: 12.3k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.739|  (STATUS) Ev: 1.5k Px: 13.2k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.740|  (STATUS) Ev: 1.6k Px: 14.1k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.741|  (STATUS) Ev: 1.7k Px: 15.0k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.742|  (STATUS) Ev: 1.8k Px: 15.9k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.743|  (STATUS) Ev: 1.9k Px: 16.8k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.744|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 2000 events, DUT participation rate = 99.95%
+|17:29:41.744|  (STATUS) Ev: 2.0k Px: 17.8k Tr: 0.0k (0/ev) t = -10ns
+|17:29:41.745|  (STATUS) Ev: 2.1k Px: 18.6k Tr: 0.0k (0/ev) t = -10ns
+|17:29:41.746|  (STATUS) Ev: 2.2k Px: 19.5k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.747|  (STATUS) Ev: 2.3k Px: 20.4k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.748|  (STATUS) Ev: 2.4k Px: 21.3k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.749|  (STATUS) Ev: 2.5k Px: 22.2k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.750|  (STATUS) Ev: 2.6k Px: 23.0k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.750|  (STATUS) Ev: 2.7k Px: 23.9k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.751|  (STATUS) Ev: 2.8k Px: 24.8k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.752|  (STATUS) Ev: 2.9k Px: 25.7k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.753|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 3000 events, DUT participation rate = 99.97%
+|17:29:41.753|  (STATUS) Ev: 3.0k Px: 26.6k Tr: 0.0k (0/ev) t = -10ns
+|17:29:41.754|  (STATUS) Ev: 3.1k Px: 27.5k Tr: 0.0k (0/ev) t = -10ns
+|17:29:41.755|  (STATUS) Ev: 3.2k Px: 28.4k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.756|  (STATUS) Ev: 3.3k Px: 29.3k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.757|  (STATUS) Ev: 3.4k Px: 30.2k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.758|  (STATUS) Ev: 3.5k Px: 31.1k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.759|  (STATUS) Ev: 3.6k Px: 32.0k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.760|  (STATUS) Ev: 3.7k Px: 32.9k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.761|  (STATUS) Ev: 3.8k Px: 33.8k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.762|  (STATUS) Ev: 3.9k Px: 34.7k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.763|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 4000 events, DUT participation rate = 99.98%
+|17:29:41.763|  (STATUS) Ev: 4.0k Px: 35.6k Tr: 0.0k (0/ev) t = -10ns
+|17:29:41.764|  (STATUS) Ev: 4.1k Px: 36.4k Tr: 0.0k (0/ev) t = -10ns
+|17:29:41.765|  (STATUS) Ev: 4.2k Px: 37.3k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.766|  (STATUS) Ev: 4.3k Px: 38.2k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.767|  (STATUS) Ev: 4.4k Px: 39.1k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.768|  (STATUS) Ev: 4.5k Px: 40.0k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.769|  (STATUS) Ev: 4.6k Px: 40.9k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.769|  (STATUS) Ev: 4.7k Px: 41.8k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.770|  (STATUS) Ev: 4.8k Px: 42.7k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.771|  (STATUS) Ev: 4.9k Px: 43.6k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.772|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 5000 events, DUT participation rate = 99.98%
+|17:29:41.772|  (STATUS) Ev: 5.0k Px: 44.4k Tr: 0.0k (0/ev) t = -10ns
+|17:29:41.773|  (STATUS) Ev: 5.1k Px: 45.3k Tr: 0.0k (0/ev) t = -10ns
+|17:29:41.774|  (STATUS) Ev: 5.2k Px: 46.2k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.775|  (STATUS) Ev: 5.3k Px: 47.1k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.776|  (STATUS) Ev: 5.4k Px: 48.0k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.777|  (STATUS) Ev: 5.5k Px: 48.8k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.778|  (STATUS) Ev: 5.6k Px: 49.7k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.779|  (STATUS) Ev: 5.7k Px: 50.6k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.780|  (STATUS) Ev: 5.8k Px: 51.5k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.781|  (STATUS) Ev: 5.9k Px: 52.4k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.782|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 6000 events, DUT participation rate = 99.98%
+|17:29:41.782|  (STATUS) Ev: 6.0k Px: 53.2k Tr: 0.0k (0/ev) t = -10ns
+|17:29:41.783|  (STATUS) Ev: 6.1k Px: 54.1k Tr: 0.0k (0/ev) t = -10ns
+|17:29:41.784|  (STATUS) Ev: 6.2k Px: 55.0k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.787|  (STATUS) Ev: 6.3k Px: 55.9k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.788|  (STATUS) Ev: 6.4k Px: 56.8k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.789|  (STATUS) Ev: 6.5k Px: 57.7k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.790|  (STATUS) Ev: 6.6k Px: 58.6k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.791|  (STATUS) Ev: 6.7k Px: 59.5k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.792|  (STATUS) Ev: 6.8k Px: 60.3k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.793|  (STATUS) Ev: 6.9k Px: 61.2k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.794|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 7000 events, DUT participation rate = 99.99%
+|17:29:41.794|  (STATUS) Ev: 7.0k Px: 62.1k Tr: 0.0k (0/ev) t = -10ns
+|17:29:41.795|  (STATUS) Ev: 7.1k Px: 63.0k Tr: 0.0k (0/ev) t = -10ns
+|17:29:41.796|  (STATUS) Ev: 7.2k Px: 63.8k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.796|  (STATUS) Ev: 7.3k Px: 64.7k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.797|  (STATUS) Ev: 7.4k Px: 65.6k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.798|  (STATUS) Ev: 7.5k Px: 66.5k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.799|  (STATUS) Ev: 7.6k Px: 67.3k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.800|  (STATUS) Ev: 7.7k Px: 68.2k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.801|  (STATUS) Ev: 7.8k Px: 69.2k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.802|  (STATUS) Ev: 7.9k Px: 70.0k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.803|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 8000 events, DUT participation rate = 99.98%
+|17:29:41.803|  (STATUS) Ev: 8.0k Px: 70.9k Tr: 0.0k (0/ev) t = -10ns
+|17:29:41.804|  (STATUS) Ev: 8.1k Px: 71.8k Tr: 0.0k (0/ev) t = -10ns
+|17:29:41.805|  (STATUS) Ev: 8.2k Px: 72.7k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.806|  (STATUS) Ev: 8.3k Px: 73.6k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.807|  (STATUS) Ev: 8.4k Px: 74.5k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.808|  (STATUS) Ev: 8.5k Px: 75.4k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.808|  (STATUS) Ev: 8.6k Px: 76.3k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.809|  (STATUS) Ev: 8.7k Px: 77.2k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.810|  (STATUS) Ev: 8.8k Px: 78.1k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.811|  (STATUS) Ev: 8.9k Px: 79.0k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.812|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 9000 events, DUT participation rate = 99.98%
+|17:29:41.812|  (STATUS) Ev: 9.0k Px: 79.8k Tr: 0.0k (0/ev) t = -10ns
+|17:29:41.813|  (STATUS) Ev: 9.1k Px: 80.7k Tr: 0.0k (0/ev) t = -10ns
+|17:29:41.814|  (STATUS) Ev: 9.2k Px: 81.6k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.815|  (STATUS) Ev: 9.3k Px: 82.5k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.816|  (STATUS) Ev: 9.4k Px: 83.3k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.817|  (STATUS) Ev: 9.5k Px: 84.2k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.818|  (STATUS) Ev: 9.6k Px: 85.1k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.819|  (STATUS) Ev: 9.7k Px: 86.0k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.819|  (STATUS) Ev: 9.8k Px: 86.9k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.820|  (STATUS) Ev: 9.9k Px: 87.8k Tr: 0.0k (0/ev) t = -10ns 
+|17:29:41.821|  (STATUS) ===================| Finalising modules |===================
+|17:29:41.856|    (INFO) [F:MaskCreator:MALTA_0] Using global frequency filter
+|17:29:41.857|    (INFO) [F:MaskCreator:MALTA_0] Detector MALTA_0:
+|17:29:41.857|    (INFO) [F:MaskCreator:MALTA_0]   mean hits/pixel:       0.108459
+|17:29:41.857|    (INFO) [F:MaskCreator:MALTA_0]   total masked pixels:   0
+|17:29:41.857|    (INFO) [F:MaskCreator:MALTA_0]   of which newly masked: 0
+|17:29:41.857|    (INFO) [F:MaskCreator:MALTA_0] Masking dead pixels
+|17:29:41.858|    (INFO) [F:MaskCreator:MALTA_0] Detector MALTA_0:
+|17:29:41.858|    (INFO) [F:MaskCreator:MALTA_0]   total masked pixels:   103274
+|17:29:41.858|    (INFO) [F:MaskCreator:MALTA_0]   of which newly masked: 103274
+|17:29:41.858| (WARNING) [F:MaskCreator:MALTA_0] File /home/hinata/MALTA2/AnalysisTemplate/Telescope/output/mask/MaskCreator/MALTA_0/mask_MALTA_0.txt exists and will be overwritten.
+|17:29:41.888|  (STATUS) [F:MaskCreator:MALTA_0] MALTA_0 mask written to:  
+                                                 "/home/hinata/MALTA2/AnalysisTemplate/Telescope/output/mask/MaskCreator/MALTA_0/mask_MALTA_0.txt"
+|17:29:41.892|    (INFO) [F:MaskCreator:MALTA_1] Using global frequency filter
+|17:29:41.893|    (INFO) [F:MaskCreator:MALTA_1] Detector MALTA_1:
+|17:29:41.893|    (INFO) [F:MaskCreator:MALTA_1]   mean hits/pixel:       0.109907
+|17:29:41.893|    (INFO) [F:MaskCreator:MALTA_1]   total masked pixels:   0
+|17:29:41.893|    (INFO) [F:MaskCreator:MALTA_1]   of which newly masked: 0
+|17:29:41.893|    (INFO) [F:MaskCreator:MALTA_1] Masking dead pixels
+|17:29:41.895|    (INFO) [F:MaskCreator:MALTA_1] Detector MALTA_1:
+|17:29:41.895|    (INFO) [F:MaskCreator:MALTA_1]   total masked pixels:   103141
+|17:29:41.895|    (INFO) [F:MaskCreator:MALTA_1]   of which newly masked: 103141
+|17:29:41.895| (WARNING) [F:MaskCreator:MALTA_1] File /home/hinata/MALTA2/AnalysisTemplate/Telescope/output/mask/MaskCreator/MALTA_1/mask_MALTA_1.txt exists and will be overwritten.
+|17:29:41.923|  (STATUS) [F:MaskCreator:MALTA_1] MALTA_1 mask written to:  
+                                                 "/home/hinata/MALTA2/AnalysisTemplate/Telescope/output/mask/MaskCreator/MALTA_1/mask_MALTA_1.txt"
+|17:29:41.927|    (INFO) [F:MaskCreator:MALTA_2] Using global frequency filter
+|17:29:41.928|    (INFO) [F:MaskCreator:MALTA_2] Detector MALTA_2:
+|17:29:41.928|    (INFO) [F:MaskCreator:MALTA_2]   mean hits/pixel:       0.10927
+|17:29:41.928|    (INFO) [F:MaskCreator:MALTA_2]   total masked pixels:   0
+|17:29:41.928|    (INFO) [F:MaskCreator:MALTA_2]   of which newly masked: 0
+|17:29:41.928|    (INFO) [F:MaskCreator:MALTA_2] Masking dead pixels
+|17:29:41.930|    (INFO) [F:MaskCreator:MALTA_2] Detector MALTA_2:
+|17:29:41.930|    (INFO) [F:MaskCreator:MALTA_2]   total masked pixels:   103143
+|17:29:41.930|    (INFO) [F:MaskCreator:MALTA_2]   of which newly masked: 103143
+|17:29:41.930| (WARNING) [F:MaskCreator:MALTA_2] File /home/hinata/MALTA2/AnalysisTemplate/Telescope/output/mask/MaskCreator/MALTA_2/mask_MALTA_2.txt exists and will be overwritten.
+|17:29:41.961|  (STATUS) [F:MaskCreator:MALTA_2] MALTA_2 mask written to:  
+                                                 "/home/hinata/MALTA2/AnalysisTemplate/Telescope/output/mask/MaskCreator/MALTA_2/mask_MALTA_2.txt"
+|17:29:41.965|    (INFO) [F:MaskCreator:MALTA_3] Using global frequency filter
+|17:29:41.966|    (INFO) [F:MaskCreator:MALTA_3] Detector MALTA_3:
+|17:29:41.966|    (INFO) [F:MaskCreator:MALTA_3]   mean hits/pixel:       0.109689
+|17:29:41.966|    (INFO) [F:MaskCreator:MALTA_3]   total masked pixels:   0
+|17:29:41.966|    (INFO) [F:MaskCreator:MALTA_3]   of which newly masked: 0
+|17:29:41.966|    (INFO) [F:MaskCreator:MALTA_3] Masking dead pixels
+|17:29:41.967|    (INFO) [F:MaskCreator:MALTA_3] Detector MALTA_3:
+|17:29:41.967|    (INFO) [F:MaskCreator:MALTA_3]   total masked pixels:   103168
+|17:29:41.967|    (INFO) [F:MaskCreator:MALTA_3]   of which newly masked: 103168
+|17:29:41.967| (WARNING) [F:MaskCreator:MALTA_3] File /home/hinata/MALTA2/AnalysisTemplate/Telescope/output/mask/MaskCreator/MALTA_3/mask_MALTA_3.txt exists and will be overwritten.
+|17:29:42.006|  (STATUS) [F:MaskCreator:MALTA_3] MALTA_3 mask written to:  
+                                                 "/home/hinata/MALTA2/AnalysisTemplate/Telescope/output/mask/MaskCreator/MALTA_3/mask_MALTA_3.txt"
+|17:29:42.010|    (INFO) [F:MaskCreator:MALTA_4] Using global frequency filter
+|17:29:42.011|    (INFO) [F:MaskCreator:MALTA_4] Detector MALTA_4:
+|17:29:42.011|    (INFO) [F:MaskCreator:MALTA_4]   mean hits/pixel:       0.109052
+|17:29:42.011|    (INFO) [F:MaskCreator:MALTA_4]   total masked pixels:   0
+|17:29:42.011|    (INFO) [F:MaskCreator:MALTA_4]   of which newly masked: 0
+|17:29:42.011|    (INFO) [F:MaskCreator:MALTA_4] Masking dead pixels
+|17:29:42.014|    (INFO) [F:MaskCreator:MALTA_4] Detector MALTA_4:
+|17:29:42.014|    (INFO) [F:MaskCreator:MALTA_4]   total masked pixels:   103161
+|17:29:42.014|    (INFO) [F:MaskCreator:MALTA_4]   of which newly masked: 103161
+|17:29:42.014| (WARNING) [F:MaskCreator:MALTA_4] File /home/hinata/MALTA2/AnalysisTemplate/Telescope/output/mask/MaskCreator/MALTA_4/mask_MALTA_4.txt exists and will be overwritten.
+|17:29:42.061|  (STATUS) [F:MaskCreator:MALTA_4] MALTA_4 mask written to:  
+                                                 "/home/hinata/MALTA2/AnalysisTemplate/Telescope/output/mask/MaskCreator/MALTA_4/mask_MALTA_4.txt"
+|17:29:42.066|    (INFO) [F:MaskCreator:MALTA_5] Using global frequency filter
+|17:29:42.067|    (INFO) [F:MaskCreator:MALTA_5] Detector MALTA_5:
+|17:29:42.067|    (INFO) [F:MaskCreator:MALTA_5]   mean hits/pixel:       0.111049
+|17:29:42.067|    (INFO) [F:MaskCreator:MALTA_5]   total masked pixels:   0
+|17:29:42.067|    (INFO) [F:MaskCreator:MALTA_5]   of which newly masked: 0
+|17:29:42.067|    (INFO) [F:MaskCreator:MALTA_5] Masking dead pixels
+|17:29:42.069|    (INFO) [F:MaskCreator:MALTA_5] Detector MALTA_5:
+|17:29:42.069|    (INFO) [F:MaskCreator:MALTA_5]   total masked pixels:   103029
+|17:29:42.069|    (INFO) [F:MaskCreator:MALTA_5]   of which newly masked: 103029
+|17:29:42.069| (WARNING) [F:MaskCreator:MALTA_5] File /home/hinata/MALTA2/AnalysisTemplate/Telescope/output/mask/MaskCreator/MALTA_5/mask_MALTA_5.txt exists and will be overwritten.
+|17:29:42.112|  (STATUS) [F:MaskCreator:MALTA_5] MALTA_5 mask written to:  
+                                                 "/home/hinata/MALTA2/AnalysisTemplate/Telescope/output/mask/MaskCreator/MALTA_5/mask_MALTA_5.txt"
+|17:29:42.116|    (INFO) [F:MaskCreator:MALTA_6] Using global frequency filter
+|17:29:42.117|    (INFO) [F:MaskCreator:MALTA_6] Detector MALTA_6:
+|17:29:42.117|    (INFO) [F:MaskCreator:MALTA_6]   mean hits/pixel:       0.110186
+|17:29:42.117|    (INFO) [F:MaskCreator:MALTA_6]   total masked pixels:   0
+|17:29:42.117|    (INFO) [F:MaskCreator:MALTA_6]   of which newly masked: 0
+|17:29:42.117|    (INFO) [F:MaskCreator:MALTA_6] Masking dead pixels
+|17:29:42.120|    (INFO) [F:MaskCreator:MALTA_6] Detector MALTA_6:
+|17:29:42.120|    (INFO) [F:MaskCreator:MALTA_6]   total masked pixels:   103071
+|17:29:42.120|    (INFO) [F:MaskCreator:MALTA_6]   of which newly masked: 103071
+|17:29:42.120| (WARNING) [F:MaskCreator:MALTA_6] File /home/hinata/MALTA2/AnalysisTemplate/Telescope/output/mask/MaskCreator/MALTA_6/mask_MALTA_6.txt exists and will be overwritten.
+|17:29:42.151|  (STATUS) [F:MaskCreator:MALTA_6] MALTA_6 mask written to:  
+                                                 "/home/hinata/MALTA2/AnalysisTemplate/Telescope/output/mask/MaskCreator/MALTA_6/mask_MALTA_6.txt"
+|17:29:42.156|  (STATUS) Wrote histogram output file to "/home/hinata/MALTA2/AnalysisTemplate/Telescope/output/mask/mask.root"
+|17:29:42.156| (WARNING) Detectors file /home/hinata/MALTA2/AnalysisTemplate/Telescope/config/../geometry/masked.conf exists and will be overwritten.
+|17:29:42.156|  (STATUS) Wrote updated detector configuration to /home/hinata/MALTA2/AnalysisTemplate/Telescope/config/../geometry/masked.conf
+|17:29:42.156|  (STATUS) ===============| Wall-clock timing (seconds) |================
+|17:29:42.156|  (STATUS)     EventLoaderMALTA               --  0.07497s = 0.007553ms/evt
+|17:29:42.156|  (STATUS)          MaskCreator :    MALTA_0  --  0.00340s = 0.000342ms/evt
+|17:29:42.156|  (STATUS)          MaskCreator :    MALTA_1  --  0.00317s = 0.000319ms/evt
+|17:29:42.156|  (STATUS)          MaskCreator :    MALTA_2  --  0.00312s = 0.000314ms/evt
+|17:29:42.156|  (STATUS)          MaskCreator :    MALTA_3  --  0.00318s = 0.000321ms/evt
+|17:29:42.156|  (STATUS)          MaskCreator :    MALTA_4  --  0.00322s = 0.000325ms/evt
+|17:29:42.156|  (STATUS)          MaskCreator :    MALTA_5  --  0.00326s = 0.000329ms/evt
+|17:29:42.156|  (STATUS)          MaskCreator :    MALTA_6  --  0.00314s = 0.000316ms/evt
+|17:29:42.156|  (STATUS) ==============================================================
