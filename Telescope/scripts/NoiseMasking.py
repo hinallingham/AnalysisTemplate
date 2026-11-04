@@ -18,11 +18,13 @@ def main():
     args = common.base_arg_parser("Run corry MaskCreator (noise/dead pixel masking)").parse_args()
 
     overrides = common.standard_overrides(args)
+    out_dir = common.step_dir(args, "mask")
+    overrides.update(common.setup_overrides(args, "mask", out_dir))
 
-    log_path = common.TELESCOPE_DIR / "output" / "mask" / f"run{args.run_number}_corry.log"
-    common.run_corry(CONFIG, overrides, log_path)
+    log_path = out_dir / f"run{args.run_number}_corry.log"
+    common.run_corry(CONFIG, overrides, log_path, dut=args.dut)
 
-    root_path = common.TELESCOPE_DIR / "output" / "mask" / "mask.root"
+    root_path = out_dir / "mask.root"
     f = ROOT.TFile.Open(str(root_path))
 
     canvas = common.make_grid_canvas(f"c_mask_run{args.run_number}", 4, 2)
@@ -56,8 +58,8 @@ def main():
         keepalive.append((occupancy, maskmap, label))
 
     canvas.cd(0)
-    png_path = common.save(canvas, common.TELESCOPE_DIR / "output" / "mask", f"run{args.run_number}_summary")
-    print(f"\nUpdated geometry written to: {common.TELESCOPE_DIR / 'geometry' / 'masked.conf'}")
+    png_path = common.save(canvas, out_dir, f"run{args.run_number}_summary")
+    print(f"\nUpdated geometry written to: {common.geometry_file(args, 'masked')}")
     print(f"Summary: {png_path}")
 
 

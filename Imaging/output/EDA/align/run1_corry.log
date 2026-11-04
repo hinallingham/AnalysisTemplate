@@ -1,0 +1,1332 @@
+|02:49:24.581|    (INFO) Setting provided option output_directory=/home/hinata/MALTA2/AnalysisTemplate/Imaging/output/EDA/align
+|02:49:24.581|    (INFO) Setting provided option detectors_file=/home/hinata/MALTA2/AnalysisTemplate/Imaging/geometry/EDA/prealigned.conf
+|02:49:24.581|    (INFO) Setting provided option detectors_file_updated=/home/hinata/MALTA2/AnalysisTemplate/Imaging/geometry/EDA/aligned.conf
+|02:49:24.581|    (INFO) Setting provided option run_number=1 for EventLoaderMALTA
+|02:49:24.581|    (INFO) Setting provided option base_path=/home/hinata/MALTA2/Telescope/sim/output/MLCC_imaging_EDA for EventLoaderMALTA
+|02:49:24.581|  (STATUS) Welcome to Corryvreckan v2.0-2137-gf4d886e4-dirty
+|02:49:24.581|  (STATUS) Loading detector MALTA_0
+|02:49:24.581|    (INFO) Fixed alignment, position: (0um,0um,-281.65mm)
+|02:49:24.581|    (INFO) 0 masked pixels
+|02:49:24.581|  (STATUS) Loading detector MALTA_1
+|02:49:24.581|    (INFO) Fixed alignment, position: (-341.128um,48.907um,-171.65mm)
+|02:49:24.581|    (INFO) 0 masked pixels
+|02:49:24.581|  (STATUS) Loading detector MALTA_2
+|02:49:24.581|    (INFO) Fixed alignment, position: (-142.375um,365.819um,-61.65mm)
+|02:49:24.581|    (INFO) 0 masked pixels
+|02:49:24.581|  (STATUS) Loading detector MALTA_4
+|02:49:24.581|    (INFO) Fixed alignment, position: (15.895um,196.331um,48.35mm)
+|02:49:24.581|    (INFO) 0 masked pixels
+|02:49:24.581|  (STATUS) Loading detector MALTA_5
+|02:49:24.581|    (INFO) Fixed alignment, position: (1.592um,417.063um,158.35mm)
+|02:49:24.581|    (INFO) 0 masked pixels
+|02:49:24.581|  (STATUS) Loading detector MALTA_6
+|02:49:24.581|    (INFO) Fixed alignment, position: (53.925um,194.801um,268.35mm)
+|02:49:24.581|    (INFO) 0 masked pixels
+|02:49:24.581|  (STATUS) Loaded 6 detectors
+|02:49:24.734|  (STATUS) Loading module EventLoaderMALTA
+|02:49:24.735|    (INFO) Setting provided option run_number=1 for EventLoaderMALTA
+|02:49:24.735|    (INFO) Setting provided option base_path=/home/hinata/MALTA2/Telescope/sim/output/MLCC_imaging_EDA for EventLoaderMALTA
+|02:49:24.735|  (STATUS) Loading module ClusteringSpatial
+|02:49:24.736|  (STATUS) Loading module FilterEvents     
+|02:49:24.736|  (STATUS) Loading module Correlations 
+|02:49:24.736|  (STATUS) Loading module Tracking4D   
+|02:49:24.737|  (STATUS) Loading module AlignmentMillepede
+|02:49:24.737|  (STATUS) Loaded 16 module instances        
+|02:49:24.737|  (STATUS) =================| Initializing modules |==================
+|02:49:24.738|  (STATUS) [I:EventLoaderMALTA] Initializing "EventLoaderMALTA"
+|02:49:24.738|  (STATUS) [I:EventLoaderMALTA] Column filter disabled: All columns will be processed.
+|02:49:24.738|  (STATUS) [I:EventLoaderMALTA] Near-Online Setup: Skip=0, MaxEvents=Unlimited
+|02:49:24.738|  (STATUS) [I:EventLoaderMALTA] Multi-Run Merger active. Merging 1 run dataset(s).
+|02:49:24.741|  (STATUS) [I:EventLoaderMALTA] Plane 0 [MALTA_0] Appended Stream: /home/hinata/MALTA2/Telescope/sim/output/MLCC_imaging_EDA/run_000001_0.root
+|02:49:24.800|    (INFO) [I:EventLoaderMALTA] Plane 0 [MALTA_0] Total Chained Entries = 348142
+|02:49:24.800|  (STATUS) [I:EventLoaderMALTA] Plane 1 [MALTA_1] Appended Stream: /home/hinata/MALTA2/Telescope/sim/output/MLCC_imaging_EDA/run_000001_1.root
+|02:49:24.800|    (INFO) [I:EventLoaderMALTA] Plane 1 [MALTA_1] Total Chained Entries = 353507
+|02:49:24.800|  (STATUS) [I:EventLoaderMALTA] Plane 2 [MALTA_2] Appended Stream: /home/hinata/MALTA2/Telescope/sim/output/MLCC_imaging_EDA/run_000001_2.root
+|02:49:24.800|    (INFO) [I:EventLoaderMALTA] Plane 2 [MALTA_2] Total Chained Entries = 360678
+|02:49:24.800|  (STATUS) [I:EventLoaderMALTA] Plane 3 [MALTA_4] Appended Stream: /home/hinata/MALTA2/Telescope/sim/output/MLCC_imaging_EDA/run_000001_3.root
+|02:49:24.800|    (INFO) [I:EventLoaderMALTA] Plane 3 [MALTA_4] Total Chained Entries = 367370
+|02:49:24.800|  (STATUS) [I:EventLoaderMALTA] Plane 4 [MALTA_5] Appended Stream: /home/hinata/MALTA2/Telescope/sim/output/MLCC_imaging_EDA/run_000001_4.root
+|02:49:24.800|    (INFO) [I:EventLoaderMALTA] Plane 4 [MALTA_5] Total Chained Entries = 373735
+|02:49:24.801|  (STATUS) [I:EventLoaderMALTA] Plane 5 [MALTA_6] Appended Stream: /home/hinata/MALTA2/Telescope/sim/output/MLCC_imaging_EDA/run_000001_5.root
+|02:49:24.801|    (INFO) [I:EventLoaderMALTA] Plane 5 [MALTA_6] Total Chained Entries = 379748
+|02:49:24.801| (WARNING) [I:EventLoaderMALTA] No non-DUT reference planes found among detector_names -- coincidence requirement disabled, every l1id will be accepted as an event (old behaviour).
+|02:49:24.803|  (STATUS) [I:ClusteringSpatial:MALTA_0] Initializing "ClusteringSpatial:MALTA_0"
+|02:49:24.807|  (STATUS) [I:ClusteringSpatial:MALTA_1] Initializing "ClusteringSpatial:MALTA_1"
+|02:49:24.810|  (STATUS) [I:ClusteringSpatial:MALTA_2] Initializing "ClusteringSpatial:MALTA_2" 
+|02:49:24.813|  (STATUS) [I:ClusteringSpatial:MALTA_4] Initializing "ClusteringSpatial:MALTA_4" 
+|02:49:24.817|  (STATUS) [I:ClusteringSpatial:MALTA_5] Initializing "ClusteringSpatial:MALTA_5" 
+|02:49:24.820|  (STATUS) [I:ClusteringSpatial:MALTA_6] Initializing "ClusteringSpatial:MALTA_6" 
+|02:49:24.824|  (STATUS) [I:FilterEvents] Initializing "FilterEvents"                           
+|02:49:24.824|    (INFO) [I:FilterEvents] Not filtering on DUT detectors
+|02:49:24.824|  (STATUS) [I:Correlations:MALTA_0] Initializing "Correlations:MALTA_0"
+|02:49:24.824| (WARNING) [I:Correlations:MALTA_0] [further messages suppressed] Correlations module is enabled and will significantly increase the runtime
+|02:49:24.832|  (STATUS) [I:Correlations:MALTA_1] Initializing "Correlations:MALTA_1"
+|02:49:24.840|  (STATUS) [I:Correlations:MALTA_2] Initializing "Correlations:MALTA_2"
+|02:49:24.848|  (STATUS) [I:Correlations:MALTA_4] Initializing "Correlations:MALTA_4" 
+|02:49:24.856|  (STATUS) [I:Correlations:MALTA_5] Initializing "Correlations:MALTA_5" 
+|02:49:24.863|  (STATUS) [I:Correlations:MALTA_6] Initializing "Correlations:MALTA_6" 
+|02:49:24.871|  (STATUS) [I:Tracking4D] Initializing "Tracking4D"                     
+|02:49:24.891|  (STATUS) [I:AlignmentMillepede] Initializing "AlignmentMillepede"
+|02:49:24.891|    (INFO) [I:AlignmentMillepede] Using the following degrees of freedom:
+|02:49:24.891|    (INFO) [I:AlignmentMillepede] Translation X	ON
+|02:49:24.891|    (INFO) [I:AlignmentMillepede] Translation Y	ON
+|02:49:24.891|    (INFO) [I:AlignmentMillepede] Translation Z	OFF
+|02:49:24.891|    (INFO) [I:AlignmentMillepede] Rotation X	ON
+|02:49:24.891|    (INFO) [I:AlignmentMillepede] Rotation Y	ON
+|02:49:24.891|    (INFO) [I:AlignmentMillepede] Rotation Z	ON
+|02:49:24.891|  (STATUS) ========================| Event loop |========================
+|02:49:24.902|  (STATUS) Ev: 0.1k Px: 0.8k Tr: 0.1k (0.8/ev) t = -10ns
+|02:49:24.913|  (STATUS) Ev: 0.2k Px: 1.6k Tr: 0.2k (0.825/ev) t = -10ns
+|02:49:24.922|  (STATUS) Ev: 0.3k Px: 2.3k Tr: 0.3k (0.843/ev) t = -10ns 
+|02:49:24.931|  (STATUS) Ev: 0.4k Px: 3.0k Tr: 0.3k (0.823/ev) t = -10ns 
+|02:49:24.939|  (STATUS) Ev: 0.5k Px: 3.8k Tr: 0.4k (0.826/ev) t = -10ns 
+|02:49:24.948|  (STATUS) Ev: 0.6k Px: 4.6k Tr: 0.5k (0.813/ev) t = -10ns 
+|02:49:24.957|  (STATUS) Ev: 0.7k Px: 5.3k Tr: 0.6k (0.817/ev) t = -10ns 
+|02:49:24.967|  (STATUS) Ev: 0.8k Px: 6.1k Tr: 0.7k (0.818/ev) t = -10ns 
+|02:49:24.976|  (STATUS) Ev: 0.9k Px: 6.8k Tr: 0.7k (0.826/ev) t = -10ns 
+|02:49:24.986|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 1000 events, DUT participation rate = 99.50%, l1id acceptance rate = 100.00% (1000/1000 candidates)
+|02:49:24.986|  (STATUS) Ev: 1.0k Px: 7.6k Tr: 0.8k (0.816/ev) t = -10ns
+|02:49:24.995|  (STATUS) Ev: 1.1k Px: 8.3k Tr: 0.9k (0.816/ev) t = -10ns
+|02:49:25.004|  (STATUS) Ev: 1.2k Px: 9.1k Tr: 1.0k (0.812/ev) t = -10ns 
+|02:49:25.013|  (STATUS) Ev: 1.3k Px: 9.9k Tr: 1.1k (0.815/ev) t = -10ns 
+|02:49:25.027|  (STATUS) Ev: 1.4k Px: 10.6k Tr: 1.1k (0.814/ev) t = -10ns
+|02:49:25.039|  (STATUS) Ev: 1.5k Px: 11.4k Tr: 1.2k (0.816/ev) t = -10ns 
+|02:49:25.045|  (STATUS) Ev: 1.6k Px: 12.1k Tr: 1.3k (0.814/ev) t = -10ns 
+|02:49:25.050|  (STATUS) Ev: 1.7k Px: 12.8k Tr: 1.4k (0.818/ev) t = -10ns 
+|02:49:25.055|  (STATUS) Ev: 1.8k Px: 13.6k Tr: 1.5k (0.817/ev) t = -10ns 
+|02:49:25.065|  (STATUS) Ev: 1.9k Px: 14.3k Tr: 1.6k (0.821/ev) t = -10ns 
+|02:49:25.075|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 2000 events, DUT participation rate = 99.60%, l1id acceptance rate = 100.00% (2000/2000 candidates)
+|02:49:25.075|  (STATUS) Ev: 2.0k Px: 15.1k Tr: 1.6k (0.822/ev) t = -10ns
+|02:49:25.085|  (STATUS) Ev: 2.1k Px: 15.9k Tr: 1.7k (0.821/ev) t = -10ns
+|02:49:25.095|  (STATUS) Ev: 2.2k Px: 16.7k Tr: 1.8k (0.821/ev) t = -10ns 
+|02:49:25.106|  (STATUS) Ev: 2.3k Px: 17.4k Tr: 1.9k (0.822/ev) t = -10ns 
+|02:49:25.116|  (STATUS) Ev: 2.4k Px: 18.2k Tr: 2.0k (0.823/ev) t = -10ns 
+|02:49:25.125|  (STATUS) Ev: 2.5k Px: 19.0k Tr: 2.1k (0.823/ev) t = -10ns 
+|02:49:25.135|  (STATUS) Ev: 2.6k Px: 19.7k Tr: 2.1k (0.824/ev) t = -10ns 
+|02:49:25.145|  (STATUS) Ev: 2.7k Px: 20.5k Tr: 2.2k (0.826/ev) t = -10ns 
+|02:49:25.155|  (STATUS) Ev: 2.8k Px: 21.2k Tr: 2.3k (0.826/ev) t = -10ns 
+|02:49:25.165|  (STATUS) Ev: 2.9k Px: 22.0k Tr: 2.4k (0.827/ev) t = -10ns 
+|02:49:25.175|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 3000 events, DUT participation rate = 99.57%, l1id acceptance rate = 100.00% (3000/3000 candidates)
+|02:49:25.175|  (STATUS) Ev: 3.0k Px: 22.8k Tr: 2.5k (0.826/ev) t = -10ns
+|02:49:25.184|  (STATUS) Ev: 3.1k Px: 23.5k Tr: 2.6k (0.825/ev) t = -10ns
+|02:49:25.194|  (STATUS) Ev: 3.2k Px: 24.3k Tr: 2.6k (0.825/ev) t = -10ns 
+|02:49:25.203|  (STATUS) Ev: 3.3k Px: 25.0k Tr: 2.7k (0.824/ev) t = -10ns 
+|02:49:25.213|  (STATUS) Ev: 3.4k Px: 25.8k Tr: 2.8k (0.823/ev) t = -10ns 
+|02:49:25.222|  (STATUS) Ev: 3.5k Px: 26.6k Tr: 2.9k (0.823/ev) t = -10ns 
+|02:49:25.230|  (STATUS) Ev: 3.6k Px: 27.3k Tr: 3.0k (0.823/ev) t = -10ns 
+|02:49:25.240|  (STATUS) Ev: 3.7k Px: 28.1k Tr: 3.0k (0.822/ev) t = -10ns 
+|02:49:25.250|  (STATUS) Ev: 3.8k Px: 28.9k Tr: 3.1k (0.822/ev) t = -10ns 
+|02:49:25.261|  (STATUS) Ev: 3.9k Px: 29.6k Tr: 3.2k (0.822/ev) t = -10ns 
+|02:49:25.271|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 4000 events, DUT participation rate = 99.65%, l1id acceptance rate = 100.00% (4000/4000 candidates)
+|02:49:25.271|  (STATUS) Ev: 4.0k Px: 30.3k Tr: 3.3k (0.825/ev) t = -10ns
+|02:49:25.282|  (STATUS) Ev: 4.1k Px: 31.1k Tr: 3.4k (0.824/ev) t = -10ns
+|02:49:25.292|  (STATUS) Ev: 4.2k Px: 31.9k Tr: 3.5k (0.825/ev) t = -10ns 
+|02:49:25.301|  (STATUS) Ev: 4.3k Px: 32.6k Tr: 3.5k (0.824/ev) t = -10ns 
+|02:49:25.310|  (STATUS) Ev: 4.4k Px: 33.4k Tr: 3.6k (0.823/ev) t = -10ns 
+|02:49:25.320|  (STATUS) Ev: 4.5k Px: 34.1k Tr: 3.7k (0.824/ev) t = -10ns 
+|02:49:25.329|  (STATUS) Ev: 4.6k Px: 34.9k Tr: 3.8k (0.822/ev) t = -10ns 
+|02:49:25.339|  (STATUS) Ev: 4.7k Px: 35.7k Tr: 3.9k (0.822/ev) t = -10ns 
+|02:49:25.348|  (STATUS) Ev: 4.8k Px: 36.5k Tr: 4.0k (0.824/ev) t = -10ns 
+|02:49:25.354|  (STATUS) Ev: 4.9k Px: 37.2k Tr: 4.0k (0.823/ev) t = -10ns 
+|02:49:25.360|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 5000 events, DUT participation rate = 99.66%, l1id acceptance rate = 100.00% (5000/5000 candidates)
+|02:49:25.360|  (STATUS) Ev: 5.0k Px: 38.0k Tr: 4.1k (0.823/ev) t = -10ns
+|02:49:25.366|  (STATUS) Ev: 5.1k Px: 38.8k Tr: 4.2k (0.823/ev) t = -10ns
+|02:49:25.375|  (STATUS) Ev: 5.2k Px: 39.5k Tr: 4.3k (0.822/ev) t = -10ns 
+|02:49:25.385|  (STATUS) Ev: 5.3k Px: 40.3k Tr: 4.4k (0.821/ev) t = -10ns 
+|02:49:25.395|  (STATUS) Ev: 5.4k Px: 41.1k Tr: 4.4k (0.822/ev) t = -10ns 
+|02:49:25.405|  (STATUS) Ev: 5.5k Px: 41.9k Tr: 4.5k (0.822/ev) t = -10ns 
+|02:49:25.416|  (STATUS) Ev: 5.6k Px: 42.7k Tr: 4.6k (0.823/ev) t = -10ns 
+|02:49:25.427|  (STATUS) Ev: 5.7k Px: 43.4k Tr: 4.7k (0.823/ev) t = -10ns 
+|02:49:25.437|  (STATUS) Ev: 5.8k Px: 44.1k Tr: 4.8k (0.825/ev) t = -10ns 
+|02:49:25.447|  (STATUS) Ev: 5.9k Px: 44.9k Tr: 4.9k (0.826/ev) t = -10ns 
+|02:49:25.458|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 6000 events, DUT participation rate = 99.70%, l1id acceptance rate = 100.00% (6000/6000 candidates)
+|02:49:25.458|  (STATUS) Ev: 6.0k Px: 45.6k Tr: 5.0k (0.826/ev) t = -10ns
+|02:49:25.470|  (STATUS) Ev: 6.1k Px: 46.4k Tr: 5.0k (0.826/ev) t = -10ns
+|02:49:25.482|  (STATUS) Ev: 6.2k Px: 47.1k Tr: 5.1k (0.826/ev) t = -10ns 
+|02:49:25.494|  (STATUS) Ev: 6.3k Px: 47.9k Tr: 5.2k (0.826/ev) t = -10ns 
+|02:49:25.507|  (STATUS) Ev: 6.4k Px: 48.6k Tr: 5.3k (0.825/ev) t = -10ns 
+|02:49:25.520|  (STATUS) Ev: 6.5k Px: 49.4k Tr: 5.4k (0.826/ev) t = -10ns 
+|02:49:25.530|  (STATUS) Ev: 6.6k Px: 50.1k Tr: 5.5k (0.826/ev) t = -10ns 
+|02:49:25.535|  (STATUS) Ev: 6.7k Px: 50.9k Tr: 5.5k (0.826/ev) t = -10ns 
+|02:49:25.540|  (STATUS) Ev: 6.8k Px: 51.6k Tr: 5.6k (0.826/ev) t = -10ns 
+|02:49:25.545|  (STATUS) Ev: 6.9k Px: 52.4k Tr: 5.7k (0.827/ev) t = -10ns 
+|02:49:25.553|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 7000 events, DUT participation rate = 99.69%, l1id acceptance rate = 100.00% (7000/7000 candidates)
+|02:49:25.553|  (STATUS) Ev: 7.0k Px: 53.1k Tr: 5.8k (0.827/ev) t = -10ns
+|02:49:25.563|  (STATUS) Ev: 7.1k Px: 53.9k Tr: 5.9k (0.827/ev) t = -10ns
+|02:49:25.574|  (STATUS) Ev: 7.2k Px: 54.6k Tr: 6.0k (0.828/ev) t = -10ns 
+|02:49:25.583|  (STATUS) Ev: 7.3k Px: 55.4k Tr: 6.0k (0.827/ev) t = -10ns 
+|02:49:25.593|  (STATUS) Ev: 7.4k Px: 56.1k Tr: 6.1k (0.827/ev) t = -10ns 
+|02:49:25.603|  (STATUS) Ev: 7.5k Px: 56.9k Tr: 6.2k (0.827/ev) t = -10ns 
+|02:49:25.613|  (STATUS) Ev: 7.6k Px: 57.6k Tr: 6.3k (0.826/ev) t = -10ns 
+|02:49:25.624|  (STATUS) Ev: 7.7k Px: 58.4k Tr: 6.4k (0.826/ev) t = -10ns 
+|02:49:25.634|  (STATUS) Ev: 7.8k Px: 59.2k Tr: 6.4k (0.826/ev) t = -10ns 
+|02:49:25.645|  (STATUS) Ev: 7.9k Px: 59.9k Tr: 6.5k (0.826/ev) t = -10ns 
+|02:49:25.655|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 8000 events, DUT participation rate = 99.69%, l1id acceptance rate = 100.00% (8000/8000 candidates)
+|02:49:25.655|  (STATUS) Ev: 8.0k Px: 60.7k Tr: 6.6k (0.826/ev) t = -10ns
+|02:49:25.666|  (STATUS) Ev: 8.1k Px: 61.4k Tr: 6.7k (0.826/ev) t = -10ns
+|02:49:25.675|  (STATUS) Ev: 8.2k Px: 62.2k Tr: 6.8k (0.826/ev) t = -10ns 
+|02:49:25.680|  (STATUS) Ev: 8.3k Px: 63.0k Tr: 6.9k (0.827/ev) t = -10ns 
+|02:49:25.686|  (STATUS) Ev: 8.4k Px: 63.8k Tr: 6.9k (0.827/ev) t = -10ns 
+|02:49:25.691|  (STATUS) Ev: 8.5k Px: 64.5k Tr: 7.0k (0.826/ev) t = -10ns 
+|02:49:25.697|  (STATUS) Ev: 8.6k Px: 65.3k Tr: 7.1k (0.827/ev) t = -10ns 
+|02:49:25.702|  (STATUS) Ev: 8.7k Px: 66.0k Tr: 7.2k (0.826/ev) t = -10ns 
+|02:49:25.708|  (STATUS) Ev: 8.8k Px: 66.8k Tr: 7.3k (0.826/ev) t = -10ns 
+|02:49:25.714|  (STATUS) Ev: 8.9k Px: 67.5k Tr: 7.4k (0.826/ev) t = -10ns 
+|02:49:25.719|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 9000 events, DUT participation rate = 99.71%, l1id acceptance rate = 100.00% (9000/9000 candidates)
+|02:49:25.719|  (STATUS) Ev: 9.0k Px: 68.3k Tr: 7.4k (0.826/ev) t = -10ns
+|02:49:25.726|  (STATUS) Ev: 9.1k Px: 69.1k Tr: 7.5k (0.826/ev) t = -10ns
+|02:49:25.731|  (STATUS) Ev: 9.2k Px: 69.8k Tr: 7.6k (0.825/ev) t = -10ns 
+|02:49:25.737|  (STATUS) Ev: 9.3k Px: 70.6k Tr: 7.7k (0.825/ev) t = -10ns 
+|02:49:25.742|  (STATUS) Ev: 9.4k Px: 71.4k Tr: 7.8k (0.825/ev) t = -10ns 
+|02:49:25.748|  (STATUS) Ev: 9.5k Px: 72.1k Tr: 7.8k (0.825/ev) t = -10ns 
+|02:49:25.754|  (STATUS) Ev: 9.6k Px: 72.8k Tr: 7.9k (0.825/ev) t = -10ns 
+|02:49:25.759|  (STATUS) Ev: 9.7k Px: 73.6k Tr: 8.0k (0.826/ev) t = -10ns 
+|02:49:25.765|  (STATUS) Ev: 9.8k Px: 74.4k Tr: 8.1k (0.826/ev) t = -10ns 
+|02:49:25.774|  (STATUS) Ev: 9.9k Px: 75.2k Tr: 8.2k (0.825/ev) t = -10ns 
+|02:49:25.785|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 10000 events, DUT participation rate = 99.73%, l1id acceptance rate = 100.00% (10000/10000 candidates)
+|02:49:25.785|  (STATUS) Ev: 10.0k Px: 75.9k Tr: 8.3k (0.826/ev) t = -10ns
+|02:49:25.796|  (STATUS) Ev: 10.1k Px: 76.7k Tr: 8.3k (0.826/ev) t = -10ns
+|02:49:25.806|  (STATUS) Ev: 10.2k Px: 77.4k Tr: 8.4k (0.826/ev) t = -10ns 
+|02:49:25.816|  (STATUS) Ev: 10.3k Px: 78.2k Tr: 8.5k (0.826/ev) t = -10ns 
+|02:49:25.825|  (STATUS) Ev: 10.4k Px: 79.0k Tr: 8.6k (0.825/ev) t = -10ns 
+|02:49:25.835|  (STATUS) Ev: 10.5k Px: 79.7k Tr: 8.7k (0.825/ev) t = -10ns 
+|02:49:25.846|  (STATUS) Ev: 10.6k Px: 80.5k Tr: 8.8k (0.825/ev) t = -10ns 
+|02:49:25.857|  (STATUS) Ev: 10.7k Px: 81.2k Tr: 8.8k (0.826/ev) t = -10ns 
+|02:49:25.867|  (STATUS) Ev: 10.8k Px: 82.0k Tr: 8.9k (0.825/ev) t = -10ns 
+|02:49:25.877|  (STATUS) Ev: 10.9k Px: 82.7k Tr: 9.0k (0.824/ev) t = -10ns 
+|02:49:25.887|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 11000 events, DUT participation rate = 99.69%, l1id acceptance rate = 100.00% (11000/11000 candidates)
+|02:49:25.887|  (STATUS) Ev: 11.0k Px: 83.5k Tr: 9.1k (0.825/ev) t = -10ns
+|02:49:25.897|  (STATUS) Ev: 11.1k Px: 84.2k Tr: 9.2k (0.825/ev) t = -10ns
+|02:49:25.907|  (STATUS) Ev: 11.2k Px: 85.0k Tr: 9.2k (0.825/ev) t = -10ns 
+|02:49:25.917|  (STATUS) Ev: 11.3k Px: 85.7k Tr: 9.3k (0.825/ev) t = -10ns 
+|02:49:25.927|  (STATUS) Ev: 11.4k Px: 86.5k Tr: 9.4k (0.824/ev) t = -10ns 
+|02:49:25.937|  (STATUS) Ev: 11.5k Px: 87.2k Tr: 9.5k (0.825/ev) t = -10ns 
+|02:49:25.948|  (STATUS) Ev: 11.6k Px: 87.9k Tr: 9.6k (0.826/ev) t = -10ns 
+|02:49:25.958|  (STATUS) Ev: 11.7k Px: 88.7k Tr: 9.7k (0.825/ev) t = -10ns 
+|02:49:25.968|  (STATUS) Ev: 11.8k Px: 89.5k Tr: 9.7k (0.825/ev) t = -10ns 
+|02:49:25.978|  (STATUS) Ev: 11.9k Px: 90.2k Tr: 9.8k (0.825/ev) t = -10ns 
+|02:49:25.989|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 12000 events, DUT participation rate = 99.70%, l1id acceptance rate = 100.00% (12000/12000 candidates)
+|02:49:25.989|  (STATUS) Ev: 12.0k Px: 91.0k Tr: 9.9k (0.825/ev) t = -10ns
+|02:49:25.999|  (STATUS) Ev: 12.1k Px: 91.8k Tr: 10.0k (0.825/ev) t = -10ns
+|02:49:26.011|  (STATUS) Ev: 12.2k Px: 92.5k Tr: 10.1k (0.825/ev) t = -10ns 
+|02:49:26.021|  (STATUS) Ev: 12.3k Px: 93.3k Tr: 10.1k (0.825/ev) t = -10ns 
+|02:49:26.032|  (STATUS) Ev: 12.4k Px: 94.1k Tr: 10.2k (0.825/ev) t = -10ns 
+|02:49:26.042|  (STATUS) Ev: 12.5k Px: 94.8k Tr: 10.3k (0.825/ev) t = -10ns 
+|02:49:26.053|  (STATUS) Ev: 12.6k Px: 95.6k Tr: 10.4k (0.824/ev) t = -10ns 
+|02:49:26.063|  (STATUS) Ev: 12.7k Px: 96.4k Tr: 10.5k (0.824/ev) t = -10ns 
+|02:49:26.075|  (STATUS) Ev: 12.8k Px: 97.1k Tr: 10.6k (0.825/ev) t = -10ns 
+|02:49:26.086|  (STATUS) Ev: 12.9k Px: 97.9k Tr: 10.6k (0.825/ev) t = -10ns 
+|02:49:26.097|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 13000 events, DUT participation rate = 99.68%, l1id acceptance rate = 100.00% (13000/13000 candidates)
+|02:49:26.097|  (STATUS) Ev: 13.0k Px: 98.6k Tr: 10.7k (0.825/ev) t = -10ns
+|02:49:26.107|  (STATUS) Ev: 13.1k Px: 99.4k Tr: 10.8k (0.824/ev) t = -10ns
+|02:49:26.119|  (STATUS) Ev: 13.2k Px: 100.1k Tr: 10.9k (0.825/ev) t = -10ns
+|02:49:26.128|  (STATUS) Ev: 13.3k Px: 100.9k Tr: 11.0k (0.825/ev) t = -10ns 
+|02:49:26.138|  (STATUS) Ev: 13.4k Px: 101.6k Tr: 11.1k (0.825/ev) t = -10ns 
+|02:49:26.149|  (STATUS) Ev: 13.5k Px: 102.4k Tr: 11.1k (0.825/ev) t = -10ns 
+|02:49:26.159|  (STATUS) Ev: 13.6k Px: 103.1k Tr: 11.2k (0.825/ev) t = -10ns 
+|02:49:26.169|  (STATUS) Ev: 13.7k Px: 103.9k Tr: 11.3k (0.824/ev) t = -10ns 
+|02:49:26.179|  (STATUS) Ev: 13.8k Px: 104.7k Tr: 11.4k (0.824/ev) t = -10ns 
+|02:49:26.190|  (STATUS) Ev: 13.9k Px: 105.5k Tr: 11.5k (0.824/ev) t = -10ns 
+|02:49:26.200|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 14000 events, DUT participation rate = 99.70%, l1id acceptance rate = 100.00% (14000/14000 candidates)
+|02:49:26.200|  (STATUS) Ev: 14.0k Px: 106.2k Tr: 11.5k (0.825/ev) t = -10ns
+|02:49:26.210|  (STATUS) Ev: 14.1k Px: 107.0k Tr: 11.6k (0.824/ev) t = -10ns
+|02:49:26.217|  (STATUS) Ev: 14.2k Px: 107.7k Tr: 11.7k (0.825/ev) t = -10ns 
+|02:49:26.222|  (STATUS) Ev: 14.3k Px: 108.5k Tr: 11.8k (0.824/ev) t = -10ns 
+|02:49:26.230|  (STATUS) Ev: 14.4k Px: 109.3k Tr: 11.9k (0.824/ev) t = -10ns 
+|02:49:26.241|  (STATUS) Ev: 14.5k Px: 110.0k Tr: 12.0k (0.825/ev) t = -10ns 
+|02:49:26.251|  (STATUS) Ev: 14.6k Px: 110.8k Tr: 12.0k (0.825/ev) t = -10ns 
+|02:49:26.262|  (STATUS) Ev: 14.7k Px: 111.5k Tr: 12.1k (0.825/ev) t = -10ns 
+|02:49:26.273|  (STATUS) Ev: 14.8k Px: 112.3k Tr: 12.2k (0.825/ev) t = -10ns 
+|02:49:26.283|  (STATUS) Ev: 14.9k Px: 113.0k Tr: 12.3k (0.825/ev) t = -10ns 
+|02:49:26.294|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 15000 events, DUT participation rate = 99.71%, l1id acceptance rate = 100.00% (15000/15000 candidates)
+|02:49:26.294|  (STATUS) Ev: 15.0k Px: 113.8k Tr: 12.4k (0.825/ev) t = -10ns
+|02:49:26.304|  (STATUS) Ev: 15.1k Px: 114.5k Tr: 12.5k (0.825/ev) t = -10ns
+|02:49:26.315|  (STATUS) Ev: 15.2k Px: 115.3k Tr: 12.5k (0.825/ev) t = -10ns 
+|02:49:26.325|  (STATUS) Ev: 15.3k Px: 116.0k Tr: 12.6k (0.825/ev) t = -10ns 
+|02:49:26.336|  (STATUS) Ev: 15.4k Px: 116.8k Tr: 12.7k (0.825/ev) t = -10ns 
+|02:49:26.345|  (STATUS) Ev: 15.5k Px: 117.5k Tr: 12.8k (0.825/ev) t = -10ns 
+|02:49:26.351|  (STATUS) Ev: 15.6k Px: 118.3k Tr: 12.9k (0.825/ev) t = -10ns 
+|02:49:26.357|  (STATUS) Ev: 15.7k Px: 119.0k Tr: 13.0k (0.825/ev) t = -10ns 
+|02:49:26.364|  (STATUS) Ev: 15.8k Px: 119.8k Tr: 13.0k (0.826/ev) t = -10ns 
+|02:49:26.369|  (STATUS) Ev: 15.9k Px: 120.6k Tr: 13.1k (0.826/ev) t = -10ns 
+|02:49:26.376|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 16000 events, DUT participation rate = 99.71%, l1id acceptance rate = 100.00% (16000/16000 candidates)
+|02:49:26.376|  (STATUS) Ev: 16.0k Px: 121.3k Tr: 13.2k (0.826/ev) t = -10ns
+|02:49:26.382|  (STATUS) Ev: 16.1k Px: 122.1k Tr: 13.3k (0.825/ev) t = -10ns
+|02:49:26.389|  (STATUS) Ev: 16.2k Px: 122.9k Tr: 13.4k (0.825/ev) t = -10ns 
+|02:49:26.395|  (STATUS) Ev: 16.3k Px: 123.6k Tr: 13.5k (0.825/ev) t = -10ns 
+|02:49:26.405|  (STATUS) Ev: 16.4k Px: 124.4k Tr: 13.5k (0.825/ev) t = -10ns 
+|02:49:26.415|  (STATUS) Ev: 16.5k Px: 125.2k Tr: 13.6k (0.825/ev) t = -10ns 
+|02:49:26.425|  (STATUS) Ev: 16.6k Px: 125.9k Tr: 13.7k (0.826/ev) t = -10ns 
+|02:49:26.435|  (STATUS) Ev: 16.7k Px: 126.7k Tr: 13.8k (0.826/ev) t = -10ns 
+|02:49:26.446|  (STATUS) Ev: 16.8k Px: 127.4k Tr: 13.9k (0.826/ev) t = -10ns 
+|02:49:26.456|  (STATUS) Ev: 16.9k Px: 128.2k Tr: 14.0k (0.826/ev) t = -10ns 
+|02:49:26.466|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 17000 events, DUT participation rate = 99.71%, l1id acceptance rate = 100.00% (17000/17000 candidates)
+|02:49:26.466|  (STATUS) Ev: 17.0k Px: 128.9k Tr: 14.0k (0.826/ev) t = -10ns
+|02:49:26.477|  (STATUS) Ev: 17.1k Px: 129.7k Tr: 14.1k (0.826/ev) t = -10ns
+|02:49:26.488|  (STATUS) Ev: 17.2k Px: 130.4k Tr: 14.2k (0.826/ev) t = -10ns 
+|02:49:26.498|  (STATUS) Ev: 17.3k Px: 131.2k Tr: 14.3k (0.826/ev) t = -10ns 
+|02:49:26.509|  (STATUS) Ev: 17.4k Px: 132.0k Tr: 14.4k (0.826/ev) t = -10ns 
+|02:49:26.519|  (STATUS) Ev: 17.5k Px: 132.7k Tr: 14.5k (0.826/ev) t = -10ns 
+|02:49:26.529|  (STATUS) Ev: 17.6k Px: 133.5k Tr: 14.5k (0.826/ev) t = -10ns 
+|02:49:26.539|  (STATUS) Ev: 17.7k Px: 134.3k Tr: 14.6k (0.825/ev) t = -10ns 
+|02:49:26.550|  (STATUS) Ev: 17.8k Px: 135.0k Tr: 14.7k (0.826/ev) t = -10ns 
+|02:49:26.560|  (STATUS) Ev: 17.9k Px: 135.8k Tr: 14.8k (0.826/ev) t = -10ns 
+|02:49:26.570|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 18000 events, DUT participation rate = 99.72%, l1id acceptance rate = 100.00% (18000/18000 candidates)
+|02:49:26.570|  (STATUS) Ev: 18.0k Px: 136.5k Tr: 14.9k (0.826/ev) t = -10ns
+|02:49:26.581|  (STATUS) Ev: 18.1k Px: 137.3k Tr: 14.9k (0.826/ev) t = -10ns
+|02:49:26.592|  (STATUS) Ev: 18.2k Px: 138.0k Tr: 15.0k (0.826/ev) t = -10ns 
+|02:49:26.603|  (STATUS) Ev: 18.3k Px: 138.8k Tr: 15.1k (0.826/ev) t = -10ns 
+|02:49:26.613|  (STATUS) Ev: 18.4k Px: 139.5k Tr: 15.2k (0.825/ev) t = -10ns 
+|02:49:26.624|  (STATUS) Ev: 18.5k Px: 140.3k Tr: 15.3k (0.826/ev) t = -10ns 
+|02:49:26.635|  (STATUS) Ev: 18.6k Px: 141.0k Tr: 15.4k (0.826/ev) t = -10ns 
+|02:49:26.645|  (STATUS) Ev: 18.7k Px: 141.8k Tr: 15.4k (0.825/ev) t = -10ns 
+|02:49:26.656|  (STATUS) Ev: 18.8k Px: 142.6k Tr: 15.5k (0.825/ev) t = -10ns 
+|02:49:26.666|  (STATUS) Ev: 18.9k Px: 143.3k Tr: 15.6k (0.826/ev) t = -10ns 
+|02:49:26.673|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 19000 events, DUT participation rate = 99.73%, l1id acceptance rate = 100.00% (19000/19000 candidates)
+|02:49:26.673|  (STATUS) Ev: 19.0k Px: 144.1k Tr: 15.7k (0.826/ev) t = -10ns
+|02:49:26.678|  (STATUS) Ev: 19.1k Px: 144.9k Tr: 15.8k (0.826/ev) t = -10ns
+|02:49:26.684|  (STATUS) Ev: 19.2k Px: 145.6k Tr: 15.9k (0.826/ev) t = -10ns 
+|02:49:26.689|  (STATUS) Ev: 19.3k Px: 146.4k Tr: 15.9k (0.826/ev) t = -10ns 
+|02:49:26.694|  (STATUS) Ev: 19.4k Px: 147.1k Tr: 16.0k (0.826/ev) t = -10ns 
+|02:49:26.699|  (STATUS) Ev: 19.5k Px: 147.9k Tr: 16.1k (0.826/ev) t = -10ns 
+|02:49:26.705|  (STATUS) Ev: 19.6k Px: 148.6k Tr: 16.2k (0.826/ev) t = -10ns 
+|02:49:26.712|  (STATUS) Ev: 19.7k Px: 149.3k Tr: 16.3k (0.826/ev) t = -10ns 
+|02:49:26.718|  (STATUS) Ev: 19.8k Px: 150.1k Tr: 16.4k (0.826/ev) t = -10ns 
+|02:49:26.724|  (STATUS) Ev: 19.9k Px: 150.8k Tr: 16.4k (0.826/ev) t = -10ns 
+|02:49:26.729|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 20000 events, DUT participation rate = 99.72%, l1id acceptance rate = 100.00% (20000/20000 candidates)
+|02:49:26.729|  (STATUS) Ev: 20.0k Px: 151.6k Tr: 16.5k (0.827/ev) t = -10ns
+|02:49:26.734|  (STATUS) Ev: 20.1k Px: 152.3k Tr: 16.6k (0.826/ev) t = -10ns
+|02:49:26.740|  (STATUS) Ev: 20.2k Px: 153.1k Tr: 16.7k (0.826/ev) t = -10ns 
+|02:49:26.745|  (STATUS) Ev: 20.3k Px: 153.9k Tr: 16.8k (0.826/ev) t = -10ns 
+|02:49:26.750|  (STATUS) Ev: 20.4k Px: 154.7k Tr: 16.8k (0.826/ev) t = -10ns 
+|02:49:26.756|  (STATUS) Ev: 20.5k Px: 155.4k Tr: 16.9k (0.826/ev) t = -10ns 
+|02:49:26.761|  (STATUS) Ev: 20.6k Px: 156.2k Tr: 17.0k (0.826/ev) t = -10ns 
+|02:49:26.766|  (STATUS) Ev: 20.7k Px: 156.9k Tr: 17.1k (0.826/ev) t = -10ns 
+|02:49:26.771|  (STATUS) Ev: 20.8k Px: 157.7k Tr: 17.2k (0.826/ev) t = -10ns 
+|02:49:26.776|  (STATUS) Ev: 20.9k Px: 158.4k Tr: 17.3k (0.826/ev) t = -10ns 
+|02:49:26.781|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 21000 events, DUT participation rate = 99.71%, l1id acceptance rate = 100.00% (21000/21000 candidates)
+|02:49:26.781|  (STATUS) Ev: 21.0k Px: 159.2k Tr: 17.3k (0.826/ev) t = -10ns
+|02:49:26.786|  (STATUS) Ev: 21.1k Px: 159.9k Tr: 17.4k (0.826/ev) t = -10ns
+|02:49:26.791|  (STATUS) Ev: 21.2k Px: 160.7k Tr: 17.5k (0.826/ev) t = -10ns 
+|02:49:26.795|  (STATUS) Ev: 21.3k Px: 161.5k Tr: 17.6k (0.825/ev) t = -10ns 
+|02:49:26.800|  (STATUS) Ev: 21.4k Px: 162.3k Tr: 17.7k (0.825/ev) t = -10ns 
+|02:49:26.805|  (STATUS) Ev: 21.5k Px: 163.0k Tr: 17.7k (0.825/ev) t = -10ns 
+|02:49:26.810|  (STATUS) Ev: 21.6k Px: 163.8k Tr: 17.8k (0.825/ev) t = -10ns 
+|02:49:26.819|  (STATUS) Ev: 21.7k Px: 164.5k Tr: 17.9k (0.826/ev) t = -10ns 
+|02:49:26.828|  (STATUS) Ev: 21.8k Px: 165.4k Tr: 18.0k (0.825/ev) t = -10ns 
+|02:49:26.838|  (STATUS) Ev: 21.9k Px: 166.2k Tr: 18.1k (0.825/ev) t = -10ns 
+|02:49:26.848|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 22000 events, DUT participation rate = 99.72%, l1id acceptance rate = 100.00% (22000/22000 candidates)
+|02:49:26.848|  (STATUS) Ev: 22.0k Px: 166.9k Tr: 18.2k (0.825/ev) t = -10ns
+|02:49:26.859|  (STATUS) Ev: 22.1k Px: 167.7k Tr: 18.2k (0.825/ev) t = -10ns
+|02:49:26.870|  (STATUS) Ev: 22.2k Px: 168.5k Tr: 18.3k (0.825/ev) t = -10ns 
+|02:49:26.880|  (STATUS) Ev: 22.3k Px: 169.2k Tr: 18.4k (0.826/ev) t = -10ns 
+|02:49:26.891|  (STATUS) Ev: 22.4k Px: 169.9k Tr: 18.5k (0.826/ev) t = -10ns 
+|02:49:26.901|  (STATUS) Ev: 22.5k Px: 170.7k Tr: 18.6k (0.826/ev) t = -10ns 
+|02:49:26.912|  (STATUS) Ev: 22.6k Px: 171.4k Tr: 18.7k (0.826/ev) t = -10ns 
+|02:49:26.923|  (STATUS) Ev: 22.7k Px: 172.2k Tr: 18.8k (0.826/ev) t = -10ns 
+|02:49:26.933|  (STATUS) Ev: 22.8k Px: 172.9k Tr: 18.8k (0.826/ev) t = -10ns 
+|02:49:26.942|  (STATUS) Ev: 22.9k Px: 173.7k Tr: 18.9k (0.826/ev) t = -10ns 
+|02:49:26.953|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 23000 events, DUT participation rate = 99.73%, l1id acceptance rate = 100.00% (23000/23000 candidates)
+|02:49:26.953|  (STATUS) Ev: 23.0k Px: 174.4k Tr: 19.0k (0.826/ev) t = -10ns
+|02:49:26.962|  (STATUS) Ev: 23.1k Px: 175.2k Tr: 19.1k (0.827/ev) t = -10ns
+|02:49:26.972|  (STATUS) Ev: 23.2k Px: 175.9k Tr: 19.2k (0.827/ev) t = -10ns 
+|02:49:26.983|  (STATUS) Ev: 23.3k Px: 176.7k Tr: 19.3k (0.827/ev) t = -10ns 
+|02:49:26.993|  (STATUS) Ev: 23.4k Px: 177.4k Tr: 19.4k (0.827/ev) t = -10ns 
+|02:49:27.003|  (STATUS) Ev: 23.5k Px: 178.2k Tr: 19.4k (0.827/ev) t = -10ns 
+|02:49:27.013|  (STATUS) Ev: 23.6k Px: 178.9k Tr: 19.5k (0.827/ev) t = -10ns 
+|02:49:27.022|  (STATUS) Ev: 23.7k Px: 179.7k Tr: 19.6k (0.827/ev) t = -10ns 
+|02:49:27.033|  (STATUS) Ev: 23.8k Px: 180.4k Tr: 19.7k (0.827/ev) t = -10ns 
+|02:49:27.043|  (STATUS) Ev: 23.9k Px: 181.2k Tr: 19.8k (0.828/ev) t = -10ns 
+|02:49:27.053|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 24000 events, DUT participation rate = 99.73%, l1id acceptance rate = 100.00% (24000/24000 candidates)
+|02:49:27.053|  (STATUS) Ev: 24.0k Px: 182.0k Tr: 19.9k (0.828/ev) t = -10ns
+|02:49:27.063|  (STATUS) Ev: 24.1k Px: 182.7k Tr: 19.9k (0.828/ev) t = -10ns
+|02:49:27.075|  (STATUS) Ev: 24.2k Px: 183.5k Tr: 20.0k (0.827/ev) t = -10ns 
+|02:49:27.085|  (STATUS) Ev: 24.3k Px: 184.3k Tr: 20.1k (0.827/ev) t = -10ns 
+|02:49:27.096|  (STATUS) Ev: 24.4k Px: 185.0k Tr: 20.2k (0.827/ev) t = -10ns 
+|02:49:27.106|  (STATUS) Ev: 24.5k Px: 185.8k Tr: 20.3k (0.827/ev) t = -10ns 
+|02:49:27.117|  (STATUS) Ev: 24.6k Px: 186.5k Tr: 20.4k (0.827/ev) t = -10ns 
+|02:49:27.127|  (STATUS) Ev: 24.7k Px: 187.4k Tr: 20.4k (0.827/ev) t = -10ns 
+|02:49:27.137|  (STATUS) Ev: 24.8k Px: 188.1k Tr: 20.5k (0.827/ev) t = -10ns 
+|02:49:27.142|  (STATUS) Ev: 24.9k Px: 188.8k Tr: 20.6k (0.827/ev) t = -10ns 
+|02:49:27.147|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 25000 events, DUT participation rate = 99.73%, l1id acceptance rate = 100.00% (25000/25000 candidates)
+|02:49:27.147|  (STATUS) Ev: 25.0k Px: 189.6k Tr: 20.7k (0.827/ev) t = -10ns
+|02:49:27.153|  (STATUS) Ev: 25.1k Px: 190.4k Tr: 20.8k (0.827/ev) t = -10ns
+|02:49:27.158|  (STATUS) Ev: 25.2k Px: 191.1k Tr: 20.9k (0.828/ev) t = -10ns 
+|02:49:27.166|  (STATUS) Ev: 25.3k Px: 191.9k Tr: 20.9k (0.827/ev) t = -10ns 
+|02:49:27.176|  (STATUS) Ev: 25.4k Px: 192.7k Tr: 21.0k (0.827/ev) t = -10ns 
+|02:49:27.185|  (STATUS) Ev: 25.5k Px: 193.4k Tr: 21.1k (0.827/ev) t = -10ns 
+|02:49:27.196|  (STATUS) Ev: 25.6k Px: 194.1k Tr: 21.2k (0.827/ev) t = -10ns 
+|02:49:27.206|  (STATUS) Ev: 25.7k Px: 194.9k Tr: 21.3k (0.827/ev) t = -10ns 
+|02:49:27.217|  (STATUS) Ev: 25.8k Px: 195.7k Tr: 21.3k (0.827/ev) t = -10ns 
+|02:49:27.227|  (STATUS) Ev: 25.9k Px: 196.4k Tr: 21.4k (0.827/ev) t = -10ns 
+|02:49:27.237|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 26000 events, DUT participation rate = 99.73%, l1id acceptance rate = 100.00% (26000/26000 candidates)
+|02:49:27.237|  (STATUS) Ev: 26.0k Px: 197.2k Tr: 21.5k (0.827/ev) t = -10ns
+|02:49:27.249|  (STATUS) Ev: 26.1k Px: 198.0k Tr: 21.6k (0.827/ev) t = -10ns
+|02:49:27.259|  (STATUS) Ev: 26.2k Px: 198.7k Tr: 21.7k (0.827/ev) t = -10ns 
+|02:49:27.271|  (STATUS) Ev: 26.3k Px: 199.5k Tr: 21.8k (0.827/ev) t = -10ns 
+|02:49:27.281|  (STATUS) Ev: 26.4k Px: 200.3k Tr: 21.8k (0.827/ev) t = -10ns 
+|02:49:27.291|  (STATUS) Ev: 26.5k Px: 201.1k Tr: 21.9k (0.827/ev) t = -10ns 
+|02:49:27.302|  (STATUS) Ev: 26.6k Px: 201.8k Tr: 22.0k (0.827/ev) t = -10ns 
+|02:49:27.312|  (STATUS) Ev: 26.7k Px: 202.6k Tr: 22.1k (0.827/ev) t = -10ns 
+|02:49:27.322|  (STATUS) Ev: 26.8k Px: 203.3k Tr: 22.1k (0.826/ev) t = -10ns 
+|02:49:27.333|  (STATUS) Ev: 26.9k Px: 204.1k Tr: 22.2k (0.826/ev) t = -10ns 
+|02:49:27.342|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 27000 events, DUT participation rate = 99.73%, l1id acceptance rate = 100.00% (27000/27000 candidates)
+|02:49:27.342|  (STATUS) Ev: 27.0k Px: 204.8k Tr: 22.3k (0.826/ev) t = -10ns
+|02:49:27.353|  (STATUS) Ev: 27.1k Px: 205.6k Tr: 22.4k (0.826/ev) t = -10ns
+|02:49:27.363|  (STATUS) Ev: 27.2k Px: 206.3k Tr: 22.5k (0.826/ev) t = -10ns 
+|02:49:27.373|  (STATUS) Ev: 27.3k Px: 207.1k Tr: 22.6k (0.826/ev) t = -10ns 
+|02:49:27.384|  (STATUS) Ev: 27.4k Px: 207.9k Tr: 22.6k (0.826/ev) t = -10ns 
+|02:49:27.394|  (STATUS) Ev: 27.5k Px: 208.6k Tr: 22.7k (0.826/ev) t = -10ns 
+|02:49:27.404|  (STATUS) Ev: 27.6k Px: 209.4k Tr: 22.8k (0.826/ev) t = -10ns 
+|02:49:27.415|  (STATUS) Ev: 27.7k Px: 210.1k Tr: 22.9k (0.826/ev) t = -10ns 
+|02:49:27.426|  (STATUS) Ev: 27.8k Px: 210.9k Tr: 23.0k (0.827/ev) t = -10ns 
+|02:49:27.436|  (STATUS) Ev: 27.9k Px: 211.7k Tr: 23.1k (0.826/ev) t = -10ns 
+|02:49:27.445|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 28000 events, DUT participation rate = 99.73%, l1id acceptance rate = 100.00% (28000/28000 candidates)
+|02:49:27.446|  (STATUS) Ev: 28.0k Px: 212.4k Tr: 23.1k (0.826/ev) t = -10ns
+|02:49:27.456|  (STATUS) Ev: 28.1k Px: 213.2k Tr: 23.2k (0.826/ev) t = -10ns
+|02:49:27.466|  (STATUS) Ev: 28.2k Px: 214.0k Tr: 23.3k (0.826/ev) t = -10ns 
+|02:49:27.477|  (STATUS) Ev: 28.3k Px: 214.7k Tr: 23.4k (0.826/ev) t = -10ns 
+|02:49:27.487|  (STATUS) Ev: 28.4k Px: 215.5k Tr: 23.5k (0.826/ev) t = -10ns 
+|02:49:27.498|  (STATUS) Ev: 28.5k Px: 216.2k Tr: 23.5k (0.826/ev) t = -10ns 
+|02:49:27.508|  (STATUS) Ev: 28.6k Px: 217.0k Tr: 23.6k (0.826/ev) t = -10ns 
+|02:49:27.519|  (STATUS) Ev: 28.7k Px: 217.8k Tr: 23.7k (0.826/ev) t = -10ns 
+|02:49:27.529|  (STATUS) Ev: 28.8k Px: 218.5k Tr: 23.8k (0.826/ev) t = -10ns 
+|02:49:27.540|  (STATUS) Ev: 28.9k Px: 219.3k Tr: 23.9k (0.826/ev) t = -10ns 
+|02:49:27.550|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 29000 events, DUT participation rate = 99.72%, l1id acceptance rate = 100.00% (29000/29000 candidates)
+|02:49:27.550|  (STATUS) Ev: 29.0k Px: 220.0k Tr: 24.0k (0.826/ev) t = -10ns
+|02:49:27.561|  (STATUS) Ev: 29.1k Px: 220.8k Tr: 24.1k (0.827/ev) t = -10ns
+|02:49:27.571|  (STATUS) Ev: 29.2k Px: 221.5k Tr: 24.1k (0.827/ev) t = -10ns 
+|02:49:27.578|  (STATUS) Ev: 29.3k Px: 222.3k Tr: 24.2k (0.827/ev) t = -10ns 
+|02:49:27.583|  (STATUS) Ev: 29.4k Px: 223.0k Tr: 24.3k (0.827/ev) t = -10ns 
+|02:49:27.588|  (STATUS) Ev: 29.5k Px: 223.8k Tr: 24.4k (0.826/ev) t = -10ns 
+|02:49:27.593|  (STATUS) Ev: 29.6k Px: 224.5k Tr: 24.5k (0.827/ev) t = -10ns 
+|02:49:27.599|  (STATUS) Ev: 29.7k Px: 225.3k Tr: 24.5k (0.827/ev) t = -10ns 
+|02:49:27.609|  (STATUS) Ev: 29.8k Px: 226.1k Tr: 24.6k (0.826/ev) t = -10ns 
+|02:49:27.618|  (STATUS) Ev: 29.9k Px: 226.9k Tr: 24.7k (0.826/ev) t = -10ns 
+|02:49:27.628|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 30000 events, DUT participation rate = 99.72%, l1id acceptance rate = 100.00% (30000/30000 candidates)
+|02:49:27.628|  (STATUS) Ev: 30.0k Px: 227.6k Tr: 24.8k (0.826/ev) t = -10ns
+|02:49:27.638|  (STATUS) Ev: 30.1k Px: 228.4k Tr: 24.9k (0.826/ev) t = -10ns
+|02:49:27.650|  (STATUS) Ev: 30.2k Px: 229.2k Tr: 25.0k (0.827/ev) t = -10ns 
+|02:49:27.660|  (STATUS) Ev: 30.3k Px: 229.9k Tr: 25.0k (0.827/ev) t = -10ns 
+|02:49:27.670|  (STATUS) Ev: 30.4k Px: 230.7k Tr: 25.1k (0.827/ev) t = -10ns 
+|02:49:27.675|  (STATUS) Ev: 30.5k Px: 231.4k Tr: 25.2k (0.827/ev) t = -10ns 
+|02:49:27.680|  (STATUS) Ev: 30.6k Px: 232.2k Tr: 25.3k (0.827/ev) t = -10ns 
+|02:49:27.685|  (STATUS) Ev: 30.7k Px: 233.0k Tr: 25.4k (0.827/ev) t = -10ns 
+|02:49:27.691|  (STATUS) Ev: 30.8k Px: 233.8k Tr: 25.5k (0.826/ev) t = -10ns 
+|02:49:27.696|  (STATUS) Ev: 30.9k Px: 234.5k Tr: 25.5k (0.827/ev) t = -10ns 
+|02:49:27.701|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 31000 events, DUT participation rate = 99.72%, l1id acceptance rate = 100.00% (31000/31000 candidates)
+|02:49:27.701|  (STATUS) Ev: 31.0k Px: 235.2k Tr: 25.6k (0.827/ev) t = -10ns
+|02:49:27.706|  (STATUS) Ev: 31.1k Px: 236.0k Tr: 25.7k (0.827/ev) t = -10ns
+|02:49:27.711|  (STATUS) Ev: 31.2k Px: 236.7k Tr: 25.8k (0.827/ev) t = -10ns 
+|02:49:27.716|  (STATUS) Ev: 31.3k Px: 237.5k Tr: 25.9k (0.827/ev) t = -10ns 
+|02:49:27.722|  (STATUS) Ev: 31.4k Px: 238.3k Tr: 26.0k (0.827/ev) t = -10ns 
+|02:49:27.727|  (STATUS) Ev: 31.5k Px: 239.0k Tr: 26.1k (0.827/ev) t = -10ns 
+|02:49:27.733|  (STATUS) Ev: 31.6k Px: 239.8k Tr: 26.1k (0.827/ev) t = -10ns 
+|02:49:27.738|  (STATUS) Ev: 31.7k Px: 240.6k Tr: 26.2k (0.827/ev) t = -10ns 
+|02:49:27.743|  (STATUS) Ev: 31.8k Px: 241.3k Tr: 26.3k (0.827/ev) t = -10ns 
+|02:49:27.749|  (STATUS) Ev: 31.9k Px: 242.1k Tr: 26.4k (0.827/ev) t = -10ns 
+|02:49:27.755|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 32000 events, DUT participation rate = 99.72%, l1id acceptance rate = 100.00% (32000/32000 candidates)
+|02:49:27.755|  (STATUS) Ev: 32.0k Px: 242.8k Tr: 26.5k (0.827/ev) t = -10ns
+|02:49:27.760|  (STATUS) Ev: 32.1k Px: 243.6k Tr: 26.5k (0.827/ev) t = -10ns
+|02:49:27.766|  (STATUS) Ev: 32.2k Px: 244.4k Tr: 26.6k (0.827/ev) t = -10ns 
+|02:49:27.772|  (STATUS) Ev: 32.3k Px: 245.1k Tr: 26.7k (0.827/ev) t = -10ns 
+|02:49:27.777|  (STATUS) Ev: 32.4k Px: 245.9k Tr: 26.8k (0.827/ev) t = -10ns 
+|02:49:27.782|  (STATUS) Ev: 32.5k Px: 246.6k Tr: 26.9k (0.827/ev) t = -10ns 
+|02:49:27.788|  (STATUS) Ev: 32.6k Px: 247.4k Tr: 27.0k (0.827/ev) t = -10ns 
+|02:49:27.794|  (STATUS) Ev: 32.7k Px: 248.2k Tr: 27.0k (0.827/ev) t = -10ns 
+|02:49:27.805|  (STATUS) Ev: 32.8k Px: 248.9k Tr: 27.1k (0.827/ev) t = -10ns 
+|02:49:27.816|  (STATUS) Ev: 32.9k Px: 249.7k Tr: 27.2k (0.827/ev) t = -10ns 
+|02:49:27.827|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 33000 events, DUT participation rate = 99.72%, l1id acceptance rate = 100.00% (33000/33000 candidates)
+|02:49:27.827|  (STATUS) Ev: 33.0k Px: 250.5k Tr: 27.3k (0.827/ev) t = -10ns
+|02:49:27.837|  (STATUS) Ev: 33.1k Px: 251.2k Tr: 27.4k (0.827/ev) t = -10ns
+|02:49:27.848|  (STATUS) Ev: 33.2k Px: 252.0k Tr: 27.5k (0.827/ev) t = -10ns 
+|02:49:27.859|  (STATUS) Ev: 33.3k Px: 252.7k Tr: 27.5k (0.827/ev) t = -10ns 
+|02:49:27.869|  (STATUS) Ev: 33.4k Px: 253.5k Tr: 27.6k (0.827/ev) t = -10ns 
+|02:49:27.879|  (STATUS) Ev: 33.5k Px: 254.2k Tr: 27.7k (0.827/ev) t = -10ns 
+|02:49:27.890|  (STATUS) Ev: 33.6k Px: 255.0k Tr: 27.8k (0.827/ev) t = -10ns 
+|02:49:27.900|  (STATUS) Ev: 33.7k Px: 255.8k Tr: 27.9k (0.827/ev) t = -10ns 
+|02:49:27.910|  (STATUS) Ev: 33.8k Px: 256.5k Tr: 28.0k (0.827/ev) t = -10ns 
+|02:49:27.921|  (STATUS) Ev: 33.9k Px: 257.3k Tr: 28.0k (0.827/ev) t = -10ns 
+|02:49:27.931|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 34000 events, DUT participation rate = 99.73%, l1id acceptance rate = 100.00% (34000/34000 candidates)
+|02:49:27.932|  (STATUS) Ev: 34.0k Px: 258.0k Tr: 28.1k (0.827/ev) t = -10ns
+|02:49:27.940|  (STATUS) Ev: 34.1k Px: 258.8k Tr: 28.2k (0.827/ev) t = -10ns
+|02:49:27.950|  (STATUS) Ev: 34.2k Px: 259.5k Tr: 28.3k (0.827/ev) t = -10ns 
+|02:49:27.961|  (STATUS) Ev: 34.3k Px: 260.3k Tr: 28.4k (0.827/ev) t = -10ns 
+|02:49:27.971|  (STATUS) Ev: 34.4k Px: 261.0k Tr: 28.5k (0.827/ev) t = -10ns 
+|02:49:27.982|  (STATUS) Ev: 34.5k Px: 261.8k Tr: 28.6k (0.828/ev) t = -10ns 
+|02:49:27.992|  (STATUS) Ev: 34.6k Px: 262.5k Tr: 28.6k (0.828/ev) t = -10ns 
+|02:49:28.002|  (STATUS) Ev: 34.7k Px: 263.3k Tr: 28.7k (0.828/ev) t = -10ns 
+|02:49:28.013|  (STATUS) Ev: 34.8k Px: 264.0k Tr: 28.8k (0.828/ev) t = -10ns 
+|02:49:28.023|  (STATUS) Ev: 34.9k Px: 264.8k Tr: 28.9k (0.828/ev) t = -10ns 
+|02:49:28.034|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 35000 events, DUT participation rate = 99.72%, l1id acceptance rate = 100.00% (35000/35000 candidates)
+|02:49:28.034|  (STATUS) Ev: 35.0k Px: 265.6k Tr: 29.0k (0.828/ev) t = -10ns
+|02:49:28.043|  (STATUS) Ev: 35.1k Px: 266.4k Tr: 29.1k (0.828/ev) t = -10ns
+|02:49:28.053|  (STATUS) Ev: 35.2k Px: 267.1k Tr: 29.1k (0.828/ev) t = -10ns 
+|02:49:28.063|  (STATUS) Ev: 35.3k Px: 267.9k Tr: 29.2k (0.828/ev) t = -10ns 
+|02:49:28.074|  (STATUS) Ev: 35.4k Px: 268.6k Tr: 29.3k (0.828/ev) t = -10ns 
+|02:49:28.084|  (STATUS) Ev: 35.5k Px: 269.4k Tr: 29.4k (0.828/ev) t = -10ns 
+|02:49:28.095|  (STATUS) Ev: 35.6k Px: 270.1k Tr: 29.5k (0.828/ev) t = -10ns 
+|02:49:28.104|  (STATUS) Ev: 35.7k Px: 270.9k Tr: 29.5k (0.828/ev) t = -10ns 
+|02:49:28.114|  (STATUS) Ev: 35.8k Px: 271.7k Tr: 29.6k (0.828/ev) t = -10ns 
+|02:49:28.124|  (STATUS) Ev: 35.9k Px: 272.4k Tr: 29.7k (0.828/ev) t = -10ns 
+|02:49:28.139|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 36000 events, DUT participation rate = 99.72%, l1id acceptance rate = 100.00% (36000/36000 candidates)
+|02:49:28.139|  (STATUS) Ev: 36.0k Px: 273.2k Tr: 29.8k (0.828/ev) t = -10ns
+|02:49:28.146|  (STATUS) Ev: 36.1k Px: 273.9k Tr: 29.9k (0.828/ev) t = -10ns
+|02:49:28.152|  (STATUS) Ev: 36.2k Px: 274.6k Tr: 30.0k (0.828/ev) t = -10ns 
+|02:49:28.158|  (STATUS) Ev: 36.3k Px: 275.4k Tr: 30.0k (0.828/ev) t = -10ns 
+|02:49:28.165|  (STATUS) Ev: 36.4k Px: 276.2k Tr: 30.1k (0.828/ev) t = -10ns 
+|02:49:28.170|  (STATUS) Ev: 36.5k Px: 276.9k Tr: 30.2k (0.828/ev) t = -10ns 
+|02:49:28.175|  (STATUS) Ev: 36.6k Px: 277.7k Tr: 30.3k (0.827/ev) t = -10ns 
+|02:49:28.180|  (STATUS) Ev: 36.7k Px: 278.5k Tr: 30.4k (0.827/ev) t = -10ns 
+|02:49:28.186|  (STATUS) Ev: 36.8k Px: 279.2k Tr: 30.4k (0.827/ev) t = -10ns 
+|02:49:28.191|  (STATUS) Ev: 36.9k Px: 280.0k Tr: 30.5k (0.827/ev) t = -10ns 
+|02:49:28.197|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 37000 events, DUT participation rate = 99.71%, l1id acceptance rate = 100.00% (37000/37000 candidates)
+|02:49:28.197|  (STATUS) Ev: 37.0k Px: 280.8k Tr: 30.6k (0.827/ev) t = -10ns
+|02:49:28.202|  (STATUS) Ev: 37.1k Px: 281.6k Tr: 30.7k (0.827/ev) t = -10ns
+|02:49:28.208|  (STATUS) Ev: 37.2k Px: 282.3k Tr: 30.8k (0.827/ev) t = -10ns 
+|02:49:28.213|  (STATUS) Ev: 37.3k Px: 283.1k Tr: 30.9k (0.827/ev) t = -10ns 
+|02:49:28.218|  (STATUS) Ev: 37.4k Px: 283.8k Tr: 30.9k (0.827/ev) t = -10ns 
+|02:49:28.223|  (STATUS) Ev: 37.5k Px: 284.6k Tr: 31.0k (0.827/ev) t = -10ns 
+|02:49:28.229|  (STATUS) Ev: 37.6k Px: 285.3k Tr: 31.1k (0.827/ev) t = -10ns 
+|02:49:28.234|  (STATUS) Ev: 37.7k Px: 286.1k Tr: 31.2k (0.827/ev) t = -10ns 
+|02:49:28.240|  (STATUS) Ev: 37.8k Px: 286.8k Tr: 31.3k (0.827/ev) t = -10ns 
+|02:49:28.245|  (STATUS) Ev: 37.9k Px: 287.6k Tr: 31.4k (0.827/ev) t = -10ns 
+|02:49:28.250|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 38000 events, DUT participation rate = 99.71%, l1id acceptance rate = 100.00% (38000/38000 candidates)
+|02:49:28.250|  (STATUS) Ev: 38.0k Px: 288.4k Tr: 31.4k (0.827/ev) t = -10ns
+|02:49:28.256|  (STATUS) Ev: 38.1k Px: 289.1k Tr: 31.5k (0.827/ev) t = -10ns
+|02:49:28.262|  (STATUS) Ev: 38.2k Px: 289.9k Tr: 31.6k (0.827/ev) t = -10ns 
+|02:49:28.267|  (STATUS) Ev: 38.3k Px: 290.7k Tr: 31.7k (0.827/ev) t = -10ns 
+|02:49:28.277|  (STATUS) Ev: 38.4k Px: 291.4k Tr: 31.8k (0.827/ev) t = -10ns 
+|02:49:28.288|  (STATUS) Ev: 38.5k Px: 292.2k Tr: 31.9k (0.827/ev) t = -10ns 
+|02:49:28.298|  (STATUS) Ev: 38.6k Px: 292.9k Tr: 31.9k (0.827/ev) t = -10ns 
+|02:49:28.307|  (STATUS) Ev: 38.7k Px: 293.7k Tr: 32.0k (0.827/ev) t = -10ns 
+|02:49:28.318|  (STATUS) Ev: 38.8k Px: 294.4k Tr: 32.1k (0.828/ev) t = -10ns 
+|02:49:28.328|  (STATUS) Ev: 38.9k Px: 295.2k Tr: 32.2k (0.827/ev) t = -10ns 
+|02:49:28.338|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 39000 events, DUT participation rate = 99.71%, l1id acceptance rate = 100.00% (39000/39000 candidates)
+|02:49:28.338|  (STATUS) Ev: 39.0k Px: 295.9k Tr: 32.3k (0.828/ev) t = -10ns
+|02:49:28.350|  (STATUS) Ev: 39.1k Px: 296.7k Tr: 32.4k (0.828/ev) t = -10ns
+|02:49:28.360|  (STATUS) Ev: 39.2k Px: 297.5k Tr: 32.4k (0.828/ev) t = -10ns 
+|02:49:28.369|  (STATUS) Ev: 39.3k Px: 298.2k Tr: 32.5k (0.827/ev) t = -10ns 
+|02:49:28.379|  (STATUS) Ev: 39.4k Px: 299.0k Tr: 32.6k (0.827/ev) t = -10ns 
+|02:49:28.391|  (STATUS) Ev: 39.5k Px: 299.7k Tr: 32.7k (0.828/ev) t = -10ns 
+|02:49:28.402|  (STATUS) Ev: 39.6k Px: 300.5k Tr: 32.8k (0.828/ev) t = -10ns 
+|02:49:28.412|  (STATUS) Ev: 39.7k Px: 301.3k Tr: 32.9k (0.828/ev) t = -10ns 
+|02:49:28.422|  (STATUS) Ev: 39.8k Px: 302.0k Tr: 32.9k (0.828/ev) t = -10ns 
+|02:49:28.432|  (STATUS) Ev: 39.9k Px: 302.7k Tr: 33.0k (0.828/ev) t = -10ns 
+|02:49:28.442|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 40000 events, DUT participation rate = 99.71%, l1id acceptance rate = 100.00% (40000/40000 candidates)
+|02:49:28.442|  (STATUS) Ev: 40.0k Px: 303.5k Tr: 33.1k (0.828/ev) t = -10ns
+|02:49:28.453|  (STATUS) Ev: 40.1k Px: 304.3k Tr: 33.2k (0.828/ev) t = -10ns
+|02:49:28.462|  (STATUS) Ev: 40.2k Px: 305.0k Tr: 33.3k (0.828/ev) t = -10ns 
+|02:49:28.473|  (STATUS) Ev: 40.3k Px: 305.8k Tr: 33.4k (0.828/ev) t = -10ns 
+|02:49:28.484|  (STATUS) Ev: 40.4k Px: 306.6k Tr: 33.4k (0.828/ev) t = -10ns 
+|02:49:28.493|  (STATUS) Ev: 40.5k Px: 307.4k Tr: 33.5k (0.828/ev) t = -10ns 
+|02:49:28.504|  (STATUS) Ev: 40.6k Px: 308.1k Tr: 33.6k (0.828/ev) t = -10ns 
+|02:49:28.515|  (STATUS) Ev: 40.7k Px: 308.9k Tr: 33.7k (0.828/ev) t = -10ns 
+|02:49:28.525|  (STATUS) Ev: 40.8k Px: 309.6k Tr: 33.8k (0.828/ev) t = -10ns 
+|02:49:28.535|  (STATUS) Ev: 40.9k Px: 310.4k Tr: 33.9k (0.828/ev) t = -10ns 
+|02:49:28.544|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 41000 events, DUT participation rate = 99.71%, l1id acceptance rate = 100.00% (41000/41000 candidates)
+|02:49:28.544|  (STATUS) Ev: 41.0k Px: 311.2k Tr: 33.9k (0.828/ev) t = -10ns
+|02:49:28.554|  (STATUS) Ev: 41.1k Px: 311.9k Tr: 34.0k (0.828/ev) t = -10ns
+|02:49:28.565|  (STATUS) Ev: 41.2k Px: 312.7k Tr: 34.1k (0.828/ev) t = -10ns 
+|02:49:28.575|  (STATUS) Ev: 41.3k Px: 313.4k Tr: 34.2k (0.828/ev) t = -10ns 
+|02:49:28.586|  (STATUS) Ev: 41.4k Px: 314.2k Tr: 34.3k (0.828/ev) t = -10ns 
+|02:49:28.595|  (STATUS) Ev: 41.5k Px: 314.9k Tr: 34.4k (0.828/ev) t = -10ns 
+|02:49:28.605|  (STATUS) Ev: 41.6k Px: 315.7k Tr: 34.4k (0.828/ev) t = -10ns 
+|02:49:28.615|  (STATUS) Ev: 41.7k Px: 316.4k Tr: 34.5k (0.828/ev) t = -10ns 
+|02:49:28.625|  (STATUS) Ev: 41.8k Px: 317.2k Tr: 34.6k (0.828/ev) t = -10ns 
+|02:49:28.636|  (STATUS) Ev: 41.9k Px: 317.9k Tr: 34.7k (0.828/ev) t = -10ns 
+|02:49:28.646|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 42000 events, DUT participation rate = 99.72%, l1id acceptance rate = 100.00% (42000/42000 candidates)
+|02:49:28.646|  (STATUS) Ev: 42.0k Px: 318.7k Tr: 34.8k (0.828/ev) t = -10ns
+|02:49:28.657|  (STATUS) Ev: 42.1k Px: 319.4k Tr: 34.9k (0.828/ev) t = -10ns
+|02:49:28.667|  (STATUS) Ev: 42.2k Px: 320.2k Tr: 35.0k (0.828/ev) t = -10ns 
+|02:49:28.674|  (STATUS) Ev: 42.3k Px: 320.9k Tr: 35.0k (0.828/ev) t = -10ns 
+|02:49:28.679|  (STATUS) Ev: 42.4k Px: 321.7k Tr: 35.1k (0.828/ev) t = -10ns 
+|02:49:28.685|  (STATUS) Ev: 42.5k Px: 322.5k Tr: 35.2k (0.828/ev) t = -10ns 
+|02:49:28.690|  (STATUS) Ev: 42.6k Px: 323.2k Tr: 35.3k (0.829/ev) t = -10ns 
+|02:49:28.695|  (STATUS) Ev: 42.7k Px: 324.0k Tr: 35.4k (0.829/ev) t = -10ns 
+|02:49:28.700|  (STATUS) Ev: 42.8k Px: 324.8k Tr: 35.5k (0.829/ev) t = -10ns 
+|02:49:28.705|  (STATUS) Ev: 42.9k Px: 325.5k Tr: 35.6k (0.829/ev) t = -10ns 
+|02:49:28.710|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 43000 events, DUT participation rate = 99.73%, l1id acceptance rate = 100.00% (43000/43000 candidates)
+|02:49:28.710|  (STATUS) Ev: 43.0k Px: 326.3k Tr: 35.6k (0.829/ev) t = -10ns
+|02:49:28.715|  (STATUS) Ev: 43.1k Px: 327.0k Tr: 35.7k (0.829/ev) t = -10ns
+|02:49:28.720|  (STATUS) Ev: 43.2k Px: 327.8k Tr: 35.8k (0.829/ev) t = -10ns 
+|02:49:28.725|  (STATUS) Ev: 43.3k Px: 328.5k Tr: 35.9k (0.828/ev) t = -10ns 
+|02:49:28.730|  (STATUS) Ev: 43.4k Px: 329.3k Tr: 36.0k (0.828/ev) t = -10ns 
+|02:49:28.735|  (STATUS) Ev: 43.5k Px: 330.0k Tr: 36.0k (0.828/ev) t = -10ns 
+|02:49:28.740|  (STATUS) Ev: 43.6k Px: 330.8k Tr: 36.1k (0.828/ev) t = -10ns 
+|02:49:28.745|  (STATUS) Ev: 43.7k Px: 331.5k Tr: 36.2k (0.829/ev) t = -10ns 
+|02:49:28.751|  (STATUS) Ev: 43.8k Px: 332.3k Tr: 36.3k (0.828/ev) t = -10ns 
+|02:49:28.756|  (STATUS) Ev: 43.9k Px: 333.0k Tr: 36.4k (0.828/ev) t = -10ns 
+|02:49:28.761|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 44000 events, DUT participation rate = 99.71%, l1id acceptance rate = 100.00% (44000/44000 candidates)
+|02:49:28.761|  (STATUS) Ev: 44.0k Px: 333.8k Tr: 36.5k (0.828/ev) t = -10ns
+|02:49:28.766|  (STATUS) Ev: 44.1k Px: 334.6k Tr: 36.5k (0.828/ev) t = -10ns
+|02:49:28.771|  (STATUS) Ev: 44.2k Px: 335.3k Tr: 36.6k (0.828/ev) t = -10ns 
+|02:49:28.776|  (STATUS) Ev: 44.3k Px: 336.1k Tr: 36.7k (0.829/ev) t = -10ns 
+|02:49:28.780|  (STATUS) Ev: 44.4k Px: 336.9k Tr: 36.8k (0.828/ev) t = -10ns 
+|02:49:28.790|  (STATUS) Ev: 44.5k Px: 337.6k Tr: 36.9k (0.829/ev) t = -10ns 
+|02:49:28.800|  (STATUS) Ev: 44.6k Px: 338.4k Tr: 37.0k (0.829/ev) t = -10ns 
+|02:49:28.810|  (STATUS) Ev: 44.7k Px: 339.1k Tr: 37.0k (0.829/ev) t = -10ns 
+|02:49:28.819|  (STATUS) Ev: 44.8k Px: 339.9k Tr: 37.1k (0.829/ev) t = -10ns 
+|02:49:28.826|  (STATUS) Ev: 44.9k Px: 340.7k Tr: 37.2k (0.829/ev) t = -10ns 
+|02:49:28.831|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 45000 events, DUT participation rate = 99.71%, l1id acceptance rate = 100.00% (45000/45000 candidates)
+|02:49:28.831|  (STATUS) Ev: 45.0k Px: 341.4k Tr: 37.3k (0.828/ev) t = -10ns
+|02:49:28.836|  (STATUS) Ev: 45.1k Px: 342.2k Tr: 37.4k (0.828/ev) t = -10ns
+|02:49:28.841|  (STATUS) Ev: 45.2k Px: 342.9k Tr: 37.4k (0.828/ev) t = -10ns 
+|02:49:28.847|  (STATUS) Ev: 45.3k Px: 343.7k Tr: 37.5k (0.828/ev) t = -10ns 
+|02:49:28.851|  (STATUS) Ev: 45.4k Px: 344.5k Tr: 37.6k (0.828/ev) t = -10ns 
+|02:49:28.856|  (STATUS) Ev: 45.5k Px: 345.2k Tr: 37.7k (0.828/ev) t = -10ns 
+|02:49:28.867|  (STATUS) Ev: 45.6k Px: 346.0k Tr: 37.8k (0.828/ev) t = -10ns 
+|02:49:28.877|  (STATUS) Ev: 45.7k Px: 346.8k Tr: 37.9k (0.828/ev) t = -10ns 
+|02:49:28.887|  (STATUS) Ev: 45.8k Px: 347.5k Tr: 37.9k (0.828/ev) t = -10ns 
+|02:49:28.897|  (STATUS) Ev: 45.9k Px: 348.2k Tr: 38.0k (0.828/ev) t = -10ns 
+|02:49:28.907|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 46000 events, DUT participation rate = 99.72%, l1id acceptance rate = 100.00% (46000/46000 candidates)
+|02:49:28.907|  (STATUS) Ev: 46.0k Px: 349.0k Tr: 38.1k (0.828/ev) t = -10ns
+|02:49:28.919|  (STATUS) Ev: 46.1k Px: 349.8k Tr: 38.2k (0.828/ev) t = -10ns
+|02:49:28.930|  (STATUS) Ev: 46.2k Px: 350.5k Tr: 38.3k (0.828/ev) t = -10ns 
+|02:49:28.940|  (STATUS) Ev: 46.3k Px: 351.2k Tr: 38.4k (0.828/ev) t = -10ns 
+|02:49:28.950|  (STATUS) Ev: 46.4k Px: 352.0k Tr: 38.4k (0.828/ev) t = -10ns 
+|02:49:28.960|  (STATUS) Ev: 46.5k Px: 352.8k Tr: 38.5k (0.828/ev) t = -10ns 
+|02:49:28.971|  (STATUS) Ev: 46.6k Px: 353.6k Tr: 38.6k (0.828/ev) t = -10ns 
+|02:49:28.980|  (STATUS) Ev: 46.7k Px: 354.3k Tr: 38.7k (0.828/ev) t = -10ns 
+|02:49:28.991|  (STATUS) Ev: 46.8k Px: 355.1k Tr: 38.8k (0.828/ev) t = -10ns 
+|02:49:29.001|  (STATUS) Ev: 46.9k Px: 355.8k Tr: 38.8k (0.828/ev) t = -10ns 
+|02:49:29.011|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 47000 events, DUT participation rate = 99.72%, l1id acceptance rate = 100.00% (47000/47000 candidates)
+|02:49:29.012|  (STATUS) Ev: 47.0k Px: 356.6k Tr: 38.9k (0.828/ev) t = -10ns
+|02:49:29.022|  (STATUS) Ev: 47.1k Px: 357.3k Tr: 39.0k (0.828/ev) t = -10ns
+|02:49:29.032|  (STATUS) Ev: 47.2k Px: 358.0k Tr: 39.1k (0.828/ev) t = -10ns 
+|02:49:29.043|  (STATUS) Ev: 47.3k Px: 358.8k Tr: 39.2k (0.828/ev) t = -10ns 
+|02:49:29.054|  (STATUS) Ev: 47.4k Px: 359.6k Tr: 39.3k (0.828/ev) t = -10ns 
+|02:49:29.064|  (STATUS) Ev: 47.5k Px: 360.3k Tr: 39.3k (0.828/ev) t = -10ns 
+|02:49:29.075|  (STATUS) Ev: 47.6k Px: 361.1k Tr: 39.4k (0.828/ev) t = -10ns 
+|02:49:29.085|  (STATUS) Ev: 47.7k Px: 361.9k Tr: 39.5k (0.828/ev) t = -10ns 
+|02:49:29.095|  (STATUS) Ev: 47.8k Px: 362.6k Tr: 39.6k (0.828/ev) t = -10ns 
+|02:49:29.106|  (STATUS) Ev: 47.9k Px: 363.4k Tr: 39.7k (0.828/ev) t = -10ns 
+|02:49:29.116|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 48000 events, DUT participation rate = 99.72%, l1id acceptance rate = 100.00% (48000/48000 candidates)
+|02:49:29.116|  (STATUS) Ev: 48.0k Px: 364.2k Tr: 39.7k (0.828/ev) t = -10ns
+|02:49:29.126|  (STATUS) Ev: 48.1k Px: 364.9k Tr: 39.8k (0.828/ev) t = -10ns
+|02:49:29.136|  (STATUS) Ev: 48.2k Px: 365.7k Tr: 39.9k (0.828/ev) t = -10ns 
+|02:49:29.146|  (STATUS) Ev: 48.3k Px: 366.5k Tr: 40.0k (0.828/ev) t = -10ns 
+|02:49:29.159|  (STATUS) Ev: 48.4k Px: 367.2k Tr: 40.1k (0.828/ev) t = -10ns 
+|02:49:29.168|  (STATUS) Ev: 48.5k Px: 368.0k Tr: 40.2k (0.828/ev) t = -10ns 
+|02:49:29.178|  (STATUS) Ev: 48.6k Px: 368.8k Tr: 40.2k (0.828/ev) t = -10ns 
+|02:49:29.189|  (STATUS) Ev: 48.7k Px: 369.5k Tr: 40.3k (0.828/ev) t = -10ns 
+|02:49:29.199|  (STATUS) Ev: 48.8k Px: 370.3k Tr: 40.4k (0.828/ev) t = -10ns 
+|02:49:29.209|  (STATUS) Ev: 48.9k Px: 371.1k Tr: 40.5k (0.828/ev) t = -10ns 
+|02:49:29.220|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 49000 events, DUT participation rate = 99.73%, l1id acceptance rate = 100.00% (49000/49000 candidates)
+|02:49:29.220|  (STATUS) Ev: 49.0k Px: 371.8k Tr: 40.6k (0.828/ev) t = -10ns
+|02:49:29.229|  (STATUS) Ev: 49.1k Px: 372.6k Tr: 40.7k (0.828/ev) t = -10ns
+|02:49:29.239|  (STATUS) Ev: 49.2k Px: 373.3k Tr: 40.8k (0.828/ev) t = -10ns 
+|02:49:29.251|  (STATUS) Ev: 49.3k Px: 374.1k Tr: 40.8k (0.828/ev) t = -10ns 
+|02:49:29.262|  (STATUS) Ev: 49.4k Px: 374.8k Tr: 40.9k (0.828/ev) t = -10ns 
+|02:49:29.272|  (STATUS) Ev: 49.5k Px: 375.6k Tr: 41.0k (0.828/ev) t = -10ns 
+|02:49:29.283|  (STATUS) Ev: 49.6k Px: 376.4k Tr: 41.1k (0.828/ev) t = -10ns 
+|02:49:29.293|  (STATUS) Ev: 49.7k Px: 377.1k Tr: 41.2k (0.828/ev) t = -10ns 
+|02:49:29.303|  (STATUS) Ev: 49.8k Px: 377.9k Tr: 41.3k (0.828/ev) t = -10ns 
+|02:49:29.314|  (STATUS) Ev: 49.9k Px: 378.7k Tr: 41.3k (0.828/ev) t = -10ns 
+|02:49:29.324|    (INFO) [R:EventLoaderMALTA] Health Check: Run progress = 50000 events, DUT participation rate = 99.73%, l1id acceptance rate = 100.00% (50000/50000 candidates)
+|02:49:29.324|  (STATUS) Ev: 50.0k Px: 379.4k Tr: 41.4k (0.828/ev) t = -10ns
+|02:49:29.324|  (STATUS) ===================| Finalising modules |===================
+|02:49:29.508|  (STATUS) [F:FilterEvents] 45935 out of 50000 events passed.
+|02:49:29.912|    (INFO) [F:AlignmentMillepede] Millepede alignment
+|02:49:29.912|    (INFO) [F:AlignmentMillepede] Aligning 6 planes
+|02:49:29.912|    (INFO) [F:AlignmentMillepede] Feeding Millepede with 41415 tracks...
+|02:49:31.112|    (INFO) [F:AlignmentMillepede] Determining global parameters...
+|02:49:31.113|    (INFO) [F:AlignmentMillepede] Iteration 1 (using 41415 tracks)
+|02:49:31.646|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.33246
+|02:49:31.646|    (INFO) [F:AlignmentMillepede] Iteration 2 (using 40796 tracks)
+|02:49:32.336|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.33215
+|02:49:32.336|    (INFO) [F:AlignmentMillepede] Iteration 3 (using 40794 tracks)
+|02:49:33.085|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.33215
+|02:49:33.085|    (INFO) [F:AlignmentMillepede] Iteration 4 (using 40794 tracks)
+|02:49:33.789|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.33215
+|02:49:33.789|    (INFO) [F:AlignmentMillepede] Iteration 5 (using 40794 tracks)
+|02:49:34.577|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.33215
+|02:49:34.577|    (INFO) [F:AlignmentMillepede] Iteration 6 (using 40794 tracks)
+|02:49:35.314|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.33215
+|02:49:35.314|    (INFO) [F:AlignmentMillepede] Iteration 7 (using 40794 tracks)
+|02:49:36.015|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.33215
+|02:49:36.015|    (INFO) [F:AlignmentMillepede] Iteration 8 (using 40794 tracks)
+|02:49:36.685|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.33215
+|02:49:36.685|    (INFO) [F:AlignmentMillepede] Iteration 9 (using 40794 tracks)
+|02:49:36.685|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:49:36.685|    (INFO) [F:AlignmentMillepede]  Result of fit for global parameters
+|02:49:36.685|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:49:36.685|    (INFO) [F:AlignmentMillepede]    I  Difference    Last step      Error        Pull Global corr.
+|02:49:36.685|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:49:36.685|    (INFO) [F:AlignmentMillepede]   0   -5.628e-06    7.730e-17   4.84e-05   -1.13e-04    1.19e+00
+|02:49:36.685|    (INFO) [F:AlignmentMillepede]   1   -4.436e-04   -5.335e-17   5.82e-05   -8.87e-03    3.62e-01
+|02:49:36.685|    (INFO) [F:AlignmentMillepede]   2   -6.704e-05   -9.554e-17   6.34e-05   -1.34e-03    4.22e-01
+|02:49:36.685|    (INFO) [F:AlignmentMillepede]   3   -3.262e-04    1.522e-17   6.29e-05   -6.52e-03    4.09e-01
+|02:49:36.685|    (INFO) [F:AlignmentMillepede]   4    2.656e-03    8.328e-17   5.92e-05    5.31e-02    3.07e-01
+|02:49:36.685|    (INFO) [F:AlignmentMillepede]   5   -1.814e-03   -2.688e-17   4.79e-05   -3.63e-02    1.21e+00
+|02:49:36.685|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:49:36.685|    (INFO) [F:AlignmentMillepede]   6   -5.517e-03    1.657e-18   4.25e-05   -1.10e-01    1.47e+00
+|02:49:36.685|    (INFO) [F:AlignmentMillepede]   7    1.194e-02    2.346e-17   5.27e-05    2.39e-01    6.16e-01
+|02:49:36.685|    (INFO) [F:AlignmentMillepede]   8   -8.965e-03   -1.749e-17   5.45e-05   -1.79e-01    3.35e-01
+|02:49:36.685|    (INFO) [F:AlignmentMillepede]   9   -3.046e-03   -1.887e-17   5.40e-05   -6.09e-02    3.61e-01
+|02:49:36.685|    (INFO) [F:AlignmentMillepede]  10    1.281e-02   -1.195e-17   4.99e-05    2.56e-01    7.36e-01
+|02:49:36.685|    (INFO) [F:AlignmentMillepede]  11   -7.222e-03    2.405e-17   4.10e-05   -1.44e-01    1.54e+00
+|02:49:36.685|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:49:36.685|    (INFO) [F:AlignmentMillepede]  12          OFF          OFF        OFF         OFF         OFF
+|02:49:36.685|    (INFO) [F:AlignmentMillepede]  13          OFF          OFF        OFF         OFF         OFF
+|02:49:36.685|    (INFO) [F:AlignmentMillepede]  14          OFF          OFF        OFF         OFF         OFF
+|02:49:36.685|    (INFO) [F:AlignmentMillepede]  15          OFF          OFF        OFF         OFF         OFF
+|02:49:36.685|    (INFO) [F:AlignmentMillepede]  16          OFF          OFF        OFF         OFF         OFF
+|02:49:36.685|    (INFO) [F:AlignmentMillepede]  17          OFF          OFF        OFF         OFF         OFF
+|02:49:36.685|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:49:36.685|    (INFO) [F:AlignmentMillepede]  18   -9.049e-05   -5.921e-17   1.32e-05   -1.81e-02    7.90e-01
+|02:49:36.685|    (INFO) [F:AlignmentMillepede]  19   -1.022e-04   -9.737e-17   2.10e-05   -2.04e-02    9.49e-01
+|02:49:36.685|    (INFO) [F:AlignmentMillepede]  20   -1.324e-04   -1.364e-16   2.94e-05   -2.65e-02    9.79e-01
+|02:49:36.685|    (INFO) [F:AlignmentMillepede]  21   -1.795e-04   -1.783e-16   3.78e-05   -3.59e-02    9.88e-01
+|02:49:36.685|    (INFO) [F:AlignmentMillepede]  22   -2.309e-04   -2.225e-16   4.58e-05   -4.62e-02    9.91e-01
+|02:49:36.685|    (INFO) [F:AlignmentMillepede]  23   -2.737e-04   -2.488e-16   5.31e-05   -5.47e-02    9.90e-01
+|02:49:36.685|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:49:36.685|    (INFO) [F:AlignmentMillepede]  24   -4.768e-04   -2.321e-16   1.56e-05   -9.54e-02    9.83e-01
+|02:49:36.685|    (INFO) [F:AlignmentMillepede]  25   -7.249e-04   -3.492e-16   2.32e-05   -1.45e-01    9.95e-01
+|02:49:36.685|    (INFO) [F:AlignmentMillepede]  26   -1.031e-03   -4.927e-16   3.27e-05   -2.06e-01    9.98e-01
+|02:49:36.685|    (INFO) [F:AlignmentMillepede]  27   -1.334e-03   -6.427e-16   4.25e-05   -2.67e-01    9.99e-01
+|02:49:36.685|    (INFO) [F:AlignmentMillepede]  28   -1.636e-03   -7.865e-16   5.20e-05   -3.27e-01    9.99e-01
+|02:49:36.685|    (INFO) [F:AlignmentMillepede]  29   -1.930e-03   -9.303e-16   6.17e-05   -3.86e-01    9.99e-01
+|02:49:36.685|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:49:36.685|    (INFO) [F:AlignmentMillepede]  30    4.323e-03   -4.716e-17   8.84e-05    8.65e-01    9.83e-01
+|02:49:36.685|    (INFO) [F:AlignmentMillepede]  31   -7.029e-03   -2.837e-17   5.46e-05   -1.41e+00    9.70e-01
+|02:49:36.685|    (INFO) [F:AlignmentMillepede]  32    4.057e-03   -1.067e-17   2.13e-05    8.11e-01    8.09e-01
+|02:49:36.685|    (INFO) [F:AlignmentMillepede]  33    3.318e-03    8.703e-18   2.09e-05    6.64e-01    7.97e-01
+|02:49:36.685|    (INFO) [F:AlignmentMillepede]  34   -8.609e-03    2.939e-17   5.45e-05   -1.72e+00    9.68e-01
+|02:49:36.685|    (INFO) [F:AlignmentMillepede]  35    3.940e-03    4.809e-17   8.89e-05    7.88e-01    9.83e-01
+|02:49:36.685|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:49:36.686|    (INFO) [F:AlignmentMillepede] Convergence: 0.00261755
+|02:49:36.686|    (INFO) [F:AlignmentMillepede] Updating geometry...
+|02:49:36.756|    (INFO) [F:AlignmentMillepede] Feeding Millepede with 41415 tracks...
+|02:49:38.037|    (INFO) [F:AlignmentMillepede] Determining global parameters...
+|02:49:38.038|    (INFO) [F:AlignmentMillepede] Iteration 1 (using 41415 tracks)
+|02:49:38.662|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.3321
+|02:49:38.662|    (INFO) [F:AlignmentMillepede] Iteration 2 (using 40795 tracks)
+|02:49:39.478|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.33177
+|02:49:39.478|    (INFO) [F:AlignmentMillepede] Iteration 3 (using 40793 tracks)
+|02:49:40.223|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.33177
+|02:49:40.223|    (INFO) [F:AlignmentMillepede] Iteration 4 (using 40793 tracks)
+|02:49:41.059|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.33177
+|02:49:41.059|    (INFO) [F:AlignmentMillepede] Iteration 5 (using 40793 tracks)
+|02:49:41.874|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.33177
+|02:49:41.874|    (INFO) [F:AlignmentMillepede] Iteration 6 (using 40793 tracks)
+|02:49:42.667|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.33177
+|02:49:42.667|    (INFO) [F:AlignmentMillepede] Iteration 7 (using 40793 tracks)
+|02:49:43.382|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.33177
+|02:49:43.382|    (INFO) [F:AlignmentMillepede] Iteration 8 (using 40793 tracks)
+|02:49:44.072|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.33177
+|02:49:44.072|    (INFO) [F:AlignmentMillepede] Iteration 9 (using 40793 tracks)
+|02:49:44.072|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:49:44.072|    (INFO) [F:AlignmentMillepede]  Result of fit for global parameters
+|02:49:44.072|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:49:44.072|    (INFO) [F:AlignmentMillepede]    I  Difference    Last step      Error        Pull Global corr.
+|02:49:44.072|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:49:44.072|    (INFO) [F:AlignmentMillepede]   0   -1.091e-05    3.457e-17   4.84e-05   -2.18e-04    1.19e+00
+|02:49:44.072|    (INFO) [F:AlignmentMillepede]   1    2.613e-07   -4.794e-17   5.82e-05    5.23e-06    3.61e-01
+|02:49:44.072|    (INFO) [F:AlignmentMillepede]   2    1.061e-05   -2.118e-17   6.33e-05    2.12e-04    4.24e-01
+|02:49:44.072|    (INFO) [F:AlignmentMillepede]   3    1.124e-05    2.488e-17   6.29e-05    2.25e-04    4.11e-01
+|02:49:44.072|    (INFO) [F:AlignmentMillepede]   4   -7.962e-07    3.277e-17   5.91e-05   -1.59e-05    3.04e-01
+|02:49:44.072|    (INFO) [F:AlignmentMillepede]   5   -1.041e-05   -2.309e-17   4.78e-05   -2.08e-04    1.21e+00
+|02:49:44.072|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:49:44.072|    (INFO) [F:AlignmentMillepede]   6    3.617e-06   -3.037e-18   4.25e-05    7.23e-05    1.47e+00
+|02:49:44.072|    (INFO) [F:AlignmentMillepede]   7   -6.603e-06    4.796e-18   5.27e-05   -1.32e-04    6.16e-01
+|02:49:44.073|    (INFO) [F:AlignmentMillepede]   8    6.020e-08    3.181e-18   5.45e-05    1.20e-06    3.35e-01
+|02:49:44.073|    (INFO) [F:AlignmentMillepede]   9    4.815e-06   -8.487e-18   5.40e-05    9.63e-05    3.62e-01
+|02:49:44.073|    (INFO) [F:AlignmentMillepede]  10   -1.483e-06    3.408e-18   4.99e-05   -2.97e-05    7.37e-01
+|02:49:44.073|    (INFO) [F:AlignmentMillepede]  11   -4.056e-07    1.350e-19   4.10e-05   -8.11e-06    1.54e+00
+|02:49:44.073|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:49:44.073|    (INFO) [F:AlignmentMillepede]  12          OFF          OFF        OFF         OFF         OFF
+|02:49:44.073|    (INFO) [F:AlignmentMillepede]  13          OFF          OFF        OFF         OFF         OFF
+|02:49:44.073|    (INFO) [F:AlignmentMillepede]  14          OFF          OFF        OFF         OFF         OFF
+|02:49:44.073|    (INFO) [F:AlignmentMillepede]  15          OFF          OFF        OFF         OFF         OFF
+|02:49:44.073|    (INFO) [F:AlignmentMillepede]  16          OFF          OFF        OFF         OFF         OFF
+|02:49:44.073|    (INFO) [F:AlignmentMillepede]  17          OFF          OFF        OFF         OFF         OFF
+|02:49:44.073|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:49:44.073|    (INFO) [F:AlignmentMillepede]  18   -9.648e-05   -7.051e-18   1.32e-05   -1.93e-02    7.91e-01
+|02:49:44.073|    (INFO) [F:AlignmentMillepede]  19   -1.076e-04   -4.361e-18   2.10e-05   -2.15e-02    9.49e-01
+|02:49:44.073|    (INFO) [F:AlignmentMillepede]  20   -1.542e-04   -9.544e-18   2.95e-05   -3.08e-02    9.79e-01
+|02:49:44.073|    (INFO) [F:AlignmentMillepede]  21   -2.085e-04   -1.012e-17   3.79e-05   -4.17e-02    9.88e-01
+|02:49:44.073|    (INFO) [F:AlignmentMillepede]  22   -2.485e-04   -1.515e-17   4.59e-05   -4.97e-02    9.91e-01
+|02:49:44.073|    (INFO) [F:AlignmentMillepede]  23   -3.182e-04   -1.592e-17   5.32e-05   -6.36e-02    9.90e-01
+|02:49:44.073|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:49:44.073|    (INFO) [F:AlignmentMillepede]  24   -4.788e-04   -2.090e-16   1.55e-05   -9.58e-02    9.83e-01
+|02:49:44.073|    (INFO) [F:AlignmentMillepede]  25   -7.314e-04   -3.169e-16   2.32e-05   -1.46e-01    9.95e-01
+|02:49:44.073|    (INFO) [F:AlignmentMillepede]  26   -1.043e-03   -4.459e-16   3.27e-05   -2.09e-01    9.98e-01
+|02:49:44.073|    (INFO) [F:AlignmentMillepede]  27   -1.349e-03   -5.806e-16   4.25e-05   -2.70e-01    9.99e-01
+|02:49:44.073|    (INFO) [F:AlignmentMillepede]  28   -1.654e-03   -7.102e-16   5.20e-05   -3.31e-01    9.99e-01
+|02:49:44.073|    (INFO) [F:AlignmentMillepede]  29   -1.948e-03   -8.421e-16   6.16e-05   -3.90e-01    9.99e-01
+|02:49:44.073|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:49:44.073|    (INFO) [F:AlignmentMillepede]  30    4.975e-05   -3.587e-17   8.89e-05    9.95e-03    9.83e-01
+|02:49:44.073|    (INFO) [F:AlignmentMillepede]  31    3.022e-05   -2.217e-17   5.49e-05    6.04e-03    9.71e-01
+|02:49:44.073|    (INFO) [F:AlignmentMillepede]  32    9.564e-06   -7.921e-18   2.13e-05    1.91e-03    8.11e-01
+|02:49:44.073|    (INFO) [F:AlignmentMillepede]  33   -9.916e-06    7.942e-18   2.10e-05   -1.98e-03    7.98e-01
+|02:49:44.073|    (INFO) [F:AlignmentMillepede]  34   -3.067e-05    2.171e-17   5.48e-05   -6.14e-03    9.69e-01
+|02:49:44.073|    (INFO) [F:AlignmentMillepede]  35   -4.895e-05    3.634e-17   8.94e-05   -9.79e-03    9.83e-01
+|02:49:44.073|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:49:44.073|    (INFO) [F:AlignmentMillepede] Convergence: 0.0002383
+|02:49:44.073|    (INFO) [F:AlignmentMillepede] Updating geometry...
+|02:49:44.149|    (INFO) [F:AlignmentMillepede] Feeding Millepede with 41415 tracks...
+|02:49:45.388|    (INFO) [F:AlignmentMillepede] Determining global parameters...
+|02:49:45.388|    (INFO) [F:AlignmentMillepede] Iteration 1 (using 41415 tracks)
+|02:49:46.024|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.33205
+|02:49:46.024|    (INFO) [F:AlignmentMillepede] Iteration 2 (using 40796 tracks)
+|02:49:46.720|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.33179
+|02:49:46.720|    (INFO) [F:AlignmentMillepede] Iteration 3 (using 40794 tracks)
+|02:49:47.450|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.33179
+|02:49:47.450|    (INFO) [F:AlignmentMillepede] Iteration 4 (using 40794 tracks)
+|02:49:48.202|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.33179
+|02:49:48.202|    (INFO) [F:AlignmentMillepede] Iteration 5 (using 40794 tracks)
+|02:49:48.946|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.33179
+|02:49:48.946|    (INFO) [F:AlignmentMillepede] Iteration 6 (using 40794 tracks)
+|02:49:49.718|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.33179
+|02:49:49.718|    (INFO) [F:AlignmentMillepede] Iteration 7 (using 40794 tracks)
+|02:49:50.430|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.33179
+|02:49:50.430|    (INFO) [F:AlignmentMillepede] Iteration 8 (using 40794 tracks)
+|02:49:51.183|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.33179
+|02:49:51.183|    (INFO) [F:AlignmentMillepede] Iteration 9 (using 40794 tracks)
+|02:49:51.183|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:49:51.183|    (INFO) [F:AlignmentMillepede]  Result of fit for global parameters
+|02:49:51.183|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:49:51.183|    (INFO) [F:AlignmentMillepede]    I  Difference    Last step      Error        Pull Global corr.
+|02:49:51.183|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:49:51.183|    (INFO) [F:AlignmentMillepede]   0   -1.761e-05    2.264e-17   4.83e-05   -3.52e-04    1.19e+00
+|02:49:51.183|    (INFO) [F:AlignmentMillepede]   1    4.277e-06   -6.160e-17   5.81e-05    8.55e-05    3.60e-01
+|02:49:51.183|    (INFO) [F:AlignmentMillepede]   2    1.347e-05    6.183e-18   6.33e-05    2.69e-04    4.25e-01
+|02:49:51.183|    (INFO) [F:AlignmentMillepede]   3    1.398e-05    3.651e-17   6.28e-05    2.80e-04    4.14e-01
+|02:49:51.183|    (INFO) [F:AlignmentMillepede]   4    2.589e-06    4.155e-17   5.90e-05    5.18e-05    3.00e-01
+|02:49:51.183|    (INFO) [F:AlignmentMillepede]   5   -1.670e-05   -4.532e-17   4.78e-05   -3.34e-04    1.21e+00
+|02:49:51.183|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:49:51.183|    (INFO) [F:AlignmentMillepede]   6    2.125e-06   -1.276e-17   4.25e-05    4.25e-05    1.47e+00
+|02:49:51.183|    (INFO) [F:AlignmentMillepede]   7   -5.262e-07    1.199e-17   5.27e-05   -1.05e-05    6.16e-01
+|02:49:51.183|    (INFO) [F:AlignmentMillepede]   8   -2.101e-06    5.915e-18   5.44e-05   -4.20e-05    3.36e-01
+|02:49:51.183|    (INFO) [F:AlignmentMillepede]   9   -1.576e-06   -8.070e-19   5.40e-05   -3.15e-05    3.63e-01
+|02:49:51.183|    (INFO) [F:AlignmentMillepede]  10    9.348e-07   -2.889e-19   4.98e-05    1.87e-05    7.38e-01
+|02:49:51.183|    (INFO) [F:AlignmentMillepede]  11    1.143e-06   -4.048e-18   4.10e-05    2.29e-05    1.54e+00
+|02:49:51.183|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:49:51.183|    (INFO) [F:AlignmentMillepede]  12          OFF          OFF        OFF         OFF         OFF
+|02:49:51.183|    (INFO) [F:AlignmentMillepede]  13          OFF          OFF        OFF         OFF         OFF
+|02:49:51.183|    (INFO) [F:AlignmentMillepede]  14          OFF          OFF        OFF         OFF         OFF
+|02:49:51.183|    (INFO) [F:AlignmentMillepede]  15          OFF          OFF        OFF         OFF         OFF
+|02:49:51.183|    (INFO) [F:AlignmentMillepede]  16          OFF          OFF        OFF         OFF         OFF
+|02:49:51.183|    (INFO) [F:AlignmentMillepede]  17          OFF          OFF        OFF         OFF         OFF
+|02:49:51.183|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:49:51.183|    (INFO) [F:AlignmentMillepede]  18   -9.322e-05   -3.440e-17   1.32e-05   -1.86e-02    7.89e-01
+|02:49:51.183|    (INFO) [F:AlignmentMillepede]  19   -1.024e-04   -5.487e-17   2.10e-05   -2.05e-02    9.49e-01
+|02:49:51.183|    (INFO) [F:AlignmentMillepede]  20   -1.467e-04   -8.113e-17   2.94e-05   -2.94e-02    9.79e-01
+|02:49:51.183|    (INFO) [F:AlignmentMillepede]  21   -1.990e-04   -1.047e-16   3.79e-05   -3.98e-02    9.88e-01
+|02:49:51.183|    (INFO) [F:AlignmentMillepede]  22   -2.371e-04   -1.277e-16   4.58e-05   -4.74e-02    9.91e-01
+|02:49:51.183|    (INFO) [F:AlignmentMillepede]  23   -3.043e-04   -1.474e-16   5.31e-05   -6.09e-02    9.91e-01
+|02:49:51.183|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:49:51.183|    (INFO) [F:AlignmentMillepede]  24   -4.867e-04   -1.986e-16   1.54e-05   -9.73e-02    9.83e-01
+|02:49:51.183|    (INFO) [F:AlignmentMillepede]  25   -7.483e-04   -3.015e-16   2.32e-05   -1.50e-01    9.95e-01
+|02:49:51.183|    (INFO) [F:AlignmentMillepede]  26   -1.068e-03   -4.286e-16   3.27e-05   -2.14e-01    9.98e-01
+|02:49:51.183|    (INFO) [F:AlignmentMillepede]  27   -1.383e-03   -5.561e-16   4.25e-05   -2.77e-01    9.99e-01
+|02:49:51.183|    (INFO) [F:AlignmentMillepede]  28   -1.693e-03   -6.817e-16   5.19e-05   -3.39e-01    9.99e-01
+|02:49:51.183|    (INFO) [F:AlignmentMillepede]  29   -1.993e-03   -8.027e-16   6.14e-05   -3.99e-01    9.99e-01
+|02:49:51.183|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:49:51.183|    (INFO) [F:AlignmentMillepede]  30    1.334e-06   -6.311e-17   8.89e-05    2.67e-04    9.83e-01
+|02:49:51.183|    (INFO) [F:AlignmentMillepede]  31    1.372e-06   -3.936e-17   5.49e-05    2.74e-04    9.71e-01
+|02:49:51.183|    (INFO) [F:AlignmentMillepede]  32    9.387e-07   -1.359e-17   2.13e-05    1.88e-04    8.11e-01
+|02:49:51.183|    (INFO) [F:AlignmentMillepede]  33   -4.033e-08    1.264e-17   2.10e-05   -8.07e-06    7.99e-01
+|02:49:51.183|    (INFO) [F:AlignmentMillepede]  34   -1.118e-06    3.891e-17   5.48e-05   -2.24e-04    9.69e-01
+|02:49:51.183|    (INFO) [F:AlignmentMillepede]  35   -2.487e-06    6.452e-17   8.95e-05   -4.97e-04    9.83e-01
+|02:49:51.183|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:49:51.183|    (INFO) [F:AlignmentMillepede] Convergence: 0.000237206
+|02:49:51.183|    (INFO) [F:AlignmentMillepede] Updating geometry...
+|02:49:51.238|    (INFO) [F:AlignmentMillepede] Feeding Millepede with 41415 tracks...
+|02:49:52.420|    (INFO) [F:AlignmentMillepede] Determining global parameters...
+|02:49:52.420|    (INFO) [F:AlignmentMillepede] Iteration 1 (using 41415 tracks)
+|02:49:53.038|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.33172
+|02:49:53.038|    (INFO) [F:AlignmentMillepede] Iteration 2 (using 40794 tracks)
+|02:49:53.787|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.33156
+|02:49:53.787|    (INFO) [F:AlignmentMillepede] Iteration 3 (using 40793 tracks)
+|02:49:54.492|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.33156
+|02:49:54.492|    (INFO) [F:AlignmentMillepede] Iteration 4 (using 40793 tracks)
+|02:49:55.230|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.33156
+|02:49:55.230|    (INFO) [F:AlignmentMillepede] Iteration 5 (using 40793 tracks)
+|02:49:55.943|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.33156
+|02:49:55.943|    (INFO) [F:AlignmentMillepede] Iteration 6 (using 40793 tracks)
+|02:49:56.637|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.33156
+|02:49:56.637|    (INFO) [F:AlignmentMillepede] Iteration 7 (using 40793 tracks)
+|02:49:57.333|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.33156
+|02:49:57.333|    (INFO) [F:AlignmentMillepede] Iteration 8 (using 40793 tracks)
+|02:49:58.058|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.33156
+|02:49:58.058|    (INFO) [F:AlignmentMillepede] Iteration 9 (using 40793 tracks)
+|02:49:58.058|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:49:58.058|    (INFO) [F:AlignmentMillepede]  Result of fit for global parameters
+|02:49:58.058|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:49:58.058|    (INFO) [F:AlignmentMillepede]    I  Difference    Last step      Error        Pull Global corr.
+|02:49:58.058|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:49:58.058|    (INFO) [F:AlignmentMillepede]   0   -1.738e-05    1.139e-17   4.83e-05   -3.48e-04    1.19e+00
+|02:49:58.058|    (INFO) [F:AlignmentMillepede]   1    5.133e-06    1.514e-18   5.81e-05    1.03e-04    3.59e-01
+|02:49:58.058|    (INFO) [F:AlignmentMillepede]   2    1.401e-05   -6.945e-18   6.32e-05    2.80e-04    4.27e-01
+|02:49:58.058|    (INFO) [F:AlignmentMillepede]   3    1.024e-05   -2.363e-17   6.28e-05    2.05e-04    4.17e-01
+|02:49:58.058|    (INFO) [F:AlignmentMillepede]   4    3.868e-06    5.111e-18   5.89e-05    7.74e-05    2.96e-01
+|02:49:58.058|    (INFO) [F:AlignmentMillepede]   5   -1.587e-05    1.257e-17   4.77e-05   -3.17e-04    1.20e+00
+|02:49:58.058|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:49:58.058|    (INFO) [F:AlignmentMillepede]   6   -1.069e-06    4.911e-18   4.25e-05   -2.14e-05    1.47e+00
+|02:49:58.058|    (INFO) [F:AlignmentMillepede]   7    4.171e-07   -8.329e-18   5.27e-05    8.34e-06    6.17e-01
+|02:49:58.058|    (INFO) [F:AlignmentMillepede]   8    2.114e-06    2.158e-18   5.44e-05    4.23e-05    3.37e-01
+|02:49:58.058|    (INFO) [F:AlignmentMillepede]   9   -1.231e-06   -2.219e-18   5.40e-05   -2.46e-05    3.64e-01
+|02:49:58.058|    (INFO) [F:AlignmentMillepede]  10   -2.025e-07    6.742e-18   4.98e-05   -4.05e-06    7.39e-01
+|02:49:58.058|    (INFO) [F:AlignmentMillepede]  11   -2.872e-08   -3.257e-18   4.10e-05   -5.74e-07    1.54e+00
+|02:49:58.058|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:49:58.058|    (INFO) [F:AlignmentMillepede]  12          OFF          OFF        OFF         OFF         OFF
+|02:49:58.058|    (INFO) [F:AlignmentMillepede]  13          OFF          OFF        OFF         OFF         OFF
+|02:49:58.058|    (INFO) [F:AlignmentMillepede]  14          OFF          OFF        OFF         OFF         OFF
+|02:49:58.058|    (INFO) [F:AlignmentMillepede]  15          OFF          OFF        OFF         OFF         OFF
+|02:49:58.058|    (INFO) [F:AlignmentMillepede]  16          OFF          OFF        OFF         OFF         OFF
+|02:49:58.058|    (INFO) [F:AlignmentMillepede]  17          OFF          OFF        OFF         OFF         OFF
+|02:49:58.058|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:49:58.058|    (INFO) [F:AlignmentMillepede]  18   -9.050e-05    3.191e-17   1.31e-05   -1.81e-02    7.87e-01
+|02:49:58.058|    (INFO) [F:AlignmentMillepede]  19   -9.783e-05    5.446e-17   2.09e-05   -1.96e-02    9.49e-01
+|02:49:58.058|    (INFO) [F:AlignmentMillepede]  20   -1.399e-04    7.860e-17   2.94e-05   -2.80e-02    9.79e-01
+|02:49:58.058|    (INFO) [F:AlignmentMillepede]  21   -1.900e-04    1.015e-16   3.78e-05   -3.80e-02    9.88e-01
+|02:49:58.058|    (INFO) [F:AlignmentMillepede]  22   -2.264e-04    1.228e-16   4.57e-05   -4.53e-02    9.91e-01
+|02:49:58.058|    (INFO) [F:AlignmentMillepede]  23   -2.918e-04    1.437e-16   5.29e-05   -5.84e-02    9.91e-01
+|02:49:58.058|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:49:58.058|    (INFO) [F:AlignmentMillepede]  24   -4.924e-04    2.448e-17   1.52e-05   -9.85e-02    9.83e-01
+|02:49:58.058|    (INFO) [F:AlignmentMillepede]  25   -7.622e-04    3.910e-17   2.31e-05   -1.52e-01    9.95e-01
+|02:49:58.058|    (INFO) [F:AlignmentMillepede]  26   -1.090e-03    5.677e-17   3.26e-05   -2.18e-01    9.98e-01
+|02:49:58.058|    (INFO) [F:AlignmentMillepede]  27   -1.411e-03    7.338e-17   4.24e-05   -2.82e-01    9.99e-01
+|02:49:58.058|    (INFO) [F:AlignmentMillepede]  28   -1.726e-03    9.034e-17   5.17e-05   -3.45e-01    9.99e-01
+|02:49:58.058|    (INFO) [F:AlignmentMillepede]  29   -2.029e-03    1.032e-16   6.12e-05   -4.06e-01    9.99e-01
+|02:49:58.058|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:49:58.058|    (INFO) [F:AlignmentMillepede]  30    5.470e-07    4.645e-17   8.90e-05    1.09e-04    9.83e-01
+|02:49:58.058|    (INFO) [F:AlignmentMillepede]  31    2.769e-07    2.809e-17   5.49e-05    5.54e-05    9.71e-01
+|02:49:58.058|    (INFO) [F:AlignmentMillepede]  32   -1.528e-07    8.992e-18   2.14e-05   -3.06e-05    8.11e-01
+|02:49:58.058|    (INFO) [F:AlignmentMillepede]  33    8.541e-08   -1.011e-17   2.10e-05    1.71e-05    7.99e-01
+|02:49:58.058|    (INFO) [F:AlignmentMillepede]  34   -2.625e-07   -2.834e-17   5.48e-05   -5.25e-05    9.69e-01
+|02:49:58.058|    (INFO) [F:AlignmentMillepede]  35   -4.939e-07   -4.507e-17   8.95e-05   -9.88e-05    9.83e-01
+|02:49:58.058|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:49:58.059|    (INFO) [F:AlignmentMillepede] Convergence: 0.00023944
+|02:49:58.059|    (INFO) [F:AlignmentMillepede] Updating geometry...
+|02:49:58.133|    (INFO) [F:AlignmentMillepede] Feeding Millepede with 41415 tracks...
+|02:49:59.345|    (INFO) [F:AlignmentMillepede] Determining global parameters...
+|02:49:59.345|    (INFO) [F:AlignmentMillepede] Iteration 1 (using 41415 tracks)
+|02:49:59.960|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.3318
+|02:49:59.960|    (INFO) [F:AlignmentMillepede] Iteration 2 (using 40796 tracks)
+|02:50:00.690|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.33147
+|02:50:00.690|    (INFO) [F:AlignmentMillepede] Iteration 3 (using 40794 tracks)
+|02:50:01.399|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.33147
+|02:50:01.399|    (INFO) [F:AlignmentMillepede] Iteration 4 (using 40794 tracks)
+|02:50:02.126|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.33147
+|02:50:02.126|    (INFO) [F:AlignmentMillepede] Iteration 5 (using 40794 tracks)
+|02:50:02.830|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.33147
+|02:50:02.830|    (INFO) [F:AlignmentMillepede] Iteration 6 (using 40794 tracks)
+|02:50:03.568|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.33147
+|02:50:03.568|    (INFO) [F:AlignmentMillepede] Iteration 7 (using 40794 tracks)
+|02:50:04.260|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.33147
+|02:50:04.260|    (INFO) [F:AlignmentMillepede] Iteration 8 (using 40794 tracks)
+|02:50:04.944|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.33147
+|02:50:04.944|    (INFO) [F:AlignmentMillepede] Iteration 9 (using 40794 tracks)
+|02:50:04.944|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:50:04.944|    (INFO) [F:AlignmentMillepede]  Result of fit for global parameters
+|02:50:04.944|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:50:04.944|    (INFO) [F:AlignmentMillepede]    I  Difference    Last step      Error        Pull Global corr.
+|02:50:04.944|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:50:04.944|    (INFO) [F:AlignmentMillepede]   0   -1.964e-05   -1.307e-17   4.83e-05   -3.93e-04    1.19e+00
+|02:50:04.944|    (INFO) [F:AlignmentMillepede]   1    5.272e-06    2.845e-17   5.81e-05    1.05e-04    3.57e-01
+|02:50:04.944|    (INFO) [F:AlignmentMillepede]   2    1.597e-05    2.189e-17   6.32e-05    3.19e-04    4.29e-01
+|02:50:04.944|    (INFO) [F:AlignmentMillepede]   3    1.293e-05   -5.619e-17   6.27e-05    2.59e-04    4.20e-01
+|02:50:04.944|    (INFO) [F:AlignmentMillepede]   4    3.321e-06   -1.657e-18   5.88e-05    6.64e-05    2.91e-01
+|02:50:04.944|    (INFO) [F:AlignmentMillepede]   5   -1.786e-05    2.061e-17   4.77e-05   -3.57e-04    1.20e+00
+|02:50:04.944|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:50:04.944|    (INFO) [F:AlignmentMillepede]   6   -3.943e-07    4.907e-18   4.24e-05   -7.89e-06    1.47e+00
+|02:50:04.944|    (INFO) [F:AlignmentMillepede]   7    1.221e-06   -1.223e-17   5.27e-05    2.44e-05    6.17e-01
+|02:50:04.944|    (INFO) [F:AlignmentMillepede]   8   -7.504e-07   -2.888e-18   5.44e-05   -1.50e-05    3.39e-01
+|02:50:04.944|    (INFO) [F:AlignmentMillepede]   9   -3.999e-07    1.742e-17   5.40e-05   -8.00e-06    3.65e-01
+|02:50:04.944|    (INFO) [F:AlignmentMillepede]  10    1.377e-07   -1.772e-18   4.98e-05    2.75e-06    7.40e-01
+|02:50:04.944|    (INFO) [F:AlignmentMillepede]  11    1.857e-07   -5.432e-18   4.09e-05    3.71e-06    1.55e+00
+|02:50:04.944|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:50:04.944|    (INFO) [F:AlignmentMillepede]  12          OFF          OFF        OFF         OFF         OFF
+|02:50:04.944|    (INFO) [F:AlignmentMillepede]  13          OFF          OFF        OFF         OFF         OFF
+|02:50:04.944|    (INFO) [F:AlignmentMillepede]  14          OFF          OFF        OFF         OFF         OFF
+|02:50:04.944|    (INFO) [F:AlignmentMillepede]  15          OFF          OFF        OFF         OFF         OFF
+|02:50:04.944|    (INFO) [F:AlignmentMillepede]  16          OFF          OFF        OFF         OFF         OFF
+|02:50:04.944|    (INFO) [F:AlignmentMillepede]  17          OFF          OFF        OFF         OFF         OFF
+|02:50:04.944|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:50:04.944|    (INFO) [F:AlignmentMillepede]  18   -8.715e-05   -5.711e-17   1.30e-05   -1.74e-02    7.85e-01
+|02:50:04.944|    (INFO) [F:AlignmentMillepede]  19   -9.248e-05   -1.052e-16   2.09e-05   -1.85e-02    9.49e-01
+|02:50:04.944|    (INFO) [F:AlignmentMillepede]  20   -1.319e-04   -1.495e-16   2.93e-05   -2.64e-02    9.79e-01
+|02:50:04.944|    (INFO) [F:AlignmentMillepede]  21   -1.800e-04   -1.934e-16   3.77e-05   -3.60e-02    9.88e-01
+|02:50:04.944|    (INFO) [F:AlignmentMillepede]  22   -2.142e-04   -2.337e-16   4.56e-05   -4.28e-02    9.91e-01
+|02:50:04.944|    (INFO) [F:AlignmentMillepede]  23   -2.774e-04   -2.712e-16   5.27e-05   -5.55e-02    9.91e-01
+|02:50:04.944|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:50:04.944|    (INFO) [F:AlignmentMillepede]  24   -4.963e-04    1.643e-16   1.50e-05   -9.93e-02    9.83e-01
+|02:50:04.944|    (INFO) [F:AlignmentMillepede]  25   -7.740e-04    2.552e-16   2.30e-05   -1.55e-01    9.95e-01
+|02:50:04.944|    (INFO) [F:AlignmentMillepede]  26   -1.108e-03    3.567e-16   3.25e-05   -2.22e-01    9.98e-01
+|02:50:04.944|    (INFO) [F:AlignmentMillepede]  27   -1.435e-03    4.717e-16   4.23e-05   -2.87e-01    9.99e-01
+|02:50:04.944|    (INFO) [F:AlignmentMillepede]  28   -1.754e-03    5.676e-16   5.15e-05   -3.51e-01    9.99e-01
+|02:50:04.944|    (INFO) [F:AlignmentMillepede]  29   -2.060e-03    6.807e-16   6.09e-05   -4.12e-01    9.99e-01
+|02:50:04.944|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:50:04.944|    (INFO) [F:AlignmentMillepede]  30   -1.520e-06    5.709e-17   8.91e-05   -3.04e-04    9.83e-01
+|02:50:04.944|    (INFO) [F:AlignmentMillepede]  31   -1.045e-06    3.527e-17   5.50e-05   -2.09e-04    9.71e-01
+|02:50:04.944|    (INFO) [F:AlignmentMillepede]  32   -2.057e-07    1.295e-17   2.14e-05   -4.11e-05    8.11e-01
+|02:50:04.944|    (INFO) [F:AlignmentMillepede]  33    3.195e-07   -1.259e-17   2.10e-05    6.39e-05    7.99e-01
+|02:50:04.944|    (INFO) [F:AlignmentMillepede]  34    8.562e-07   -3.357e-17   5.49e-05    1.71e-04    9.69e-01
+|02:50:04.944|    (INFO) [F:AlignmentMillepede]  35    1.595e-06   -5.914e-17   8.96e-05    3.19e-04    9.83e-01
+|02:50:04.944|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:50:04.945|    (INFO) [F:AlignmentMillepede] Convergence: 0.000241507
+|02:50:04.945|    (INFO) [F:AlignmentMillepede] Updating geometry...
+|02:50:05.018|    (INFO) [F:AlignmentMillepede] Feeding Millepede with 41415 tracks...
+|02:50:06.288|    (INFO) [F:AlignmentMillepede] Determining global parameters...
+|02:50:06.288|    (INFO) [F:AlignmentMillepede] Iteration 1 (using 41415 tracks)
+|02:50:06.877|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.33163
+|02:50:06.877|    (INFO) [F:AlignmentMillepede] Iteration 2 (using 40796 tracks)
+|02:50:07.609|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.3316
+|02:50:07.609|    (INFO) [F:AlignmentMillepede] Iteration 3 (using 40796 tracks)
+|02:50:08.339|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.3316
+|02:50:08.339|    (INFO) [F:AlignmentMillepede] Iteration 4 (using 40796 tracks)
+|02:50:09.078|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.3316
+|02:50:09.078|    (INFO) [F:AlignmentMillepede] Iteration 5 (using 40796 tracks)
+|02:50:09.853|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.3316
+|02:50:09.853|    (INFO) [F:AlignmentMillepede] Iteration 6 (using 40796 tracks)
+|02:50:10.607|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.3316
+|02:50:10.607|    (INFO) [F:AlignmentMillepede] Iteration 7 (using 40796 tracks)
+|02:50:11.347|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.3316
+|02:50:11.347|    (INFO) [F:AlignmentMillepede] Iteration 8 (using 40796 tracks)
+|02:50:12.046|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.3316
+|02:50:12.046|    (INFO) [F:AlignmentMillepede] Iteration 9 (using 40796 tracks)
+|02:50:12.046|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:50:12.046|    (INFO) [F:AlignmentMillepede]  Result of fit for global parameters
+|02:50:12.046|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:50:12.046|    (INFO) [F:AlignmentMillepede]    I  Difference    Last step      Error        Pull Global corr.
+|02:50:12.046|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:50:12.046|    (INFO) [F:AlignmentMillepede]   0   -2.187e-05   -1.156e-17   4.82e-05   -4.37e-04    1.19e+00
+|02:50:12.046|    (INFO) [F:AlignmentMillepede]   1    6.057e-06    4.394e-17   5.80e-05    1.21e-04    3.56e-01
+|02:50:12.046|    (INFO) [F:AlignmentMillepede]   2    1.757e-05   -2.979e-18   6.31e-05    3.51e-04    4.31e-01
+|02:50:12.046|    (INFO) [F:AlignmentMillepede]   3    1.476e-05   -3.112e-17   6.27e-05    2.95e-04    4.23e-01
+|02:50:12.046|    (INFO) [F:AlignmentMillepede]   4    2.906e-06   -4.683e-17   5.87e-05    5.81e-05    2.85e-01
+|02:50:12.046|    (INFO) [F:AlignmentMillepede]   5   -1.942e-05    4.853e-17   4.77e-05   -3.88e-04    1.19e+00
+|02:50:12.046|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:50:12.046|    (INFO) [F:AlignmentMillepede]   6    1.573e-06   -2.056e-18   4.24e-05    3.15e-05    1.47e+00
+|02:50:12.046|    (INFO) [F:AlignmentMillepede]   7    4.760e-07    1.360e-17   5.27e-05    9.52e-06    6.18e-01
+|02:50:12.046|    (INFO) [F:AlignmentMillepede]   8   -1.984e-06   -7.551e-18   5.44e-05   -3.97e-05    3.40e-01
+|02:50:12.046|    (INFO) [F:AlignmentMillepede]   9   -1.881e-06   -1.007e-17   5.39e-05   -3.76e-05    3.67e-01
+|02:50:12.046|    (INFO) [F:AlignmentMillepede]  10   -5.339e-08   -1.329e-18   4.98e-05   -1.07e-06    7.41e-01
+|02:50:12.046|    (INFO) [F:AlignmentMillepede]  11    1.870e-06    7.407e-18   4.09e-05    3.74e-05    1.55e+00
+|02:50:12.046|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:50:12.046|    (INFO) [F:AlignmentMillepede]  12          OFF          OFF        OFF         OFF         OFF
+|02:50:12.046|    (INFO) [F:AlignmentMillepede]  13          OFF          OFF        OFF         OFF         OFF
+|02:50:12.046|    (INFO) [F:AlignmentMillepede]  14          OFF          OFF        OFF         OFF         OFF
+|02:50:12.046|    (INFO) [F:AlignmentMillepede]  15          OFF          OFF        OFF         OFF         OFF
+|02:50:12.046|    (INFO) [F:AlignmentMillepede]  16          OFF          OFF        OFF         OFF         OFF
+|02:50:12.046|    (INFO) [F:AlignmentMillepede]  17          OFF          OFF        OFF         OFF         OFF
+|02:50:12.046|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:50:12.046|    (INFO) [F:AlignmentMillepede]  18   -8.422e-05    7.450e-17   1.29e-05   -1.68e-02    7.83e-01
+|02:50:12.046|    (INFO) [F:AlignmentMillepede]  19   -8.713e-05    1.268e-16   2.08e-05   -1.74e-02    9.49e-01
+|02:50:12.046|    (INFO) [F:AlignmentMillepede]  20   -1.237e-04    1.842e-16   2.92e-05   -2.47e-02    9.79e-01
+|02:50:12.046|    (INFO) [F:AlignmentMillepede]  21   -1.692e-04    2.376e-16   3.76e-05   -3.38e-02    9.88e-01
+|02:50:12.046|    (INFO) [F:AlignmentMillepede]  22   -2.016e-04    2.883e-16   4.54e-05   -4.03e-02    9.91e-01
+|02:50:12.046|    (INFO) [F:AlignmentMillepede]  23   -2.627e-04    3.348e-16   5.25e-05   -5.25e-02    9.91e-01
+|02:50:12.046|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:50:12.046|    (INFO) [F:AlignmentMillepede]  24   -4.980e-04    1.498e-16   1.48e-05   -9.96e-02    9.82e-01
+|02:50:12.046|    (INFO) [F:AlignmentMillepede]  25   -7.832e-04    2.316e-16   2.28e-05   -1.57e-01    9.95e-01
+|02:50:12.046|    (INFO) [F:AlignmentMillepede]  26   -1.123e-03    3.335e-16   3.23e-05   -2.25e-01    9.98e-01
+|02:50:12.046|    (INFO) [F:AlignmentMillepede]  27   -1.455e-03    4.293e-16   4.21e-05   -2.91e-01    9.99e-01
+|02:50:12.046|    (INFO) [F:AlignmentMillepede]  28   -1.775e-03    5.293e-16   5.12e-05   -3.55e-01    9.99e-01
+|02:50:12.046|    (INFO) [F:AlignmentMillepede]  29   -2.084e-03    6.148e-16   6.04e-05   -4.17e-01    9.99e-01
+|02:50:12.046|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:50:12.046|    (INFO) [F:AlignmentMillepede]  30   -2.161e-06   -7.843e-17   8.91e-05   -4.32e-04    9.83e-01
+|02:50:12.046|    (INFO) [F:AlignmentMillepede]  31   -1.200e-06   -4.739e-17   5.50e-05   -2.40e-04    9.71e-01
+|02:50:12.046|    (INFO) [F:AlignmentMillepede]  32   -3.463e-07   -1.523e-17   2.14e-05   -6.93e-05    8.12e-01
+|02:50:12.046|    (INFO) [F:AlignmentMillepede]  33    4.255e-07    1.540e-17   2.10e-05    8.51e-05    7.99e-01
+|02:50:12.046|    (INFO) [F:AlignmentMillepede]  34    1.169e-06    4.661e-17   5.49e-05    2.34e-04    9.69e-01
+|02:50:12.046|    (INFO) [F:AlignmentMillepede]  35    2.113e-06    7.902e-17   8.97e-05    4.23e-04    9.83e-01
+|02:50:12.046|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:50:12.046|    (INFO) [F:AlignmentMillepede] Convergence: 0.000242904
+|02:50:12.046|    (INFO) [F:AlignmentMillepede] Updating geometry...
+|02:50:12.117|    (INFO) [F:AlignmentMillepede] Feeding Millepede with 41415 tracks...
+|02:50:13.357|    (INFO) [F:AlignmentMillepede] Determining global parameters...
+|02:50:13.357|    (INFO) [F:AlignmentMillepede] Iteration 1 (using 41415 tracks)
+|02:50:14.050|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.33166
+|02:50:14.050|    (INFO) [F:AlignmentMillepede] Iteration 2 (using 40797 tracks)
+|02:50:14.783|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.33143
+|02:50:14.783|    (INFO) [F:AlignmentMillepede] Iteration 3 (using 40796 tracks)
+|02:50:15.487|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.33143
+|02:50:15.487|    (INFO) [F:AlignmentMillepede] Iteration 4 (using 40796 tracks)
+|02:50:16.191|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.33143
+|02:50:16.191|    (INFO) [F:AlignmentMillepede] Iteration 5 (using 40796 tracks)
+|02:50:16.833|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.33143
+|02:50:16.833|    (INFO) [F:AlignmentMillepede] Iteration 6 (using 40796 tracks)
+|02:50:17.509|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.33143
+|02:50:17.509|    (INFO) [F:AlignmentMillepede] Iteration 7 (using 40796 tracks)
+|02:50:18.214|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.33143
+|02:50:18.214|    (INFO) [F:AlignmentMillepede] Iteration 8 (using 40796 tracks)
+|02:50:18.888|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.33143
+|02:50:18.888|    (INFO) [F:AlignmentMillepede] Iteration 9 (using 40796 tracks)
+|02:50:18.888|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:50:18.888|    (INFO) [F:AlignmentMillepede]  Result of fit for global parameters
+|02:50:18.888|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:50:18.888|    (INFO) [F:AlignmentMillepede]    I  Difference    Last step      Error        Pull Global corr.
+|02:50:18.888|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:50:18.888|    (INFO) [F:AlignmentMillepede]   0   -2.339e-05    4.634e-18   4.82e-05   -4.68e-04    1.19e+00
+|02:50:18.888|    (INFO) [F:AlignmentMillepede]   1    7.199e-06    5.067e-17   5.80e-05    1.44e-04    3.54e-01
+|02:50:18.888|    (INFO) [F:AlignmentMillepede]   2    1.844e-05   -3.557e-17   6.31e-05    3.69e-04    4.33e-01
+|02:50:18.888|    (INFO) [F:AlignmentMillepede]   3    1.439e-05   -4.606e-17   6.26e-05    2.88e-04    4.26e-01
+|02:50:18.888|    (INFO) [F:AlignmentMillepede]   4    4.068e-06   -2.702e-17   5.86e-05    8.14e-05    2.79e-01
+|02:50:18.888|    (INFO) [F:AlignmentMillepede]   5   -2.070e-05    5.335e-17   4.76e-05   -4.14e-04    1.18e+00
+|02:50:18.888|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:50:18.888|    (INFO) [F:AlignmentMillepede]   6    2.074e-07    4.020e-18   4.24e-05    4.15e-06    1.47e+00
+|02:50:18.888|    (INFO) [F:AlignmentMillepede]   7    7.278e-07    3.878e-19   5.27e-05    1.46e-05    6.18e-01
+|02:50:18.888|    (INFO) [F:AlignmentMillepede]   8   -8.175e-07   -7.886e-19   5.44e-05   -1.64e-05    3.41e-01
+|02:50:18.888|    (INFO) [F:AlignmentMillepede]   9   -8.846e-07   -1.110e-17   5.39e-05   -1.77e-05    3.68e-01
+|02:50:18.888|    (INFO) [F:AlignmentMillepede]  10    2.736e-07    2.915e-18   4.97e-05    5.47e-06    7.42e-01
+|02:50:18.888|    (INFO) [F:AlignmentMillepede]  11    4.934e-07    4.565e-18   4.09e-05    9.87e-06    1.55e+00
+|02:50:18.888|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:50:18.888|    (INFO) [F:AlignmentMillepede]  12          OFF          OFF        OFF         OFF         OFF
+|02:50:18.888|    (INFO) [F:AlignmentMillepede]  13          OFF          OFF        OFF         OFF         OFF
+|02:50:18.888|    (INFO) [F:AlignmentMillepede]  14          OFF          OFF        OFF         OFF         OFF
+|02:50:18.888|    (INFO) [F:AlignmentMillepede]  15          OFF          OFF        OFF         OFF         OFF
+|02:50:18.888|    (INFO) [F:AlignmentMillepede]  16          OFF          OFF        OFF         OFF         OFF
+|02:50:18.888|    (INFO) [F:AlignmentMillepede]  17          OFF          OFF        OFF         OFF         OFF
+|02:50:18.888|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:50:18.888|    (INFO) [F:AlignmentMillepede]  18   -8.113e-05    5.260e-17   1.29e-05   -1.62e-02    7.80e-01
+|02:50:18.888|    (INFO) [F:AlignmentMillepede]  19   -8.185e-05    9.004e-17   2.07e-05   -1.64e-02    9.49e-01
+|02:50:18.888|    (INFO) [F:AlignmentMillepede]  20   -1.156e-04    1.307e-16   2.91e-05   -2.31e-02    9.79e-01
+|02:50:18.888|    (INFO) [F:AlignmentMillepede]  21   -1.588e-04    1.709e-16   3.75e-05   -3.18e-02    9.88e-01
+|02:50:18.888|    (INFO) [F:AlignmentMillepede]  22   -1.892e-04    2.059e-16   4.53e-05   -3.78e-02    9.91e-01
+|02:50:18.888|    (INFO) [F:AlignmentMillepede]  23   -2.482e-04    2.382e-16   5.23e-05   -4.96e-02    9.91e-01
+|02:50:18.888|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:50:18.888|    (INFO) [F:AlignmentMillepede]  24   -4.976e-04    1.458e-16   1.46e-05   -9.95e-02    9.82e-01
+|02:50:18.888|    (INFO) [F:AlignmentMillepede]  25   -7.894e-04    2.273e-16   2.26e-05   -1.58e-01    9.95e-01
+|02:50:18.888|    (INFO) [F:AlignmentMillepede]  26   -1.134e-03    3.286e-16   3.21e-05   -2.27e-01    9.98e-01
+|02:50:18.888|    (INFO) [F:AlignmentMillepede]  27   -1.469e-03    4.235e-16   4.18e-05   -2.94e-01    9.99e-01
+|02:50:18.888|    (INFO) [F:AlignmentMillepede]  28   -1.791e-03    5.198e-16   5.08e-05   -3.58e-01    9.99e-01
+|02:50:18.888|    (INFO) [F:AlignmentMillepede]  29   -2.100e-03    6.060e-16   5.99e-05   -4.20e-01    9.99e-01
+|02:50:18.888|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:50:18.888|    (INFO) [F:AlignmentMillepede]  30   -3.410e-07   -1.246e-17   8.92e-05   -6.82e-05    9.83e-01
+|02:50:18.888|    (INFO) [F:AlignmentMillepede]  31   -1.976e-07   -7.422e-18   5.51e-05   -3.95e-05    9.71e-01
+|02:50:18.888|    (INFO) [F:AlignmentMillepede]  32    4.792e-08   -2.894e-18   2.14e-05    9.58e-06    8.12e-01
+|02:50:18.888|    (INFO) [F:AlignmentMillepede]  33    1.950e-07    3.362e-18   2.11e-05    3.90e-05    8.00e-01
+|02:50:18.888|    (INFO) [F:AlignmentMillepede]  34    7.409e-09    7.143e-18   5.49e-05    1.48e-06    9.69e-01
+|02:50:18.888|    (INFO) [F:AlignmentMillepede]  35    2.882e-07    1.225e-17   8.97e-05    5.77e-05    9.83e-01
+|02:50:18.888|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:50:18.889|    (INFO) [F:AlignmentMillepede] Convergence: 0.000243017
+|02:50:18.889|    (INFO) [F:AlignmentMillepede] Updating geometry...
+|02:50:18.963|    (INFO) [F:AlignmentMillepede] Feeding Millepede with 41415 tracks...
+|02:50:20.189|    (INFO) [F:AlignmentMillepede] Determining global parameters...
+|02:50:20.190|    (INFO) [F:AlignmentMillepede] Iteration 1 (using 41415 tracks)
+|02:50:20.834|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.33149
+|02:50:20.834|    (INFO) [F:AlignmentMillepede] Iteration 2 (using 40797 tracks)
+|02:50:21.546|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.33146
+|02:50:21.546|    (INFO) [F:AlignmentMillepede] Iteration 3 (using 40797 tracks)
+|02:50:22.205|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.33146
+|02:50:22.205|    (INFO) [F:AlignmentMillepede] Iteration 4 (using 40797 tracks)
+|02:50:22.907|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.33146
+|02:50:22.907|    (INFO) [F:AlignmentMillepede] Iteration 5 (using 40797 tracks)
+|02:50:23.604|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.33146
+|02:50:23.605|    (INFO) [F:AlignmentMillepede] Iteration 6 (using 40797 tracks)
+|02:50:24.349|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.33146
+|02:50:24.349|    (INFO) [F:AlignmentMillepede] Iteration 7 (using 40797 tracks)
+|02:50:25.061|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.33146
+|02:50:25.061|    (INFO) [F:AlignmentMillepede] Iteration 8 (using 40797 tracks)
+|02:50:25.821|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.33146
+|02:50:25.821|    (INFO) [F:AlignmentMillepede] Iteration 9 (using 40797 tracks)
+|02:50:25.821|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:50:25.821|    (INFO) [F:AlignmentMillepede]  Result of fit for global parameters
+|02:50:25.821|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:50:25.821|    (INFO) [F:AlignmentMillepede]    I  Difference    Last step      Error        Pull Global corr.
+|02:50:25.821|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:50:25.821|    (INFO) [F:AlignmentMillepede]   0   -2.443e-05    3.026e-17   4.82e-05   -4.89e-04    1.19e+00
+|02:50:25.821|    (INFO) [F:AlignmentMillepede]   1    8.163e-06    7.072e-17   5.79e-05    1.63e-04    3.53e-01
+|02:50:25.821|    (INFO) [F:AlignmentMillepede]   2    1.912e-05   -4.528e-17   6.31e-05    3.82e-04    4.36e-01
+|02:50:25.821|    (INFO) [F:AlignmentMillepede]   3    1.394e-05   -1.176e-16   6.26e-05    2.79e-04    4.30e-01
+|02:50:25.821|    (INFO) [F:AlignmentMillepede]   4    4.267e-06   -6.321e-17   5.85e-05    8.53e-05    2.72e-01
+|02:50:25.821|    (INFO) [F:AlignmentMillepede]   5   -2.106e-05    1.251e-16   4.76e-05   -4.21e-04    1.18e+00
+|02:50:25.821|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:50:25.821|    (INFO) [F:AlignmentMillepede]   6    1.205e-06    9.221e-18   4.24e-05    2.41e-05    1.47e+00
+|02:50:25.821|    (INFO) [F:AlignmentMillepede]   7    1.053e-06   -1.347e-17   5.27e-05    2.11e-05    6.19e-01
+|02:50:25.821|    (INFO) [F:AlignmentMillepede]   8   -1.719e-06   -6.146e-18   5.44e-05   -3.44e-05    3.42e-01
+|02:50:25.821|    (INFO) [F:AlignmentMillepede]   9   -2.701e-06    1.417e-17   5.39e-05   -5.40e-05    3.69e-01
+|02:50:25.821|    (INFO) [F:AlignmentMillepede]  10    3.204e-07   -2.108e-18   4.97e-05    6.41e-06    7.43e-01
+|02:50:25.821|    (INFO) [F:AlignmentMillepede]  11    1.841e-06   -1.661e-18   4.09e-05    3.68e-05    1.55e+00
+|02:50:25.821|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:50:25.821|    (INFO) [F:AlignmentMillepede]  12          OFF          OFF        OFF         OFF         OFF
+|02:50:25.821|    (INFO) [F:AlignmentMillepede]  13          OFF          OFF        OFF         OFF         OFF
+|02:50:25.821|    (INFO) [F:AlignmentMillepede]  14          OFF          OFF        OFF         OFF         OFF
+|02:50:25.821|    (INFO) [F:AlignmentMillepede]  15          OFF          OFF        OFF         OFF         OFF
+|02:50:25.821|    (INFO) [F:AlignmentMillepede]  16          OFF          OFF        OFF         OFF         OFF
+|02:50:25.821|    (INFO) [F:AlignmentMillepede]  17          OFF          OFF        OFF         OFF         OFF
+|02:50:25.821|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:50:25.821|    (INFO) [F:AlignmentMillepede]  18   -7.849e-05   -8.812e-18   1.28e-05   -1.57e-02    7.77e-01
+|02:50:25.821|    (INFO) [F:AlignmentMillepede]  19   -7.697e-05   -2.825e-17   2.06e-05   -1.54e-02    9.49e-01
+|02:50:25.821|    (INFO) [F:AlignmentMillepede]  20   -1.077e-04   -3.474e-17   2.90e-05   -2.15e-02    9.79e-01
+|02:50:25.821|    (INFO) [F:AlignmentMillepede]  21   -1.487e-04   -4.553e-17   3.73e-05   -2.97e-02    9.88e-01
+|02:50:25.821|    (INFO) [F:AlignmentMillepede]  22   -1.774e-04   -5.392e-17   4.51e-05   -3.55e-02    9.91e-01
+|02:50:25.821|    (INFO) [F:AlignmentMillepede]  23   -2.344e-04   -6.330e-17   5.21e-05   -4.69e-02    9.91e-01
+|02:50:25.821|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:50:25.821|    (INFO) [F:AlignmentMillepede]  24   -4.952e-04    3.822e-16   1.43e-05   -9.90e-02    9.81e-01
+|02:50:25.821|    (INFO) [F:AlignmentMillepede]  25   -7.931e-04    6.050e-16   2.24e-05   -1.59e-01    9.95e-01
+|02:50:25.821|    (INFO) [F:AlignmentMillepede]  26   -1.142e-03    8.617e-16   3.19e-05   -2.28e-01    9.98e-01
+|02:50:25.821|    (INFO) [F:AlignmentMillepede]  27   -1.480e-03    1.125e-15   4.15e-05   -2.96e-01    9.99e-01
+|02:50:25.821|    (INFO) [F:AlignmentMillepede]  28   -1.801e-03    1.365e-15   5.04e-05   -3.60e-01    9.99e-01
+|02:50:25.821|    (INFO) [F:AlignmentMillepede]  29   -2.108e-03    1.609e-15   5.93e-05   -4.22e-01    9.99e-01
+|02:50:25.821|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:50:25.821|    (INFO) [F:AlignmentMillepede]  30   -1.038e-06    8.928e-17   8.93e-05   -2.08e-04    9.83e-01
+|02:50:25.821|    (INFO) [F:AlignmentMillepede]  31   -5.505e-07    5.540e-17   5.51e-05   -1.10e-04    9.71e-01
+|02:50:25.821|    (INFO) [F:AlignmentMillepede]  32    1.233e-07    1.845e-17   2.14e-05    2.47e-05    8.12e-01
+|02:50:25.821|    (INFO) [F:AlignmentMillepede]  33    6.854e-07   -1.961e-17   2.11e-05    1.37e-04    8.00e-01
+|02:50:25.821|    (INFO) [F:AlignmentMillepede]  34    2.749e-07   -5.337e-17   5.50e-05    5.50e-05    9.69e-01
+|02:50:25.821|    (INFO) [F:AlignmentMillepede]  35    5.044e-07   -9.020e-17   8.98e-05    1.01e-04    9.83e-01
+|02:50:25.821|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:50:25.822|    (INFO) [F:AlignmentMillepede] Convergence: 0.000242941
+|02:50:25.822|    (INFO) [F:AlignmentMillepede] Updating geometry...
+|02:50:25.902|    (INFO) [F:AlignmentMillepede] Feeding Millepede with 41415 tracks...
+|02:50:27.125|    (INFO) [F:AlignmentMillepede] Determining global parameters...
+|02:50:27.126|    (INFO) [F:AlignmentMillepede] Iteration 1 (using 41415 tracks)
+|02:50:27.764|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.33133
+|02:50:27.764|    (INFO) [F:AlignmentMillepede] Iteration 2 (using 40797 tracks)
+|02:50:28.506|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.3313
+|02:50:28.506|    (INFO) [F:AlignmentMillepede] Iteration 3 (using 40797 tracks)
+|02:50:29.237|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.3313
+|02:50:29.237|    (INFO) [F:AlignmentMillepede] Iteration 4 (using 40797 tracks)
+|02:50:29.956|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.3313
+|02:50:29.956|    (INFO) [F:AlignmentMillepede] Iteration 5 (using 40797 tracks)
+|02:50:30.691|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.3313
+|02:50:30.691|    (INFO) [F:AlignmentMillepede] Iteration 6 (using 40797 tracks)
+|02:50:31.383|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.3313
+|02:50:31.383|    (INFO) [F:AlignmentMillepede] Iteration 7 (using 40797 tracks)
+|02:50:32.125|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.3313
+|02:50:32.125|    (INFO) [F:AlignmentMillepede] Iteration 8 (using 40797 tracks)
+|02:50:32.865|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.3313
+|02:50:32.865|    (INFO) [F:AlignmentMillepede] Iteration 9 (using 40797 tracks)
+|02:50:32.865|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:50:32.865|    (INFO) [F:AlignmentMillepede]  Result of fit for global parameters
+|02:50:32.865|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:50:32.865|    (INFO) [F:AlignmentMillepede]    I  Difference    Last step      Error        Pull Global corr.
+|02:50:32.865|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:50:32.865|    (INFO) [F:AlignmentMillepede]   0   -2.586e-05   -2.359e-17   4.82e-05   -5.17e-04    1.19e+00
+|02:50:32.865|    (INFO) [F:AlignmentMillepede]   1    8.788e-06   -4.296e-17   5.79e-05    1.76e-04    3.51e-01
+|02:50:32.865|    (INFO) [F:AlignmentMillepede]   2    2.029e-05    2.217e-17   6.30e-05    4.06e-04    4.39e-01
+|02:50:32.865|    (INFO) [F:AlignmentMillepede]   3    1.439e-05    7.991e-17   6.25e-05    2.88e-04    4.34e-01
+|02:50:32.865|    (INFO) [F:AlignmentMillepede]   4    4.515e-06    6.347e-17   5.84e-05    9.03e-05    2.65e-01
+|02:50:32.865|    (INFO) [F:AlignmentMillepede]   5   -2.212e-05   -9.899e-17   4.76e-05   -4.42e-04    1.17e+00
+|02:50:32.865|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:50:32.865|    (INFO) [F:AlignmentMillepede]   6    2.089e-07    8.820e-19   4.24e-05    4.18e-06    1.47e+00
+|02:50:32.865|    (INFO) [F:AlignmentMillepede]   7    8.043e-07   -4.083e-18   5.26e-05    1.61e-05    6.19e-01
+|02:50:32.865|    (INFO) [F:AlignmentMillepede]   8   -9.627e-07    2.266e-18   5.43e-05   -1.93e-05    3.43e-01
+|02:50:32.865|    (INFO) [F:AlignmentMillepede]   9   -8.134e-07    7.870e-19   5.39e-05   -1.63e-05    3.70e-01
+|02:50:32.865|    (INFO) [F:AlignmentMillepede]  10    2.529e-07    3.528e-18   4.97e-05    5.06e-06    7.44e-01
+|02:50:32.865|    (INFO) [F:AlignmentMillepede]  11    5.099e-07   -3.389e-18   4.09e-05    1.02e-05    1.55e+00
+|02:50:32.865|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:50:32.865|    (INFO) [F:AlignmentMillepede]  12          OFF          OFF        OFF         OFF         OFF
+|02:50:32.865|    (INFO) [F:AlignmentMillepede]  13          OFF          OFF        OFF         OFF         OFF
+|02:50:32.865|    (INFO) [F:AlignmentMillepede]  14          OFF          OFF        OFF         OFF         OFF
+|02:50:32.865|    (INFO) [F:AlignmentMillepede]  15          OFF          OFF        OFF         OFF         OFF
+|02:50:32.865|    (INFO) [F:AlignmentMillepede]  16          OFF          OFF        OFF         OFF         OFF
+|02:50:32.865|    (INFO) [F:AlignmentMillepede]  17          OFF          OFF        OFF         OFF         OFF
+|02:50:32.865|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:50:32.865|    (INFO) [F:AlignmentMillepede]  18   -7.553e-05   -2.392e-17   1.27e-05   -1.51e-02    7.74e-01
+|02:50:32.865|    (INFO) [F:AlignmentMillepede]  19   -7.192e-05   -3.568e-17   2.05e-05   -1.44e-02    9.49e-01
+|02:50:32.865|    (INFO) [F:AlignmentMillepede]  20   -9.977e-05   -5.123e-17   2.89e-05   -2.00e-02    9.79e-01
+|02:50:32.865|    (INFO) [F:AlignmentMillepede]  21   -1.385e-04   -6.695e-17   3.72e-05   -2.77e-02    9.88e-01
+|02:50:32.865|    (INFO) [F:AlignmentMillepede]  22   -1.654e-04   -8.260e-17   4.49e-05   -3.31e-02    9.91e-01
+|02:50:32.865|    (INFO) [F:AlignmentMillepede]  23   -2.204e-04   -9.516e-17   5.18e-05   -4.41e-02    9.91e-01
+|02:50:32.865|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:50:32.865|    (INFO) [F:AlignmentMillepede]  24   -4.902e-04   -2.410e-16   1.40e-05   -9.80e-02    9.80e-01
+|02:50:32.865|    (INFO) [F:AlignmentMillepede]  25   -7.931e-04   -3.852e-16   2.21e-05   -1.59e-01    9.95e-01
+|02:50:32.865|    (INFO) [F:AlignmentMillepede]  26   -1.144e-03   -5.509e-16   3.15e-05   -2.29e-01    9.98e-01
+|02:50:32.865|    (INFO) [F:AlignmentMillepede]  27   -1.483e-03   -7.173e-16   4.11e-05   -2.97e-01    9.99e-01
+|02:50:32.865|    (INFO) [F:AlignmentMillepede]  28   -1.803e-03   -8.730e-16   4.98e-05   -3.61e-01    9.99e-01
+|02:50:32.865|    (INFO) [F:AlignmentMillepede]  29   -2.107e-03   -1.022e-15   5.85e-05   -4.22e-01    9.99e-01
+|02:50:32.865|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:50:32.865|    (INFO) [F:AlignmentMillepede]  30   -8.084e-07    5.036e-17   8.93e-05   -1.62e-04    9.83e-01
+|02:50:32.865|    (INFO) [F:AlignmentMillepede]  31   -4.809e-07    3.031e-17   5.51e-05   -9.62e-05    9.71e-01
+|02:50:32.865|    (INFO) [F:AlignmentMillepede]  32   -3.360e-08    1.006e-17   2.14e-05   -6.72e-06    8.12e-01
+|02:50:32.865|    (INFO) [F:AlignmentMillepede]  33    2.779e-07   -9.387e-18   2.11e-05    5.56e-05    8.00e-01
+|02:50:32.865|    (INFO) [F:AlignmentMillepede]  34    2.427e-07   -3.011e-17   5.50e-05    4.85e-05    9.69e-01
+|02:50:32.865|    (INFO) [F:AlignmentMillepede]  35    8.023e-07   -5.124e-17   8.99e-05    1.60e-04    9.83e-01
+|02:50:32.865|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:50:32.866|    (INFO) [F:AlignmentMillepede] Convergence: 0.000241508
+|02:50:32.866|    (INFO) [F:AlignmentMillepede] Updating geometry...
+|02:50:32.944|    (INFO) [F:AlignmentMillepede] Feeding Millepede with 41415 tracks...
+|02:50:34.180|    (INFO) [F:AlignmentMillepede] Determining global parameters...
+|02:50:34.180|    (INFO) [F:AlignmentMillepede] Iteration 1 (using 41415 tracks)
+|02:50:34.793|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.33147
+|02:50:34.793|    (INFO) [F:AlignmentMillepede] Iteration 2 (using 40798 tracks)
+|02:50:35.448|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.33145
+|02:50:35.448|    (INFO) [F:AlignmentMillepede] Iteration 3 (using 40798 tracks)
+|02:50:36.190|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.33145
+|02:50:36.190|    (INFO) [F:AlignmentMillepede] Iteration 4 (using 40798 tracks)
+|02:50:36.913|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.33145
+|02:50:36.913|    (INFO) [F:AlignmentMillepede] Iteration 5 (using 40798 tracks)
+|02:50:37.632|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.33145
+|02:50:37.632|    (INFO) [F:AlignmentMillepede] Iteration 6 (using 40798 tracks)
+|02:50:38.343|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.33145
+|02:50:38.343|    (INFO) [F:AlignmentMillepede] Iteration 7 (using 40798 tracks)
+|02:50:39.033|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.33145
+|02:50:39.033|    (INFO) [F:AlignmentMillepede] Iteration 8 (using 40798 tracks)
+|02:50:39.752|    (INFO) [F:AlignmentMillepede] Chi2 / DOF after re-fit: 2.33145
+|02:50:39.752|    (INFO) [F:AlignmentMillepede] Iteration 9 (using 40798 tracks)
+|02:50:39.753|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:50:39.753|    (INFO) [F:AlignmentMillepede]  Result of fit for global parameters
+|02:50:39.753|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:50:39.753|    (INFO) [F:AlignmentMillepede]    I  Difference    Last step      Error        Pull Global corr.
+|02:50:39.753|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:50:39.753|    (INFO) [F:AlignmentMillepede]   0   -2.809e-05   -1.639e-17   4.82e-05   -5.62e-04    1.19e+00
+|02:50:39.753|    (INFO) [F:AlignmentMillepede]   1    9.599e-06   -9.732e-18   5.78e-05    1.92e-04    3.49e-01
+|02:50:39.753|    (INFO) [F:AlignmentMillepede]   2    2.200e-05    1.654e-17   6.30e-05    4.40e-04    4.42e-01
+|02:50:39.753|    (INFO) [F:AlignmentMillepede]   3    1.507e-05    2.975e-17   6.25e-05    3.01e-04    4.38e-01
+|02:50:39.753|    (INFO) [F:AlignmentMillepede]   4    5.892e-06    1.175e-17   5.83e-05    1.18e-04    2.57e-01
+|02:50:39.753|    (INFO) [F:AlignmentMillepede]   5   -2.447e-05   -3.195e-17   4.75e-05   -4.89e-04    1.16e+00
+|02:50:39.753|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:50:39.753|    (INFO) [F:AlignmentMillepede]   6   -1.213e-07   -1.609e-18   4.24e-05   -2.43e-06    1.47e+00
+|02:50:39.753|    (INFO) [F:AlignmentMillepede]   7    2.273e-07    1.184e-18   5.26e-05    4.55e-06    6.20e-01
+|02:50:39.753|    (INFO) [F:AlignmentMillepede]   8   -1.361e-07    5.543e-19   5.43e-05   -2.72e-06    3.44e-01
+|02:50:39.753|    (INFO) [F:AlignmentMillepede]   9   -6.976e-08    1.412e-18   5.39e-05   -1.40e-06    3.72e-01
+|02:50:39.753|    (INFO) [F:AlignmentMillepede]  10    2.454e-07   -1.179e-18   4.97e-05    4.91e-06    7.46e-01
+|02:50:39.753|    (INFO) [F:AlignmentMillepede]  11   -1.455e-07   -3.608e-19   4.08e-05   -2.91e-06    1.55e+00
+|02:50:39.753|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:50:39.753|    (INFO) [F:AlignmentMillepede]  12          OFF          OFF        OFF         OFF         OFF
+|02:50:39.753|    (INFO) [F:AlignmentMillepede]  13          OFF          OFF        OFF         OFF         OFF
+|02:50:39.753|    (INFO) [F:AlignmentMillepede]  14          OFF          OFF        OFF         OFF         OFF
+|02:50:39.753|    (INFO) [F:AlignmentMillepede]  15          OFF          OFF        OFF         OFF         OFF
+|02:50:39.753|    (INFO) [F:AlignmentMillepede]  16          OFF          OFF        OFF         OFF         OFF
+|02:50:39.753|    (INFO) [F:AlignmentMillepede]  17          OFF          OFF        OFF         OFF         OFF
+|02:50:39.753|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:50:39.753|    (INFO) [F:AlignmentMillepede]  18   -7.330e-05   -2.715e-17   1.25e-05   -1.47e-02    7.70e-01
+|02:50:39.753|    (INFO) [F:AlignmentMillepede]  19   -6.789e-05   -4.662e-17   2.04e-05   -1.36e-02    9.48e-01
+|02:50:39.753|    (INFO) [F:AlignmentMillepede]  20   -9.321e-05   -6.550e-17   2.88e-05   -1.86e-02    9.79e-01
+|02:50:39.753|    (INFO) [F:AlignmentMillepede]  21   -1.301e-04   -8.548e-17   3.70e-05   -2.60e-02    9.88e-01
+|02:50:39.753|    (INFO) [F:AlignmentMillepede]  22   -1.556e-04   -1.041e-16   4.46e-05   -3.11e-02    9.91e-01
+|02:50:39.753|    (INFO) [F:AlignmentMillepede]  23   -2.090e-04   -1.207e-16   5.14e-05   -4.18e-02    9.91e-01
+|02:50:39.753|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:50:39.753|    (INFO) [F:AlignmentMillepede]  24   -4.840e-04   -1.004e-16   1.37e-05   -9.68e-02    9.79e-01
+|02:50:39.753|    (INFO) [F:AlignmentMillepede]  25   -7.917e-04   -1.618e-16   2.18e-05   -1.58e-01    9.95e-01
+|02:50:39.753|    (INFO) [F:AlignmentMillepede]  26   -1.145e-03   -2.328e-16   3.12e-05   -2.29e-01    9.98e-01
+|02:50:39.753|    (INFO) [F:AlignmentMillepede]  27   -1.484e-03   -3.017e-16   4.06e-05   -2.97e-01    9.99e-01
+|02:50:39.753|    (INFO) [F:AlignmentMillepede]  28   -1.802e-03   -3.683e-16   4.92e-05   -3.60e-01    9.99e-01
+|02:50:39.753|    (INFO) [F:AlignmentMillepede]  29   -2.103e-03   -4.293e-16   5.77e-05   -4.21e-01    9.99e-01
+|02:50:39.753|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:50:39.753|    (INFO) [F:AlignmentMillepede]  30    3.783e-06    1.683e-17   8.94e-05    7.57e-04    9.83e-01
+|02:50:39.753|    (INFO) [F:AlignmentMillepede]  31    2.289e-06    1.032e-17   5.52e-05    4.58e-04    9.71e-01
+|02:50:39.753|    (INFO) [F:AlignmentMillepede]  32    9.426e-07    4.113e-18   2.14e-05    1.89e-04    8.12e-01
+|02:50:39.753|    (INFO) [F:AlignmentMillepede]  33   -6.025e-07   -3.774e-18   2.11e-05   -1.21e-04    8.00e-01
+|02:50:39.753|    (INFO) [F:AlignmentMillepede]  34   -2.602e-06   -9.295e-18   5.51e-05   -5.20e-04    9.69e-01
+|02:50:39.753|    (INFO) [F:AlignmentMillepede]  35   -3.810e-06   -1.816e-17   8.99e-05   -7.62e-04    9.83e-01
+|02:50:39.753|    (INFO) [F:AlignmentMillepede] -----------------------------------------------------------------
+|02:50:39.753|    (INFO) [F:AlignmentMillepede] Convergence: 0.000240487
+|02:50:39.753|    (INFO) [F:AlignmentMillepede] Updating geometry...
+|02:50:39.799|  (STATUS) Wrote histogram output file to "/home/hinata/MALTA2/AnalysisTemplate/Imaging/output/EDA/align/align.root"
+|02:50:39.799| (WARNING) Detectors file /home/hinata/MALTA2/AnalysisTemplate/Imaging/geometry/EDA/aligned.conf exists and will be overwritten.
+|02:50:39.799|  (STATUS) Wrote updated detector configuration to /home/hinata/MALTA2/AnalysisTemplate/Imaging/geometry/EDA/aligned.conf
+|02:50:39.799|  (STATUS) ===============| Wall-clock timing (seconds) |================
+|02:50:39.799|  (STATUS)     EventLoaderMALTA               --  0.60347s = 0.012069ms/evt
+|02:50:39.799|  (STATUS)    ClusteringSpatial :    MALTA_0  --  0.12782s = 0.002556ms/evt
+|02:50:39.799|  (STATUS)    ClusteringSpatial :    MALTA_1  --  0.12177s = 0.002435ms/evt
+|02:50:39.799|  (STATUS)    ClusteringSpatial :    MALTA_2  --  0.12827s = 0.002565ms/evt
+|02:50:39.799|  (STATUS)    ClusteringSpatial :    MALTA_4  --  0.13646s = 0.002729ms/evt
+|02:50:39.799|  (STATUS)    ClusteringSpatial :    MALTA_5  --  0.14369s = 0.002874ms/evt
+|02:50:39.799|  (STATUS)    ClusteringSpatial :    MALTA_6  --  0.14274s = 0.002855ms/evt
+|02:50:39.799|  (STATUS)         FilterEvents               --  0.07094s = 0.001419ms/evt
+|02:50:39.799|  (STATUS)         Correlations :    MALTA_0  --  0.09907s = 0.001981ms/evt
+|02:50:39.799|  (STATUS)         Correlations :    MALTA_1  --  0.09147s = 0.001829ms/evt
+|02:50:39.799|  (STATUS)         Correlations :    MALTA_2  --  0.09174s = 0.001835ms/evt
+|02:50:39.799|  (STATUS)         Correlations :    MALTA_4  --  0.09141s = 0.001828ms/evt
+|02:50:39.799|  (STATUS)         Correlations :    MALTA_5  --  0.09153s = 0.001831ms/evt
+|02:50:39.799|  (STATUS)         Correlations :    MALTA_6  --  0.09302s = 0.001860ms/evt
+|02:50:39.799|  (STATUS)           Tracking4D               --  2.12251s = 0.042450ms/evt
+|02:50:39.799|  (STATUS)   AlignmentMillepede               --  0.16060s = 0.003212ms/evt
+|02:50:39.799|  (STATUS) ==============================================================

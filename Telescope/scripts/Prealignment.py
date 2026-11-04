@@ -19,11 +19,13 @@ def main():
     args = common.base_arg_parser("Run corry Prealignment (coarse X/Y shifts from correlations)").parse_args()
 
     overrides = common.standard_overrides(args)
+    out_dir = common.step_dir(args, "prealign")
+    overrides.update(common.setup_overrides(args, "prealign", out_dir))
 
-    log_path = common.TELESCOPE_DIR / "output" / "prealign" / f"run{args.run_number}_corry.log"
-    common.run_corry(CONFIG, overrides, log_path)
+    log_path = out_dir / f"run{args.run_number}_corry.log"
+    dut = common.run_corry(CONFIG, overrides, log_path, dut=args.dut)
 
-    root_path = common.TELESCOPE_DIR / "output" / "prealign" / "prealign.root"
+    root_path = out_dir / "prealign.root"
     f = ROOT.TFile.Open(str(root_path))
 
     canvas = common.make_grid_canvas(f"c_prealign_run{args.run_number}", 4, 2)
@@ -70,7 +72,7 @@ def main():
             fit_y["func"].SetLineStyle(2)
             fit_y["func"].Draw("same")
 
-        tag = " (fixed)" if det == common.DUT else ""
+        tag = " (fixed)" if det == dut else ""
         lines = [det + tag]
         if fit_x:
             lines.append(f"X = {fit_x['mean']:.3f} #pm {fit_x['mean_err']:.3f} mm")
@@ -89,8 +91,8 @@ def main():
                   f"(sigma {fit_y['sigma']:.4f} mm)")
 
     canvas.cd(0)
-    png_path = common.save(canvas, common.TELESCOPE_DIR / "output" / "prealign", f"run{args.run_number}_summary")
-    print(f"\nUpdated geometry written to: {common.TELESCOPE_DIR / 'geometry' / 'prealigned.conf'}")
+    png_path = common.save(canvas, out_dir, f"run{args.run_number}_summary")
+    print(f"\nUpdated geometry written to: {common.geometry_file(args, 'prealigned')}")
     print(f"Summary: {png_path}")
 
 

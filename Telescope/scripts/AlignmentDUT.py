@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Step 4: run corry's AlignmentDUTResidual to fine-tune the DUT (MALTA_3)
-on top of the already-Millepede-aligned reference planes. Shows the final
-unbiased residuals (with a Gaussian fit) and the per-iteration convergence
-of the DUT's translation/rotation corrections.
+on top of the already-Millepede-aligned reference planes. Shows the
+per-iteration convergence of the DUT's translation/rotation corrections;
+the final unbiased residual confirmation plot has moved to
+run_analysis.py, which shows it for the final aligned_dut geometry.
 
 Run Alignment.py first -- this step reads geometry/aligned.conf.
 
@@ -59,46 +60,18 @@ def main():
     args = common.base_arg_parser("Run corry AlignmentDUTResidual (fine-tune the DUT)").parse_args()
 
     overrides = common.standard_overrides(args)
+    out_dir = common.step_dir(args, "align_dut")
+    overrides.update(common.setup_overrides(args, "align_dut", out_dir))
 
-    log_path = common.TELESCOPE_DIR / "output" / "align_dut" / f"run{args.run_number}_corry.log"
-    common.run_corry(CONFIG, overrides, log_path)
+    log_path = out_dir / f"run{args.run_number}_corry.log"
+    dut = common.run_corry(CONFIG, overrides, log_path, dut=args.dut)
 
-    root_path = common.TELESCOPE_DIR / "output" / "align_dut" / "align_dut.root"
+    root_path = out_dir / "align_dut.root"
     f = ROOT.TFile.Open(str(root_path))
-    mod_dir = find_module_dir(f, "AlignmentDUTResidual", common.DUT)
+    mod_dir = find_module_dir(f, "AlignmentDUTResidual", dut)
 
-    canvas = common.make_grid_canvas(f"c_align_dut_run{args.run_number}", 4, 2)
+    canvas = common.make_grid_canvas(f"c_align_dut_run{args.run_number}", 3, 2, width=1500, height=1000)
     keepalive = []
-
-    # --- residual histograms (final, unbiased) with a Gaussian fit -------
-    for i, (hist_name, axis_label) in enumerate([("residualsX", "x"), ("residualsY", "y")], start=1):
-        pad = canvas.cd(i)
-        pad.SetLeftMargin(0.14)
-        h = find_object(mod_dir, hist_name)
-        if h is None:
-            print(f"  [warn] histogram not found: AlignmentDUTResidual/.../{hist_name}")
-            continue
-        h.SetLineColor(ROOT.kBlue + 2)
-        h.SetLineWidth(2)
-        h.GetXaxis().SetTitle(f"{axis_label}_{{track}} - {axis_label} [#mum]")
-        h.GetYaxis().SetTitle("associated clusters")
-        ps.style_axis_font43(h.GetXaxis(), title_size=16, title_offset=2.4, label_size=13)
-        ps.style_axis_font43(h.GetYaxis(), title_size=16, title_offset=1.8, label_size=13)
-        h.Draw("HIST")
-        fit = common.fit_gaussian(h)
-        if fit:
-            fit["func"].SetLineColor(ROOT.kRed + 1)
-            fit["func"].Draw("same")
-            center = fit["mean"]
-            half_window = max(8 * fit["sigma"], 20)
-            h.GetXaxis().SetRangeUser(center - half_window, center + half_window)
-            lines = [common.DUT, f"mean = {fit['mean']:.2f} #pm {fit['mean_err']:.2f} #mum",
-                     f"sigma = {fit['sigma']:.2f} #pm {fit['sigma_err']:.2f} #mum"]
-            corner = ps.pick_label_corner(h)
-            label = ps.draw_corner_label(pad, lines, corner=corner, header_size=0.06, body_size=0.05, dy=0.09)
-            keepalive.append(label)
-            print(f"{common.DUT}: {axis_label} residual mean {fit['mean']:+.2f} um, sigma {fit['sigma']:.2f} um")
-        keepalive.append((h, fit))
 
     # --- per-iteration convergence graphs ---------------------------------
     graph_specs = [
@@ -108,7 +81,7 @@ def main():
         ("alignment_correction_rotation1_", "rot 1 [deg]"),
         ("alignment_correction_rotation2_", "rot 2 [deg]"),
     ]
-    for i, (prefix, title) in enumerate(graph_specs, start=3):
+    for i, (prefix, title) in enumerate(graph_specs, start=1):
         pad = canvas.cd(i)
         pad.SetLeftMargin(0.16)
         graph = find_object(mod_dir, prefix)
@@ -116,10 +89,11 @@ def main():
         keepalive.append((graph, label))
 
     canvas.cd(0)
-    png_path = common.save(canvas, common.TELESCOPE_DIR / "output" / "align_dut", f"run{args.run_number}_summary")
+    png_path = common.save(canvas, out_dir, f"run{args.run_number}_summary")
 
-    print(f"\nUpdated geometry written to: {common.TELESCOPE_DIR / 'geometry' / 'aligned_dut.conf'}")
+    print(f"\nUpdated geometry written to: {common.geometry_file(args, 'aligned_dut')}")
     print("This is the final geometry -- config/analysis.conf reads from it.")
+    print("Residual confirmation plots are produced by run_analysis.py against this geometry.")
     print(f"Summary: {png_path}")
 
 

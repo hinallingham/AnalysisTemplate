@@ -56,7 +56,28 @@ there (corryvreckan's `EventLoaderMALTA` multi-file convention).
 run (e.g. while iterating on a config change). `--sim-data` sets
 `EventLoaderMALTA.real_data=false` for data produced by the
 `Malta2TreeWriter` Allpix module (no hardware group-address offset) rather
-than a real MaltaDAQ beam-test run.
+than a real MaltaDAQ beam-test run. **All configs default to real data**
+(`real_data = true`), so simulated data always needs `--sim-data`.
+
+## Setups (`--setup`)
+
+`--setup S` on any step script runs the same configs on `geometry/S/` (starting from
+`geometry/S/init.conf`) and writes to `output/S/run<N>/<step>/` (N = the run the step reads), leaving `geometry/*.conf` and
+`output/<step>/` alone -- several layouts can then live side by side. `scripts/run_chain.sh`
+runs the whole chain for one setup, `scripts/run_online.sh` the online monitor:
+
+```bash
+scripts/run_chain.sh  --setup dec2026_C1p5 --run 120                     # mask .. analysis
+scripts/run_chain.sh  --setup dec2026_C1p5 --align-run 120 --run 121 --steps "analysis upstream3"
+scripts/run_online.sh --setup dec2026_C1p5 --run 121
+```
+
+New setups: copy `geometry/template/` to `geometry/S/` and edit the z positions (lines marked `EDIT`).
+See the top-level README (`../README.md`, `../README.en.md`).
+
+`config/mask.conf` has `mask_dead_pixels = false`: with the beam covering part of the chip, the
+pixels it never reaches count as "dead", and AnalysisEfficiency then drops every track next to
+a masked pixel (measured on simulation: 85 of 30704 tracks left).
 
 All step-specific `-o` overrides go through `common.standard_overrides()` --
 notably, a truly global `[Corryvreckan]` option like `number_of_events` must

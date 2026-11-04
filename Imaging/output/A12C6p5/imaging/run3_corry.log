@@ -1,0 +1,8 @@
+|02:21:57.649|    (INFO) Setting provided option output_directory=/home/hinata/MALTA2/AnalysisTemplate/Imaging/output/A12C6p5/imaging
+|02:21:57.649|    (INFO) Setting provided option detectors_file=/home/hinata/MALTA2/AnalysisTemplate/Imaging/geometry/A12C6p5/aligned.conf
+|02:21:57.649|    (INFO) Setting provided option histogram_file=imaging_run3.root
+|02:21:57.649|    (INFO) Setting provided option run_number=3 for EventLoaderMALTA
+|02:21:57.649|    (INFO) Setting provided option base_path=/home/hinata/MALTA2/Telescope/sim/output/MLCC_imaging_A12C6p5 for EventLoaderMALTA
+|02:21:57.649|   (FATAL) Error in the configuration file:
+                          Value /home/hinata/MALTA2/AnalysisTemplate/Imaging/geometry/A12C6p5/aligned.conf of key 'detectors_file' in global section is not valid: path /home/hinata/MALTA2/AnalysisTemplate/Imaging/geometry/A12C6p5/aligned.conf not found
+                         The configuration file needs to be updated! Cannot continue...
