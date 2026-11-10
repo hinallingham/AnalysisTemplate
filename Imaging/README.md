@@ -9,7 +9,7 @@ of the kink-angle distribution is mapped per image cell
 
 ```
           run 1 (no sample)                              run 2, 3 (sample)
-mask.conf -> prealign.conf -> align.conf  ->  imaging.conf  ->  plot_imaging.py
+mask.conf -> prealign.conf -> align.conf  ->  imaging.conf  ->  macros/plot_imaging.C
 geometry/ init -> masked -> prealigned -> aligned            output/imaging/imaging_run<N>.root
 ```
 
@@ -29,7 +29,7 @@ MALTA_0  MALTA_1  MALTA_2  [sample]  MALTA_4  MALTA_5  MALTA_6
 ```bash
 scripts/run_imaging.sh --setup dec2026_EDA --data-dir <dir> --align-run 1 --image-run "2 3"
 scripts/run_imaging.sh --setup dec2026_EDA --data-dir <dir> --image-run 3 --steps "imaging plot"   # re-image only
-scripts/run_imaging.sh --data-dir <dir> --sim-data --align-run 1 --image-run "2 3" --truth   # sim, default geometry
+scripts/run_imaging.sh --data-dir <dir> --sim-data --align-run 1 --image-run "2 3"   # sim, default geometry
 scripts/run_online.sh  --setup dec2026_EDA --run 12      # online monitor (config/online.conf)
 ```
 
@@ -38,11 +38,20 @@ Malta2TreeWriter (Allpix) data (the `MLCC_imaging*_run_all.sh` scripts do). `--s
 `--variant S`) uses `geometry/S/` and `output/S/`; make a new setup with
 copying `geometry/template/` to `geometry/S/` and editing the z positions (see the top-level README).
 
-Plots go to `/home/hinata/output/plot/MALTA2/simulation_analyze/material_imaging/[<setup>/]`
-for `--sim-data`, and to `.../real_analyze/material_imaging/<setup>/` for beam-test data.
+Only bash, corry and ROOT are needed; corry / ROOT / data paths come from `../paths.json`.
+Plots go to `<plot_dir>/simulation_analyze/material_imaging/[<setup>/]` for `--sim-data`, and to
+`<plot_dir>/real_analyze/material_imaging/[<setup>/]` for beam-test data (`plot_dir` from
+`paths.json`; if it is empty, `output/[<setup>/]plots/`). `--rows "Y1 Y2"` sets the y bands [mm]
+of the x-profile plot (default `"1.9 -1.9"`, the two MLCC rows).
+
+The plot macro can also be run by hand:
+`root -l -b -q 'macros/plot_imaging.C("output/<setup>/imaging/imaging_run3.root", "<out dir>", "3")'`.
+
+The overlay of the nominal capacitor outlines (`--truth`) and the comparison with the nominal x/X0
+need the python simulation generator and are not part of the ROOT-macro version.
 
 The simulated data come from
-`/home/hinata/MALTA2/Telescope/sim/config/MLCC_imaging_run_all.sh`
+`<sim>/config/MLCC_imaging_run_all.sh`
 (Allpix^2 + Malta2TreeWriter: MLCCs on kapton tape (run 2) or on a G10 PCB (run 3) as GDML passive material;
 see `MLCC_imaging_generate_configs.py` for the capacitor model and layout),
 which ends by calling `run_imaging.sh` on `sim/output/MLCC_imaging/`.
@@ -57,7 +66,7 @@ MALTA_0  MALTA_1  MALTA_2  [sample]  MALTA_4  MALTA_5  MALTA_6
 -30.5cm  -18.5cm  -6.5cm    0        +6.5cm   +18.5cm  +30.5cm
 ```
 
-`/home/hinata/MALTA2/Telescope/sim/config/MLCC_imaging_A12C6p5_run_all.sh` simulates it and
+`<sim>/config/MLCC_imaging_A12C6p5_run_all.sh` simulates it and
 runs the chain with `run_imaging.sh --variant A12C6p5`, which uses the same step configs with
 `geometry/A12C6p5/` and `output/A12C6p5/`; plots go to `material_imaging/A12C6p5/`.
 
@@ -73,10 +82,10 @@ runs the chain with `run_imaging.sh --variant A12C6p5`, which uses the same step
   `max_z_upstream` at `numeric_limits<double>::min()` (= +2e-308), so with
   every upstream plane at z < 0 a scatterer at exactly 0 is rejected.
 - **AnalysisMaterialBudget maps are one bin off**: it fills them with
-  `SetBinContent(cell_x, cell_y)` for 0-based indices. `plot_imaging.py`
+  `SetBinContent(cell_x, cell_y)` for 0-based indices. `plot_imaging.C`
   shifts them back; the raw `MBI`/`MBISqrt` in the ROOT file are still off.
 - The image is the kink width (AAD of the central 90%, x and y pooled), not
-  x/X0. `scripts/calibrate_xx0.py` converts it (next section).
+  x/X0. `scripts/calibrate_xx0.sh` (`macros/calibrate_xx0.C`) converts it (next section).
 
 ## Calibration to x/X0 (Al plates)
 
@@ -95,10 +104,9 @@ on PCB reach ~10.5%.
 
 ```bash
 scripts/run_imaging.sh --data-dir <dir> --image-run "1 10 11 12 13 14 15 16" --steps "imaging"
-scripts/calibrate_xx0.py --calib 1:0 10:0.1 11:0.2 12:0.5 13:1 14:2 15:5 16:10 --image-run 2 3 --truth
+scripts/calibrate_xx0.sh --calib "1:0 10:0.1 11:0.2 12:0.5 13:1 14:2 15:5 16:10" --image-run "2 3" [--setup S] [--sim-data]
 ```
 
-(`MLCC_imaging_run_all.sh` does both when RUNS contains Al runs.) Outputs:
-`calib_curve`, `calib_fit.txt`, `MLCC_run<N>_xx0` and, with `--truth`, the
-nominal map / difference / profiles / per-capacitor comparison against
-`true_xx0()` of the generator.
+Outputs (in `<plot_dir>/{real,simulation}_analyze/material_imaging/[<setup>/]calib/`, or
+`output/[<setup>/]plots/calib/`): `calib_curve`, `calib_fit.txt`, `MLCC_run<N>_xx0.{pdf,png}` and
+`MLCC_run<N>_xx0.root` (the calibrated map as a TH2D `xx0`, for further analysis).

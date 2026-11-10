@@ -7,7 +7,7 @@
 #
 # Usage:
 #   ./run_online.sh --setup dec2026_EDA --run 12
-#   --data-dir DIR   where MaltaDAQ writes run_<NNNNNN>_<0..5>.root (default: ../data)
+#   --data-dir DIR   where MaltaDAQ writes run_<NNNNNN>_<0..5>.root (default: imaging_data_dir in paths.json)
 #   --geometry FILE  use this geometry instead
 #   --sim-data       Malta2TreeWriter (Allpix) data
 # Needs a display (X11). Snapshots every minute: output/<SETUP>/online/snapshots/
@@ -15,9 +15,9 @@
 set -e
 
 IMG_DIR="$(cd "$(dirname "$0")/.." && pwd)"
-CORRY_BIN="${CORRY_BIN:-/home/hinata/package/corryvreckan/bin/corry}"
+source "${IMG_DIR}/../common/paths.sh"   # corry / data paths from paths.json
 
-SETUP=""; RUN=""; GEOMETRY=""; DATA_DIR="${IMG_DIR}/data"; EXTRA=()
+SETUP=""; RUN=""; GEOMETRY=""; DATA_DIR="${IMAGING_DATA_DIR}"; EXTRA=()
 while [ "$#" -gt 0 ]; do
   case "$1" in
     --setup)    SETUP="$2"; shift 2 ;;
@@ -29,13 +29,15 @@ while [ "$#" -gt 0 ]; do
   esac
 done
 [ -n "$SETUP" ] && [ -n "$RUN" ] || { echo "usage: $0 --setup NAME --run N [options] (see header)" >&2; exit 1; }
+check_tools corry
 GEO_DIR="${IMG_DIR}/geometry/${SETUP}"
 if [ -z "$GEOMETRY" ]; then
   for G in aligned prealigned masked init; do
-    [ -f "${GEO_DIR}/${G}.conf" ] && { GEOMETRY="${GEO_DIR}/${G}.conf"; break; }
+    [ -f "${GEO_DIR}/${G}.conf" ] && geo_ok "${GEO_DIR}/${G}.conf" && { GEOMETRY="${GEO_DIR}/${G}.conf"; break; }
   done
 fi
 [ -n "$GEOMETRY" ] || { echo "no geometry in ${GEO_DIR}/" >&2; exit 1; }
+geo_ok "$GEOMETRY" || { echo "${GEOMETRY} refers to mask files that no longer exist" >&2; exit 1; }
 case "$GEOMETRY" in */aligned.conf) ;; *) echo "NOTE: using $(basename "$GEOMETRY") -- the kink angles are only meaningful after alignment" ;; esac
 
 OUT="${IMG_DIR}/output/${SETUP}/online"

@@ -1,0 +1,21 @@
+# machine-specific paths: copy paths.example.json to paths.json and edit it
+paths.json
+# python leftovers / virtual environments (the scripts only need bash + ROOT + corry)
+.venv/
+__pycache__/
+*.pyc
+# ROOT ACLiC build products
+*_C.so
+*_C.d
+*_C_ACLiC_dict_rdict.pcm
+# analysis results and data stay on each machine (output/ is rebuilt by the scripts)
+*.root
+*.png
+*.pdf
+Telescope/output/
+Imaging/output/
+Telescope/data/*
+Imaging/data/*
+!*/data/.gitkeep
+# alignments contain absolute paths of this machine (mask_file): never commit them
+Telescope/geometry/*/run*/

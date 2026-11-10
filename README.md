@@ -14,10 +14,12 @@ PF-AR の MALTA2 テレスコープのデータを Corryvreckan で解析する�
 ## 1. 考え方: setup
 
 「setup」は 1つの配置のことで、`geometry/<setup>/init.conf` に各面の z 位置を書いたものです。
-解析の各ステップは、前のステップが書いた geometry を読んで、次の geometry を同じディレクトリに書きます。
+解析の各ステップは、前のステップが書いた geometry を読んで、次の geometry を書きます。
+Telescope では、アライメントに使った run ごとにディレクトリ `geometry/<setup>/run<A>/` を分けるので、
+別の run でアラインし直しても前のアライメントは残ります (A = アライメントに使った run)。
 
 ```
-Telescope:  geometry/<setup>/init.conf → masked → prealigned → aligned → aligned_dut .conf
+Telescope:  geometry/<setup>/init.conf ─(コピー)→ run<A>/init.conf → masked → prealigned → aligned → aligned_dut .conf
 Imaging:    geometry/<setup>/init.conf → masked → prealigned → aligned .conf
 結果:       Telescope は output/<setup>/run<N>/<step>/、Imaging は output/<setup>/<step>/
             (corry の root、ログ、まとめの図。N はそのステップが読んだ run)
@@ -33,16 +35,20 @@ Imaging:    geometry/<setup>/init.conf → masked → prealigned → aligned .co
 ```
 AnalysisTemplate/
 ├── README.md / README.en.md
+├── paths.example.json            マシンごとのパスの雛形 (→ paths.json にコピーして編集。git には入れない)
+├── common/                       paths.sh (paths.json の読み込み), PlotStyle.h / MacroUtils.h (マクロ共通)
 ├── Telescope/
 │   ├── config/                   mask, prealign, align, align_dut, analysis, analysis_upstream3, online
 │   ├── geometry/
 │   │   ├── template/init.conf    setup の雛形 (z の行に "EDIT" の印)
 │   │   ├── dec2026_C1p5/         RP–RP、RP–DUT の間隔がすべて 1.5cm
-│   │   └── init.conf ...         --setup を付けないときに使う昔の geometry (1 inch 間隔)
+│   │   │   ├── init.conf         この setup の z 位置 (手で書く)
+│   │       └── run<A>/           run A でのアライメント (init のコピー、masked … aligned_dut)
 │   ├── scripts/
-│   │   ├── run_chain.sh          mask → prealign → align → align_dut → analysis (→ upstream3)
+│   │   ├── run_chain.sh          corry: mask → prealign → align → align_dut → analysis (→ upstream3)
 │   │   ├── run_online.sh         オンラインモニター
-│   │   └── NoiseMasking.py ...   各ステップ (どれも --setup を受け付ける)
+│   │   └── run_ABscan.sh, plot_ABscan_sigma.sh   (シミュレーション専用の距離スキャン)
+│   ├── macros/                   plot_<step>.C (各ステップの図を作る ROOT マクロ)
 │   ├── data/                     run_<NNNNNN>_<0..6>.root を置く場所 (既定)
 │   └── output/<setup>/run<N>/<step>/
 └── Imaging/
@@ -53,8 +59,8 @@ AnalysisTemplate/
     ├── scripts/
     │   ├── run_imaging.sh        mask → prealign → align (サンプルなしの run) → imaging → plot
     │   ├── run_online.sh         オンラインモニター
-    │   ├── plot_imaging.py       画像の作図
-    │   └── calibrate_xx0.py      Al 板による x/X0 への較正
+    │   └── calibrate_xx0.sh      Al 板による x/X0 への較正
+    ├── macros/                   plot_imaging.C (画像の作図), calibrate_xx0.C
     ├── data/                     run_<NNNNNN>_<0..5>.root を置く場所 (既定)
     └── output/<setup>/
 ```
@@ -77,8 +83,24 @@ MALTA_0 –110– MALTA_1 –110– MALTA_2 –61.65– [sample] –48.35– MAL
 
 ## 4. 前提
 
-- corry: `/home/hinata/package/corryvreckan/bin/corry` (別の場所なら `CORRY_BIN=...` を付ける)
-- Python: `Telescope/.venv/bin/python3` (PyROOT は共有の ROOT から読む)。スクリプトはこれを自動で使う。
+- 必要なのは **bash, corry, ROOT だけ** です (Python・venv は不要)。corry を実行するのは bash スクリプト、
+  図を作るのは ROOT マクロ (`Telescope/macros/*.C`, `Imaging/macros/*.C`) です。
+- **パスは `paths.json` に書く** (マシンごとに 1つ、git には入れない)。clone したらまず:
+  ```bash
+  cp paths.example.json paths.json   # 中身をそのマシンに合わせて編集
+  ```
+  | キー | 意味 |
+  |---|---|
+  | `env_setup` | 最初に source するスクリプト (例: `thisroot.sh` や LCG の `setup.sh`)。不要なら `""` |
+  | `corry_bin` | corry の実行ファイル (`"corry"` なら PATH から探す) |
+  | `root_bin` | root の実行ファイル (`"root"` なら PATH から探す) |
+  | `telescope_data_dir` | Telescope の `--data-dir` の既定値 |
+  | `imaging_data_dir` | Imaging の `--data-dir` の既定値 |
+  | `plot_dir` | Imaging / ABscan の図の置き場 (`<plot_dir>/{real,simulation}_analyze/<分類>/`)。`""` ならリポジトリ内の `output/` |
+  | `sim_config_dir` | シミュレーションの generator のある場所 (ABscan 専用。ビームテストでは `""` でよい) |
+
+  相対パスはリポジトリの一番上から見たものです。環境変数 (`CORRY_BIN`, `ROOT_BIN`, `PLOT_DIR` など、
+  キーを大文字にしたもの) を付けると、その場だけ上書きできます。
 - データ: MaltaDAQ の `run_<6桁の run 番号>_<面の番号>.root` (EventLoaderMALTA の形式)
   - Telescope: 面の番号 0..6 = MALTA_0..MALTA_6
   - Imaging: 面の番号 0..5 = MALTA_0, 1, 2, 4, 5, 6 (3 = DUT の位置は空き)
@@ -104,12 +126,14 @@ MALTA_0 –110– MALTA_1 –110– MALTA_2 –61.65– [sample] –48.35– MAL
    ```bash
    Telescope/scripts/run_chain.sh --setup dec2026_C1p5 --run 120 --data-dir /path/to/data
    ```
-4. **オンラインモニターを起動し直す**。今度は `aligned_dut.conf` が自動で選ばれ、DUT の残差と効率が見える。
+4. **オンラインモニターを起動し直す**。今度は一番新しいアライメント (`run120/aligned_dut.conf`) が自動で選ばれ、
+   DUT の残差と効率が見える。
 5. **同じ配置の他の run は、アライメントを使い回して解析だけする**:
    ```bash
    Telescope/scripts/run_chain.sh --setup dec2026_C1p5 --align-run 120 --run 121 --steps "analysis upstream3"
    ```
-   配置を動かしたら、新しい setup を作ってアライメントからやり直します。
+   アライメントは `geometry/dec2026_C1p5/run120/` に残るので、後で別の run (例: 130) でアラインし直しても、
+   `--align-run 120` で前のアライメントをいつでも使えます。配置を動かしたら、新しい setup を作ってアライメントからやり直します。
 
 ## 6. テレスコープの解析 (`Telescope/`)
 
@@ -131,7 +155,8 @@ cd Telescope/scripts
 - 結果: `output/<setup>/run<N>/<step>/` に `*.root`、`run<N>_corry.log`、`run<N>_summary.png/pdf`
   (analysis は `run<N>_residuals.png` も)。N はそのステップが読んだ run なので、
   `--align-run 120 --run 121` ならアライメントは `run120/`、解析は `run121/` に入ります。
-- 各ステップの Python スクリプトを直接使うこともできます: `../.venv/bin/python3 Alignment.py 120 --setup dec2026_C1p5`
+- 1ステップだけ: `--steps prealign`。corry をやり直さずに図だけ作り直す: `--plot-only`。
+  マクロを直接呼ぶこともできます: `root -l -b -q 'macros/plot_prealign.C("<root file>","<出力先>","120","MALTA_0,...,MALTA_6","MALTA_3")'`
 - `--dut MALTA_x` で DUT にする面を変えられます (Telescope/README.md 参照)。
 
 ## 7. イメージングの解析 (`Imaging/`)
@@ -146,10 +171,10 @@ cd Imaging/scripts
 ```
 
 - 画像は、セルごとのキンク角の幅 (中央 90% の AAD、x と y をまとめたもの) です。x/X0 ではありません。
-  x/X0 にするには、同じ配置で厚さのわかった Al 板の run を撮り、`calibrate_xx0.py` で較正します
+  x/X0 にするには、同じ配置で厚さのわかった Al 板の run を撮り、`scripts/calibrate_xx0.sh` で較正します
   (Imaging/README.md 参照)。
-- 図: `/home/hinata/output/plot/MALTA2/real_analyze/material_imaging/<setup>/MLCC_run<N>_{image,tracks,xprofile,kink}.png`
-  (`--sim-data` のときは `simulation_analyze/`)。
+- 図: `<plot_dir>/real_analyze/material_imaging/<setup>/MLCC_run<N>_{image,tracks,xprofile,kink}.png`
+  (`--sim-data` のときは `simulation_analyze/`。`plot_dir` が空なら `Imaging/output/<setup>/plots/`)。
 - **統計の目安**: 1セルに 20本 (`min_cell_content`) ないと値が出ません。EDA 配置のシミュレーションでは、
   100µm セルは約 160万トラックで全面が埋まり、10万トラックでは MLCC の上がほぼ空白でした。
   10万トラックなら 200µm セルにします
@@ -170,9 +195,12 @@ Imaging/scripts/run_online.sh   --setup dec2026_EDA  --run 12  --data-dir DIR
 
 - MaltaDAQ が書いている途中のファイルを読むので、run の開始と同時に起動できます。geometry は書き換えません。
 - **画面 (X11) が必要**です。ssh なら `ssh -X` / `ssh -Y` で入ってください。
-- geometry は、その setup にある一番新しいものを自動で選びます
-  (Telescope: aligned_dut > aligned > prealigned > init、Imaging: aligned > prealigned > masked > init)。
-  `--geometry FILE` で指定もできます。アライメント前 (init.conf) は、ヒットマップと相関だけを見てください。
+- geometry の選び方:
+  - Telescope: `--align-run A` があればそのアライメント (`run<A>/` の aligned_dut > aligned > prealigned > init)、
+    なければ一番新しく終わったアライメント (`run*/aligned_dut.conf` で最新のもの)、それもなければ setup の init.conf。
+    どれを使ったかは、起動時に `geometry: …` と表示されます。
+  - Imaging: setup にある aligned > prealigned > masked > init の順。
+  - `--geometry FILE` で直接指定もできます。アライメント前 (init.conf) は、ヒットマップと相関だけを見てください。
 - 起動し直すとヒストグラムは 0 から始まります。アライメントが済んだら、起動し直すと新しい geometry になります。
 - 終了はウィンドウを閉じるか、ターミナルで Ctrl-C。
 - 1分ごとのスナップショット (PNG): Telescope は `output/<setup>/run<N>/online/snapshots/`、
@@ -300,11 +328,11 @@ Telescope/scripts/run_chain.sh --setup dec2026_C1p5 --run 15 --sim-data --events
 
 # Imaging: MLCC_imaging_EDA の run 1 (サンプルなし) と run 3 (MLCC + PCB 0.22mm)
 Imaging/scripts/run_imaging.sh --setup dec2026_EDA --sim-data \
-    --data-dir /home/hinata/MALTA2/Telescope/sim/output/MLCC_imaging_EDA --align-run 1 --image-run 3
+    --data-dir <sim>/output/MLCC_imaging_EDA --align-run 1 --image-run 3
 ```
 
-試したあとは、`geometry/<setup>/` の init.conf 以外 (masked, prealigned, aligned, aligned_dut) と
-`output/<setup>/` を消してから当日を迎えてください。シミュレーションでアラインした geometry が残っていると、
+試したあとは、Telescope は `geometry/<setup>/run*/`、Imaging は `geometry/<setup>/` の init.conf 以外
+(masked, prealigned, aligned) と、`output/<setup>/` を消してから当日を迎えてください。シミュレーションでアラインした geometry が残っていると、
 オンラインモニターがそれを使ってしまいます。
 
 ## 10. 注意点
@@ -315,11 +343,13 @@ Imaging/scripts/run_imaging.sh --setup dec2026_EDA --sim-data \
   (シミュレーションで 30704 本中 85 本しか残らなかった)。ノイズの多いピクセルだけをマスクします。
 - **corry が終了時にたまにクラッシュする** (`double free or corruption`): 結果を書き終えた後なので、
   Telescope のスクリプトは警告を出して続けます。Imaging でこれが出たら、同じコマンドをもう一度流してください。
-- **setup の geometry は上書きされます**: 同じ setup でアライメントを流し直すと、`masked`〜`aligned_dut` が置き換わります。
-  残したいアライメントがあるときは、setup を分けてください。
-- `--setup` を付けないと、昔からの `geometry/*.conf` と `output/<step>/` を使います (互換のため)。
-- 新しい config を足すときは `config/` に置き、`Telescope/scripts/run_analysis.py --config ../config/<新しい>.conf --setup <setup>`
+- **アライメントの geometry**: Telescope は run ごとに `geometry/<setup>/run<A>/` に分かれるので、別の run でアラインしても
+  前のものは残ります。**同じ run** でアラインし直したときだけ、その `run<A>/` が上書きされます。
+  Imaging はまだ setup ごとに1つなので、アラインし直すと上書きされます (残したいときは setup を分ける)。
+- `geometry/<setup>/init.conf` を書き換えても、すでにある `run<A>/init.conf` (そのアライメントに使ったもののコピー) は変わりません。
+- 新しい解析 config を足すときは `config/` に置き、`Telescope/scripts/run_chain.sh --setup <setup> --run N --steps analysis --analysis-config config/<新しい>.conf`
   で流せます (出力は `output/<setup>/run<N>/<config の output_directory の名前>/`)。
 - **output のディレクトリを動かさない**: mask の結果 (`mask_file`) は geometry の中に絶対パスで書かれます。
   `output/<setup>/run<N>/mask/` を動かしたり消したりすると、その setup の geometry が読めなくなります
-  (動かしたときは、`geometry/<setup>/*.conf` の `mask_file` のパスも直す)。
+  (動かしたときは、`geometry/<setup>/run<A>/*.conf` の `mask_file` のパスも直す)。
+  同じ理由で、`geometry/<setup>/run<A>/` を別のマシンに持っていかないでください (そのマシンでアラインし直す)。

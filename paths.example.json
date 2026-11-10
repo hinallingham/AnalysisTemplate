@@ -1,0 +1,9 @@
+{
+  "env_setup": "",
+  "corry_bin": "corry",
+  "root_bin": "root",
+  "telescope_data_dir": "Telescope/data",
+  "imaging_data_dir": "Imaging/data",
+  "plot_dir": "",
+  "sim_config_dir": ""
+}

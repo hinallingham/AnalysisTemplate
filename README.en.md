@@ -14,10 +14,12 @@ to go from alignment to analysis and online monitoring.
 ## 1. The idea: setups
 
 A "setup" is one detector layout: `geometry/<setup>/init.conf` with the z position of every plane.
-Each analysis step reads the geometry the previous step wrote and writes its own next to it:
+Each analysis step reads the geometry the previous step wrote and writes its own. In Telescope every
+alignment run gets its own directory `geometry/<setup>/run<A>/`, so aligning on another run keeps
+the earlier alignment (A = the run the telescope was aligned on):
 
 ```
-Telescope:  geometry/<setup>/init.conf → masked → prealigned → aligned → aligned_dut .conf
+Telescope:  geometry/<setup>/init.conf ─(copy)→ run<A>/init.conf → masked → prealigned → aligned → aligned_dut .conf
 Imaging:    geometry/<setup>/init.conf → masked → prealigned → aligned .conf
 results:    Telescope: output/<setup>/run<N>/<step>/, Imaging: output/<setup>/<step>/
             (corry ROOT file, log, summary plots; N = the run the step read)
@@ -33,16 +35,20 @@ results:    Telescope: output/<setup>/run<N>/<step>/, Imaging: output/<setup>/<s
 ```
 AnalysisTemplate/
 ├── README.md / README.en.md
+├── paths.example.json            template of the machine paths (copy to paths.json and edit; not in git)
+├── common/                       paths.sh (reads paths.json), PlotStyle.h / MacroUtils.h (shared by the macros)
 ├── Telescope/
 │   ├── config/                   mask, prealign, align, align_dut, analysis, analysis_upstream3, online
 │   ├── geometry/
 │   │   ├── template/init.conf    setup template (z lines marked "EDIT")
 │   │   ├── dec2026_C1p5/         all RP-RP and RP-DUT gaps 1.5 cm
-│   │   └── init.conf ...         legacy geometry used without --setup (1 inch pitch)
+│   │   │   ├── init.conf         z positions of this setup (edited by hand)
+│   │       └── run<A>/           alignment on run A (copy of init, masked … aligned_dut)
 │   ├── scripts/
-│   │   ├── run_chain.sh          mask → prealign → align → align_dut → analysis (→ upstream3)
+│   │   ├── run_chain.sh          corry: mask → prealign → align → align_dut → analysis (→ upstream3)
 │   │   ├── run_online.sh         online monitor
-│   │   └── NoiseMasking.py ...   the individual steps (all accept --setup)
+│   │   └── run_ABscan.sh, plot_ABscan_sigma.sh   (simulation-only distance scan)
+│   ├── macros/                   plot_<step>.C (ROOT macros making each step's plots)
 │   ├── data/                     default place for run_<NNNNNN>_<0..6>.root
 │   └── output/<setup>/run<N>/<step>/
 └── Imaging/
@@ -53,8 +59,8 @@ AnalysisTemplate/
     ├── scripts/
     │   ├── run_imaging.sh        mask → prealign → align (no-sample run) → imaging → plot
     │   ├── run_online.sh         online monitor
-    │   ├── plot_imaging.py       image plots
-    │   └── calibrate_xx0.py      x/X0 calibration with Al plates
+    │   └── calibrate_xx0.sh      x/X0 calibration with Al plates
+    ├── macros/                   plot_imaging.C (image plots), calibrate_xx0.C
     ├── data/                     default place for run_<NNNNNN>_<0..5>.root
     └── output/<setup>/
 ```
@@ -77,8 +83,24 @@ MALTA_0 –110– MALTA_1 –110– MALTA_2 –61.65– [sample] –48.35– MAL
 
 ## 4. Requirements
 
-- corry: `/home/hinata/package/corryvreckan/bin/corry` (set `CORRY_BIN=...` if it lives elsewhere)
-- Python: `Telescope/.venv/bin/python3` (PyROOT from the shared ROOT install); the scripts use it automatically.
+- Only **bash, corry and ROOT** are needed (no python, no venv): bash scripts run corry, ROOT macros
+  (`Telescope/macros/*.C`, `Imaging/macros/*.C`) make the plots.
+- **Paths live in `paths.json`** (one per machine, not in git). After cloning:
+  ```bash
+  cp paths.example.json paths.json   # then edit it for this machine
+  ```
+  | key | meaning |
+  |---|---|
+  | `env_setup` | script sourced first (e.g. `thisroot.sh`, an LCG `setup.sh`); `""` if not needed |
+  | `corry_bin` | corry executable (`"corry"` = from PATH) |
+  | `root_bin` | root executable (`"root"` = from PATH) |
+  | `telescope_data_dir` | default `--data-dir` of Telescope |
+  | `imaging_data_dir` | default `--data-dir` of Imaging |
+  | `plot_dir` | Imaging / ABscan plots go to `<plot_dir>/{real,simulation}_analyze/<category>/`; `""` = inside `output/` |
+  | `sim_config_dir` | simulation generators (ABscan only; `""` is fine for the beam test) |
+
+  Relative paths are relative to the repository root. Environment variables (`CORRY_BIN`, `ROOT_BIN`,
+  `PLOT_DIR`, ... = the key in upper case) override a value for one command.
 - Data: MaltaDAQ `run_<6-digit run number>_<plane index>.root` (EventLoaderMALTA format)
   - Telescope: plane index 0..6 = MALTA_0..MALTA_6
   - Imaging: plane index 0..5 = MALTA_0, 1, 2, 4, 5, 6 (slot 3, the DUT slot, is empty)
@@ -105,12 +127,14 @@ MALTA_0 –110– MALTA_1 –110– MALTA_2 –61.65– [sample] –48.35– MAL
    ```bash
    Telescope/scripts/run_chain.sh --setup dec2026_C1p5 --run 120 --data-dir /path/to/data
    ```
-4. **Restart the online monitor.** It now picks `aligned_dut.conf` and shows the DUT residuals and efficiency.
+4. **Restart the online monitor.** It now picks the newest alignment (`run120/aligned_dut.conf`) and shows
+   the DUT residuals and efficiency.
 5. **Analyse further runs of the same layout with that alignment:**
    ```bash
    Telescope/scripts/run_chain.sh --setup dec2026_C1p5 --align-run 120 --run 121 --steps "analysis upstream3"
    ```
-   After moving any plane, make a new setup and align again.
+   The alignment stays in `geometry/dec2026_C1p5/run120/`, so after a later alignment on another run
+   (e.g. 130), `--align-run 120` still uses the earlier one. After moving any plane, make a new setup and align again.
 
 ## 6. Telescope analysis (`Telescope/`)
 
@@ -132,7 +156,8 @@ cd Telescope/scripts
 - Results: `output/<setup>/run<N>/<step>/` with `*.root`, `run<N>_corry.log`, `run<N>_summary.png/pdf`
   (analysis also `run<N>_residuals.png`). N is the run the step read, so with
   `--align-run 120 --run 121` the alignment goes to `run120/` and the analysis to `run121/`.
-- The step scripts can also be run directly: `../.venv/bin/python3 Alignment.py 120 --setup dec2026_C1p5`
+- One step only: `--steps prealign`. Redo only the plots, without corry: `--plot-only`.
+  The macros can also be called directly: `root -l -b -q 'macros/plot_prealign.C("<root file>","<out dir>","120","MALTA_0,...,MALTA_6","MALTA_3")'`
 - `--dut MALTA_x` makes another plane the DUT (see Telescope/README.md).
 
 ## 7. Imaging analysis (`Imaging/`)
@@ -148,9 +173,9 @@ cd Imaging/scripts
 
 - The image is the kink-angle width per cell (AAD of the central 90%, x and y pooled), not x/X0.
   For x/X0, take runs with Al plates of known thickness in the same layout and calibrate with
-  `calibrate_xx0.py` (see Imaging/README.md).
-- Plots: `/home/hinata/output/plot/MALTA2/real_analyze/material_imaging/<setup>/MLCC_run<N>_{image,tracks,xprofile,kink}.png`
-  (`simulation_analyze/` with `--sim-data`).
+  `scripts/calibrate_xx0.sh` (see Imaging/README.md).
+- Plots: `<plot_dir>/real_analyze/material_imaging/<setup>/MLCC_run<N>_{image,tracks,xprofile,kink}.png`
+  (`simulation_analyze/` with `--sim-data`; `Imaging/output/<setup>/plots/` if `plot_dir` is empty).
 - **Statistics**: a cell only gets a value with at least 20 multiplets (`min_cell_content`). In the
   EDA-layout simulation, ~1.6M tracks fill every 100 µm cell, while 100k tracks leave the MLCCs
   nearly empty. With ~100k tracks, use 200 µm cells
@@ -171,9 +196,12 @@ Imaging/scripts/run_online.sh   --setup dec2026_EDA  --run 12  --data-dir DIR
 
 - It reads files that are still being written, so it can be started together with the run. It never writes a geometry.
 - **Needs a display (X11).** Over ssh, log in with `ssh -X` / `ssh -Y`.
-- It picks the newest geometry of the setup
-  (Telescope: aligned_dut > aligned > prealigned > init; Imaging: aligned > prealigned > masked > init),
-  or the one given with `--geometry FILE`. Before the alignment (init.conf), only look at the hitmaps and correlations.
+- Which geometry:
+  - Telescope: with `--align-run A` that alignment (best of aligned_dut > aligned > prealigned > init in `run<A>/`),
+    otherwise the most recent finished alignment (newest `run*/aligned_dut.conf`), otherwise the setup's init.conf.
+    The choice is printed at start-up as `geometry: …`.
+  - Imaging: aligned > prealigned > masked > init of the setup.
+  - `--geometry FILE` sets it directly. Before the alignment (init.conf), only look at the hitmaps and correlations.
 - A restart starts all histograms from zero. After an alignment, restart to pick up the new geometry.
 - Stop it by closing the window or with Ctrl-C in the terminal.
 - Snapshots (PNG) every minute: Telescope `output/<setup>/run<N>/online/snapshots/`,
@@ -299,11 +327,11 @@ Telescope/scripts/run_chain.sh --setup dec2026_C1p5 --run 15 --sim-data --events
 
 # Imaging: MLCC_imaging_EDA run 1 (no sample) and run 3 (MLCCs on a 0.22 mm PCB)
 Imaging/scripts/run_imaging.sh --setup dec2026_EDA --sim-data \
-    --data-dir /home/hinata/MALTA2/Telescope/sim/output/MLCC_imaging_EDA --align-run 1 --image-run 3
+    --data-dir <sim>/output/MLCC_imaging_EDA --align-run 1 --image-run 3
 ```
 
-Afterwards, delete everything in `geometry/<setup>/` except init.conf (masked, prealigned, aligned,
-aligned_dut) and `output/<setup>/` before the beam test: the online monitor would otherwise pick up
+Afterwards, delete `geometry/<setup>/run*/` (Telescope), everything in `geometry/<setup>/` except init.conf
+(Imaging: masked, prealigned, aligned), and `output/<setup>/` before the beam test: the online monitor would otherwise pick up
 the geometry aligned on simulation.
 
 ## 10. Caveats
@@ -314,12 +342,14 @@ the geometry aligned on simulation.
   simulation). Only noisy pixels are masked.
 - **corry occasionally crashes at exit** (`double free or corruption`): after the results are written, so the
   Telescope scripts warn and continue. If it happens in Imaging, rerun the same command.
-- **A setup's geometries are overwritten**: rerunning the alignment of a setup replaces `masked` … `aligned_dut`.
-  Use a separate setup for an alignment you want to keep.
-- Without `--setup`, the legacy `geometry/*.conf` and `output/<step>/` are used (for compatibility).
+- **Alignment geometries**: in Telescope every alignment run has its own `geometry/<setup>/run<A>/`, so aligning on
+  another run keeps the earlier one. Only re-aligning on the **same** run overwrites its `run<A>/`.
+  Imaging still has one alignment per setup, so re-aligning overwrites it (use a separate setup to keep one).
+- Editing `geometry/<setup>/init.conf` does not change an existing `run<A>/init.conf` (the copy that alignment used).
 - A new analysis config goes into `config/` and runs with
-  `Telescope/scripts/run_analysis.py --config ../config/<new>.conf --setup <setup>`
+  `Telescope/scripts/run_chain.sh --setup <setup> --run N --steps analysis --analysis-config config/<new>.conf`
   (output in `output/<setup>/run<N>/<name of the config's output_directory>/`).
 - **Do not move the output directories**: the mask results (`mask_file`) are written into the geometry
   as absolute paths. Moving or deleting `output/<setup>/run<N>/mask/` makes that setup's geometry
-  unreadable (if you move it, fix the `mask_file` paths in `geometry/<setup>/*.conf` too).
+  unreadable (if you move it, fix the `mask_file` paths in `geometry/<setup>/run<A>/*.conf` too).
+  For the same reason, do not carry `geometry/<setup>/run<A>/` over to another machine: align again there.

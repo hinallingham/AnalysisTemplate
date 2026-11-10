@@ -1,94 +1,92 @@
 # Telescope (6x MALTA2 RP + 1 DUT)
 
-corryvreckan analysis template for a 7-plane MALTA2 telescope: 6 reference
-planes (`MALTA_0,1,2,4,5,6`) spaced 1 inch (2.54 cm) apart, with the DUT
-(`MALTA_3`) in the middle.
+corryvreckan analysis template for a 7-plane MALTA2 telescope: 6 reference planes
+(`MALTA_0,1,2,4,5,6`) with the DUT (`MALTA_3`) in the middle. Needs only bash, corry and ROOT;
+the paths of corry / ROOT / the data come from `../paths.json` (see the top-level README).
 
 ```
-NoiseMasking.py -> Prealignment.py -> Alignment.py -> AlignmentDUT.py -> run_analysis.py
-     mask.conf       prealign.conf     align.conf       align_dut.conf     analysis.conf
-        |                 |                |                 |                  |
-        v                 v                v                 v                  v
-  geometry/masked  geometry/prealigned  geometry/aligned  geometry/aligned_dut  output/analysis
+step:       mask        -> prealign       -> align          -> align_dut        -> analysis [upstream3]
+config:     mask.conf      prealign.conf     align.conf        align_dut.conf      analysis.conf [analysis_upstream3.conf]
+geometry:   run<A>/init -> masked         -> prealigned     -> aligned          -> aligned_dut
+plot macro: plot_mask.C    plot_prealign.C   plot_align.C      plot_align_dut.C    plot_analysis.C
 ```
 
-Each geometry file only exists once its step has been run; each step reads
-the previous step's geometry output and writes its own. `Alignment.py`
-(AlignmentMillepede) fits the 6 reference planes only, with the DUT
-excluded; `AlignmentDUT.py` (AlignmentDUTResidual) then fine-tunes just the
-DUT on top of that, using unbiased residuals against the now-fixed RP
-tracks. `geometry/aligned_dut.conf` is the final geometry -- that's what
-`config/analysis.conf` reads from.
+Each step reads the previous step's geometry and writes its own. `align` (AlignmentMillepede) fits
+the 6 reference planes only, with the DUT excluded; `align_dut` (AlignmentDUTResidual) then
+fine-tunes just the DUT on top of that, using unbiased residuals against the now-fixed RP tracks.
+`aligned_dut.conf` is the final geometry -- that's what the analysis reads.
 
 ## Layout
 
-- `geometry/init.conf` -- ideal 7-plane placement, DUT = `MALTA_3`.
-- `config/*.conf` -- one corryvreckan config per step. `run_number` /
-  `base_path` are left blank (`0` / `""`-ish placeholders) and filled in
-  via `-o` overrides at run time.
-- `scripts/*.py` -- one script per step. Each one runs `corry`, then reads
-  the resulting ROOT file (PyROOT) and shows a summary plot in the MALTA2
-  house ROOT style (`scripts/style/plot_style.py`, from the
-  `root-plot-polish` skill) -- white ROOT canvas, Gaussian fits on
-  residual/correlation peaks, shift values annotated on the plot.
-- `output/<step>/` -- corry's histogram_file, corry's own log, and the
-  summary PDF+PNG, per run.
-- `.venv/` -- project-local venv (numpy + matplotlib, used only
-  incidentally; PyROOT comes from the shared ROOT install via
-  `PYTHONPATH` and is what actually does the plotting).
+- `config/*.conf` -- one corryvreckan config per step. `run_number`, `base_path`, the geometry
+  files and `output_directory` are filled in by `scripts/run_chain.sh` with `-o` overrides.
+- `geometry/<setup>/init.conf` -- z positions of one layout; `geometry/<setup>/run<A>/` -- the
+  alignment chain made on run A. `geometry/template/` is the starting point for a new setup.
+- `scripts/run_chain.sh` -- runs corry for each step, then the step's ROOT macro.
+- `macros/plot_<step>.C` -- summary plots (PDF + PNG) in the MALTA2 house style
+  (`../common/PlotStyle.h`, `../common/MacroUtils.h`): Gaussian fits on residual/correlation
+  peaks, shift values and widths annotated on the plot.
+- `output/<setup>/run<N>/<step>/` -- corry's histogram file, corry's log, the summary plots.
 
-## Running a step
-
-```bash
-cd scripts
-../.venv/bin/python3 NoiseMasking.py  1 --data-dir ../data
-../.venv/bin/python3 Prealignment.py  1 --data-dir ../data
-../.venv/bin/python3 Alignment.py     1 --data-dir ../data
-../.venv/bin/python3 AlignmentDUT.py  1 --data-dir ../data
-../.venv/bin/python3 run_analysis.py  1 --data-dir ../data
-```
-
-`--data-dir` defaults to `Telescope/data`, and expects
-`run_<run_number zero-padded to 6 digits>_<plane index 0-6>.root` files
-there (corryvreckan's `EventLoaderMALTA` multi-file convention).
-
-`--events N` overrides `number_of_events` from the config for a quick test
-run (e.g. while iterating on a config change). `--sim-data` sets
-`EventLoaderMALTA.real_data=false` for data produced by the
-`Malta2TreeWriter` Allpix module (no hardware group-address offset) rather
-than a real MaltaDAQ beam-test run. **All configs default to real data**
-(`real_data = true`), so simulated data always needs `--sim-data`.
-
-## Setups (`--setup`)
-
-`--setup S` on any step script runs the same configs on `geometry/S/` (starting from
-`geometry/S/init.conf`) and writes to `output/S/run<N>/<step>/` (N = the run the step reads), leaving `geometry/*.conf` and
-`output/<step>/` alone -- several layouts can then live side by side. `scripts/run_chain.sh`
-runs the whole chain for one setup, `scripts/run_online.sh` the online monitor:
+## Running
 
 ```bash
 scripts/run_chain.sh  --setup dec2026_C1p5 --run 120                     # mask .. analysis
 scripts/run_chain.sh  --setup dec2026_C1p5 --align-run 120 --run 121 --steps "analysis upstream3"
+scripts/run_chain.sh  --setup dec2026_C1p5 --run 120 --steps prealign    # one step
+scripts/run_chain.sh  --setup dec2026_C1p5 --run 120 --plot-only         # redo only the plots
 scripts/run_online.sh --setup dec2026_C1p5 --run 121
 ```
 
-New setups: copy `geometry/template/` to `geometry/S/` and edit the z positions (lines marked `EDIT`).
-See the top-level README (`../README.md`, `../README.en.md`).
+`--data-dir` defaults to `telescope_data_dir` in `paths.json` and expects
+`run_<run number zero-padded to 6 digits>_<plane index 0-6>.root` (EventLoaderMALTA multi-file convention).
 
-`config/mask.conf` has `mask_dead_pixels = false`: with the beam covering part of the chip, the
-pixels it never reaches count as "dead", and AnalysisEfficiency then drops every track next to
-a masked pixel (measured on simulation: 85 of 30704 tracks left).
+`--events N` overrides `number_of_events` for a quick test. `--sim-data` sets
+`EventLoaderMALTA.real_data=false` for data from the `Malta2TreeWriter` Allpix module (no hardware
+group-address offset). **All configs default to real data**, so simulated data always needs `--sim-data`.
 
-All step-specific `-o` overrides go through `common.standard_overrides()` --
-notably, a truly global `[Corryvreckan]` option like `number_of_events` must
-be passed unprefixed (`-o number_of_events=...`), not as
-`Corryvreckan.number_of_events`: corry's OptionParser treats anything
-before a `.` as a module/detector identifier to match, and `Corryvreckan`
-isn't a module, so the prefixed form is silently dropped.
+`--analysis-config FILE` runs the analysis step with another config (output in
+`output/<setup>/run<N>/<last part of its output_directory>/`).
+
+A macro can be run by hand on any corry output, e.g.
+
+```bash
+root -l -b -q 'macros/plot_analysis.C("output/dec2026_C1p5/run120/analysis/analysis.root", "/tmp/plots", "120", "MALTA_0,MALTA_1,MALTA_2,MALTA_3,MALTA_4,MALTA_5,MALTA_6", "MALTA_3")'
+```
+
+## DUT (`--dut`)
+
+The DUT is the detector with `role = "dut"` in the input geometry. `--dut MALTA_x` moves the role
+for this step with corry `-g` overrides and regenerates `Tracking4D.require_detectors` to exclude
+the new DUT; corry writes the role into the step's output geometry, so later steps inherit it
+without `--dut` again.
+
+## Setups
+
+Each setup has its own `geometry/<setup>/` and `output/<setup>/`; every alignment run has its own
+`geometry/<setup>/run<A>/` (the mask step copies `geometry/<setup>/init.conf` there; A = `--align-run`,
+default the run itself). New setups: copy `geometry/template/` to `geometry/<setup>/` and edit the
+z positions (lines marked `EDIT`). See the top-level README (`../README.md`, `../README.en.md`).
+
+## Notes
+
+- `config/mask.conf` has `mask_dead_pixels = false`: with the beam covering part of the chip, the
+  pixels it never reaches count as "dead", and AnalysisEfficiency then drops every track next to
+  a masked pixel (measured on simulation: 85 of 30704 tracks left).
+- A truly global `[Corryvreckan]` option like `number_of_events` must be passed unprefixed
+  (`-o number_of_events=...`): corry's OptionParser treats anything before a `.` as a
+  module/detector identifier, and `Corryvreckan.number_of_events` is silently dropped.
+- corry occasionally crashes in its teardown (`double free or corruption`) after the results are
+  written; `run_chain.sh` then warns and continues.
+
+## Simulation only: ABscan
+
+`scripts/run_ABscan.sh` (C = gap RP3-DUT, A = B scanned) runs `run_chain.sh` for every run of a
+simulated scan, `scripts/plot_ABscan_sigma.sh --c "1.5 5"` plots the DUT residual width vs A = B.
+Both need `sim_config_dir` in `paths.json` (for the run table of `ABscan_generate_configs.py`).
 
 ## Growing the main analysis
 
-`config/analysis.conf` and `scripts/run_analysis.py` are intentionally
-minimal (Tracking4D + DUTAssociation + AnalysisDUT + AnalysisEfficiency).
-Add more `[AnalysisXxx]` sections as needed and extend the plotting code
-in `run_analysis.py` to match.
+`config/analysis.conf` and `macros/plot_analysis.C` are intentionally minimal (Tracking4D +
+DUTAssociation + AnalysisDUT + AnalysisEfficiency). Add more `[AnalysisXxx]` sections as needed
+and extend `plot_analysis.C` to match.
